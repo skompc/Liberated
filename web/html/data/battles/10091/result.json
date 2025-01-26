@@ -1,0 +1,814 @@
+{
+  "reward": {
+    "get_mag": 0,
+    "dvl_before": [
+      {
+        "agi": 30,
+        "exceed_info": {
+          "opened_num": 0
+        },
+        "hpmx": 177,
+        "luk": 19,
+        "devicon_power": 498,
+        "hp": 177,
+        "recommend_type": 1,
+        "lv": 10,
+        "additional_skl": [],
+        "mdef": 139,
+        "limitbreak": {
+          "effect": [],
+          "num": 60,
+          "open": []
+        },
+        "is_awk": false,
+        "dr": 0,
+        "ai_auto_type": 1,
+        "mag": 19,
+        "limitbreak_skl": [],
+        "arc": 0,
+        "wk": 64,
+        "skl": [
+          {
+            "lv": 1,
+            "id": 1128
+          },
+          {
+            "lv": 1,
+            "id": 2001
+          },
+          {
+            "lv": 1,
+            "id": 102117
+          },
+          {
+            "lv": 0,
+            "id": 0
+          },
+          {
+            "lv": 0,
+            "id": 0
+          },
+          {
+            "lv": 0,
+            "id": 0
+          }
+        ],
+        "id": 12310,
+        "patk": 139,
+        "exp": 747,
+        "vit": 22,
+        "is_released_learn_only_skill": false,
+        "st": 8,
+        "pdef": 138,
+        "mp": 10,
+        "mgtm_effs": [],
+        "mgtms": [],
+        "str": 16,
+        "av": 0,
+        "spt": 0,
+        "uniq": 30478063565,
+        "matk": 145,
+        "mpmx": 10,
+        "rp": 0,
+        "rarity": 1,
+        "contents_type": 0
+      },
+      {
+        "agi": 24,
+        "exceed_info": {
+          "opened_num": 0
+        },
+        "hpmx": 163,
+        "luk": 19,
+        "devicon_power": 467,
+        "hp": 163,
+        "recommend_type": 0,
+        "lv": 10,
+        "additional_skl": [],
+        "mdef": 136,
+        "limitbreak": {
+          "effect": [],
+          "num": 60,
+          "open": []
+        },
+        "is_awk": false,
+        "dr": 0,
+        "ai_auto_type": 2,
+        "mag": 19,
+        "limitbreak_skl": [],
+        "arc": 0,
+        "wk": 0,
+        "skl": [
+          {
+            "lv": 1,
+            "id": 1001
+          },
+          {
+            "lv": 1,
+            "id": 1101
+          },
+          {
+            "lv": 1,
+            "id": 2018
+          },
+          {
+            "lv": 0,
+            "id": 0
+          },
+          {
+            "lv": 0,
+            "id": 0
+          },
+          {
+            "lv": 0,
+            "id": 0
+          }
+        ],
+        "id": 11710,
+        "patk": 160,
+        "exp": 747,
+        "vit": 19,
+        "is_released_learn_only_skill": false,
+        "st": 0,
+        "pdef": 139,
+        "mp": 10,
+        "mgtm_effs": [],
+        "mgtms": [],
+        "str": 26,
+        "av": 32,
+        "spt": 0,
+        "uniq": 30478063566,
+        "matk": 145,
+        "mpmx": 10,
+        "rp": 0,
+        "rarity": 1,
+        "contents_type": 0
+      },
+      {
+        "agi": 19,
+        "exceed_info": {
+          "opened_num": 0
+        },
+        "hpmx": 164,
+        "luk": 23,
+        "devicon_power": 606,
+        "hp": 164,
+        "recommend_type": 0,
+        "lv": 7,
+        "additional_skl": [],
+        "mdef": 127,
+        "limitbreak": {
+          "effect": [],
+          "num": 100,
+          "open": []
+        },
+        "is_awk": false,
+        "dr": 0,
+        "ai_auto_type": 0,
+        "mag": 23,
+        "limitbreak_skl": [],
+        "arc": 4,
+        "wk": 72,
+        "skl": [
+          {
+            "lv": 1,
+            "id": 1012
+          },
+          {
+            "lv": 1,
+            "id": 103024
+          },
+          {
+            "lv": 1,
+            "id": 1007
+          },
+          {
+            "lv": 1,
+            "id": 101004
+          },
+          {
+            "lv": 1,
+            "id": 1014
+          },
+          {
+            "lv": 0,
+            "id": 0
+          }
+        ],
+        "id": 12370,
+        "patk": 158,
+        "exp": 495,
+        "vit": 24,
+        "is_released_learn_only_skill": false,
+        "st": 0,
+        "pdef": 132,
+        "mp": 10,
+        "mgtm_effs": [],
+        "mgtms": [],
+        "str": 33,
+        "av": 16,
+        "spt": 0,
+        "uniq": 30478218594,
+        "matk": 137,
+        "mpmx": 10,
+        "rp": 0,
+        "rarity": 3,
+        "contents_type": 0
+      }
+    ],
+    "item": [
+      {
+        "num": 30,
+        "is_bonus": false,
+        "id": 200,
+        "type": 2
+      },
+      {
+        "param": "5013",
+        "num": 2,
+        "is_bonus": false,
+        "id": 1100013,
+        "type": 14
+      }
+    ],
+    "usr_lv": {
+      "exp_pre": 909,
+      "level": 5,
+      "exp_next": [
+        717,
+        967,
+        1250
+      ],
+      "id": 225973463,
+      "exp_new": 1023
+    },
+    "smn_lv": [],
+    "smn_skill_ids": [
+      14010
+    ],
+    "curr_mag": 0,
+    "dbl_exp_plus": 76,
+    "usr_exp_plus": 114,
+    "magatama_rate": 1,
+    "get_money": 98,
+    "smn": [
+      {
+        "skl_p": 3,
+        "level": 4,
+        "next_lv_exp": 788,
+        "skl": [
+          14010
+        ],
+        "exists_chara_quest": true,
+        "uniq": 30205478304,
+        "is_awaken": false,
+        "lineup": [
+          {
+            "exist_up_skill": false,
+            "is_support": true,
+            "is_awaken": false,
+            "is_lock": false,
+            "need_point": 1,
+            "id": 100010,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": false,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": false,
+            "need_point": 1,
+            "id": 10010,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": false,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": false,
+            "need_point": 1,
+            "id": 10110,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": false,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": false,
+            "need_point": 1,
+            "id": 10210,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": false,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": false,
+            "need_point": 1,
+            "id": 10310,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": false,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": false,
+            "need_point": 1,
+            "id": 10410,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": false,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": false,
+            "need_point": 1,
+            "id": 10510,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": true,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": false,
+            "need_point": 0,
+            "id": 14010,
+            "is_learned": true
+          },
+          {
+            "exist_up_skill": true,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": false,
+            "need_point": 15,
+            "id": 14020,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": false,
+            "is_support": false,
+            "is_awaken": true,
+            "is_lock": true,
+            "need_point": 17,
+            "id": 14030,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": true,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": false,
+            "need_point": 3,
+            "id": 19010,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": true,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": true,
+            "need_point": 5,
+            "id": 19020,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": false,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": true,
+            "need_point": 7,
+            "id": 19030,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": true,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": false,
+            "need_point": 5,
+            "id": 120010,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": true,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": true,
+            "need_point": 8,
+            "id": 120020,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": false,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": true,
+            "need_point": 12,
+            "id": 120030,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": false,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": false,
+            "need_point": 1,
+            "id": 16510,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": false,
+            "is_support": false,
+            "is_awaken": false,
+            "is_lock": false,
+            "need_point": 2,
+            "id": 16610,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": true,
+            "is_support": false,
+            "is_awaken": true,
+            "is_lock": true,
+            "need_point": 2,
+            "id": 25810,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": false,
+            "is_support": false,
+            "is_awaken": true,
+            "is_lock": true,
+            "need_point": 5,
+            "id": 25820,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": true,
+            "is_support": false,
+            "is_awaken": true,
+            "is_lock": true,
+            "need_point": 3,
+            "id": 121110,
+            "is_learned": false
+          },
+          {
+            "exist_up_skill": false,
+            "is_support": false,
+            "is_awaken": true,
+            "is_lock": true,
+            "need_point": 8,
+            "id": 121120,
+            "is_learned": false
+          }
+        ],
+        "id": 1,
+        "exp": 671,
+        "now_lv_exp": 645
+      }
+    ],
+    "item_magatama": [],
+    "smn_exp_plus": 76,
+    "curr_money": 876,
+    "assist": [],
+    "dvl_lv": [
+      {
+        "exp_pre": 671,
+        "level": 10,
+        "exp_next": [
+          620,
+          849
+        ],
+        "id": 30478063565,
+        "exp_new": 747
+      },
+      {
+        "exp_pre": 671,
+        "level": 10,
+        "exp_next": [
+          620,
+          849
+        ],
+        "id": 30478063566,
+        "exp_new": 747
+      },
+      {
+        "exp_pre": 419,
+        "level": 7,
+        "exp_next": [
+          350,
+          427,
+          520
+        ],
+        "id": 30478218594,
+        "exp_new": 495
+      }
+    ],
+    "item_tag": [
+      {
+        "item_index": 1,
+        "id": 7,
+        "text": "EVENT"
+      }
+    ],
+    "dvl": [
+      {
+        "agi": 30,
+        "exceed_info": {
+          "opened_num": 0
+        },
+        "hpmx": 177,
+        "luk": 19,
+        "devicon_power": 498,
+        "hp": 177,
+        "recommend_type": 1,
+        "lv": 10,
+        "additional_skl": [],
+        "mdef": 139,
+        "limitbreak": {
+          "effect": [],
+          "num": 60,
+          "open": []
+        },
+        "is_awk": false,
+        "dr": 0,
+        "ai_auto_type": 1,
+        "mag": 19,
+        "limitbreak_skl": [],
+        "arc": 0,
+        "wk": 64,
+        "skl": [
+          {
+            "lv": 1,
+            "id": 1128
+          },
+          {
+            "lv": 1,
+            "id": 2001
+          },
+          {
+            "lv": 1,
+            "id": 102117
+          },
+          {
+            "lv": 0,
+            "id": 0
+          },
+          {
+            "lv": 0,
+            "id": 0
+          },
+          {
+            "lv": 0,
+            "id": 0
+          },
+          {
+            "lv": 0,
+            "id": 0
+          }
+        ],
+        "id": 12310,
+        "patk": 139,
+        "exp": 747,
+        "vit": 22,
+        "is_released_learn_only_skill": false,
+        "st": 8,
+        "pdef": 138,
+        "mp": 10,
+        "mgtm_effs": [],
+        "lock_ex_skl": [
+          true
+        ],
+        "mgtms": [],
+        "str": 16,
+        "av": 0,
+        "spt": 0,
+        "uniq": 30478063565,
+        "matk": 145,
+        "mpmx": 10,
+        "rp": 0,
+        "rarity": 1,
+        "contents_type": 0
+      },
+      {
+        "agi": 24,
+        "exceed_info": {
+          "opened_num": 0
+        },
+        "hpmx": 163,
+        "luk": 19,
+        "devicon_power": 467,
+        "hp": 163,
+        "recommend_type": 0,
+        "lv": 10,
+        "additional_skl": [],
+        "mdef": 136,
+        "limitbreak": {
+          "effect": [],
+          "num": 60,
+          "open": []
+        },
+        "is_awk": false,
+        "dr": 0,
+        "ai_auto_type": 2,
+        "mag": 19,
+        "limitbreak_skl": [],
+        "arc": 0,
+        "wk": 0,
+        "skl": [
+          {
+            "lv": 1,
+            "id": 1001
+          },
+          {
+            "lv": 1,
+            "id": 1101
+          },
+          {
+            "lv": 1,
+            "id": 2018
+          },
+          {
+            "lv": 0,
+            "id": 0
+          },
+          {
+            "lv": 0,
+            "id": 0
+          },
+          {
+            "lv": 0,
+            "id": 0
+          },
+          {
+            "lv": 0,
+            "id": 0
+          }
+        ],
+        "id": 11710,
+        "patk": 160,
+        "exp": 747,
+        "vit": 19,
+        "is_released_learn_only_skill": false,
+        "st": 0,
+        "pdef": 139,
+        "mp": 10,
+        "mgtm_effs": [],
+        "lock_ex_skl": [
+          true
+        ],
+        "mgtms": [],
+        "str": 26,
+        "av": 32,
+        "spt": 0,
+        "uniq": 30478063566,
+        "matk": 145,
+        "mpmx": 10,
+        "rp": 0,
+        "rarity": 1,
+        "contents_type": 0
+      },
+      {
+        "agi": 20,
+        "exceed_info": {
+          "opened_num": 0
+        },
+        "hpmx": 181,
+        "luk": 24,
+        "devicon_power": 606,
+        "hp": 181,
+        "recommend_type": 0,
+        "lv": 8,
+        "additional_skl": [],
+        "mdef": 135,
+        "limitbreak": {
+          "effect": [],
+          "num": 100,
+          "open": []
+        },
+        "is_awk": false,
+        "dr": 0,
+        "ai_auto_type": 0,
+        "mag": 24,
+        "limitbreak_skl": [],
+        "arc": 4,
+        "wk": 72,
+        "skl": [
+          {
+            "lv": 1,
+            "id": 1012
+          },
+          {
+            "lv": 1,
+            "id": 103024
+          },
+          {
+            "lv": 1,
+            "id": 1007
+          },
+          {
+            "lv": 1,
+            "id": 101004
+          },
+          {
+            "lv": 1,
+            "id": 1014
+          },
+          {
+            "lv": 0,
+            "id": 0
+          },
+          {
+            "lv": 0,
+            "id": 0
+          }
+        ],
+        "id": 12370,
+        "patk": 168,
+        "exp": 495,
+        "vit": 26,
+        "is_released_learn_only_skill": false,
+        "st": 0,
+        "pdef": 140,
+        "mp": 10,
+        "mgtm_effs": [],
+        "lock_ex_skl": [
+          true
+        ],
+        "mgtms": [],
+        "str": 35,
+        "av": 16,
+        "spt": 0,
+        "uniq": 30478218594,
+        "matk": 145,
+        "mpmx": 10,
+        "rp": 0,
+        "rarity": 3,
+        "contents_type": 0
+      }
+    ]
+  },
+  "is_again": false,
+  "beginner_mission": {
+    "is_badge": false,
+    "is_display": false
+  },
+  "consume_ap": 1,
+  "main_mission": {
+    "currents": [],
+    "is_display": false
+  },
+  "is_magatama_max": false,
+  "is_advice_usable": false,
+  "is_first": true,
+  "first_prize": {
+    "num": 30,
+    "is_bonus": false,
+    "id": 2,
+    "type": 3
+  },
+  "res_code": 0,
+  "client_wait": 0,
+  "clear_tm": 51000,
+  "best_tm": 0,
+  "usr": {
+    "lv": 6,
+    "ap_itm": 0,
+    "pvppt": 0,
+    "rnknm": "NEWCOMER",
+    "dp_itm": 0,
+    "usr_id": 225973463,
+    "smn_id": 1,
+    "mc": 876,
+    "pp_itm": 0,
+    "fndmx": 7,
+    "mg": 180,
+    "gnd": 0,
+    "exp": 1023,
+    "gb_exchange_ticket": 0,
+    "gpmx": 2,
+    "gp": 0,
+    "cp": 290,
+    "rnk": "E5",
+    "ap": 65,
+    "nlv_exp": 1250,
+    "qst_skp_ticket": 0,
+    "clv_exp": 967,
+    "apmx": 15,
+    "name": "Iku",
+    "guild_id": 0,
+    "ap_rec_ts": 0,
+    "ap_spn": 180,
+    "fame": 0
+  },
+  "is_best_record": true,
+  "bonus_exp": 35,
+  "is_magatama_sell": false,
+  "tm": "11",
+  "bonus_player_exp": 100,
+  "comeback_mission": {
+    "is_badge": false,
+    "is_display": false
+  },
+  "is_card_max": false
+}

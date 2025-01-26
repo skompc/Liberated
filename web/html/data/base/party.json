@@ -1,0 +1,811 @@
+{
+  "limit_type": 2,
+  "lock_flag": "0000000000000000000000000000000000000000000000000000000000000000000000",
+  "res_code": 0,
+  "client_wait": 0,
+  "helper": 0,
+  "limit_smn_ids": [
+    1,
+    2
+  ],
+  "parties": [
+    {
+      "data": [
+        {
+          "devils": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "idx": 1
+        },
+        {
+          "devils": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "idx": 2
+        },
+        {
+          "devils": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "idx": 3
+        },
+        {
+          "devils": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "idx": 4
+        }
+      ],
+      "summoner": 1,
+      "is_leader": true
+    }
+  ],
+  "summoners": [
+    {
+      "skl_p": 1,
+      "level": 1,
+      "next_lv_exp": 100,
+      "skl": [
+        14010
+      ],
+      "exists_chara_quest": true,
+      "uniq": 0,
+      "is_awaken": false,
+      "lineup": [
+        {
+          "exist_up_skill": false,
+          "is_support": true,
+          "is_awaken": false,
+          "is_lock": false,
+          "need_point": 1,
+          "id": 100010,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": false,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": false,
+          "need_point": 1,
+          "id": 10010,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": false,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": false,
+          "need_point": 1,
+          "id": 10110,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": false,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": false,
+          "need_point": 1,
+          "id": 10210,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": false,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": false,
+          "need_point": 1,
+          "id": 10310,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": false,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": false,
+          "need_point": 1,
+          "id": 10410,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": false,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": false,
+          "need_point": 1,
+          "id": 10510,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": true,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": false,
+          "need_point": 0,
+          "id": 14010,
+          "is_learned": true
+        },
+        {
+          "exist_up_skill": true,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": false,
+          "need_point": 15,
+          "id": 14020,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": false,
+          "is_support": false,
+          "is_awaken": true,
+          "is_lock": true,
+          "need_point": 17,
+          "id": 14030,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": true,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": false,
+          "need_point": 3,
+          "id": 19010,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": true,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": true,
+          "need_point": 5,
+          "id": 19020,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": false,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": true,
+          "need_point": 7,
+          "id": 19030,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": true,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": false,
+          "need_point": 5,
+          "id": 120010,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": true,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": true,
+          "need_point": 8,
+          "id": 120020,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": false,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": true,
+          "need_point": 12,
+          "id": 120030,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": false,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": false,
+          "need_point": 1,
+          "id": 16510,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": false,
+          "is_support": false,
+          "is_awaken": false,
+          "is_lock": false,
+          "need_point": 2,
+          "id": 16610,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": true,
+          "is_support": false,
+          "is_awaken": true,
+          "is_lock": true,
+          "need_point": 2,
+          "id": 25810,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": false,
+          "is_support": false,
+          "is_awaken": true,
+          "is_lock": true,
+          "need_point": 5,
+          "id": 25820,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": true,
+          "is_support": false,
+          "is_awaken": true,
+          "is_lock": true,
+          "need_point": 3,
+          "id": 121110,
+          "is_learned": false
+        },
+        {
+          "exist_up_skill": false,
+          "is_support": false,
+          "is_awaken": true,
+          "is_lock": true,
+          "need_point": 8,
+          "id": 121120,
+          "is_learned": false
+        }
+      ],
+      "id": 1,
+      "exp": 0,
+      "now_lv_exp": 0
+    }
+  ],
+  "is_card_max": false,
+  "devil_max": 150,
+  "devils": [],
+  "slot_presets": [
+    {
+      "idx": 1,
+      "is_gd": false,
+      "parameter_bonus_info": {
+        "hp_bonus": 0,
+        "magical_attack_bonus": 0,
+        "magical_defense_bonus": 0,
+        "physical_attack_bonus": 0,
+        "physical_defense_bonus": 0
+      },
+      "partner_slots": [
+        {
+          "change_stack": 0,
+          "idx": 1,
+          "is_change": false,
+          "is_leader": true,
+          "is_lock": false,
+          "level": 1,
+          "partner_info": {
+            "aptitudes": [],
+            "devil_id": 0,
+            "hp": 0,
+            "intimacy": 0,
+            "mag": 0,
+            "magical_attack": 0,
+            "magical_defense": 0,
+            "partner_skill": [],
+            "physical_attack": 0,
+            "physical_defense": 0,
+            "skill_change_gage": 0,
+            "soul_injection_mag": 0,
+            "soul_injection_str": 0,
+            "soul_injection_vit": 0,
+            "str": 0,
+            "vit": 0
+          },
+          "partner_skills": [
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            }
+          ]
+        },
+        {
+          "change_stack": 0,
+          "idx": 2,
+          "is_change": false,
+          "is_leader": false,
+          "is_lock": false,
+          "level": 1,
+          "partner_info": {
+            "aptitudes": [],
+            "devil_id": 0,
+            "hp": 0,
+            "intimacy": 0,
+            "mag": 0,
+            "magical_attack": 0,
+            "magical_defense": 0,
+            "partner_skill": [],
+            "physical_attack": 0,
+            "physical_defense": 0,
+            "skill_change_gage": 0,
+            "soul_injection_mag": 0,
+            "soul_injection_str": 0,
+            "soul_injection_vit": 0,
+            "str": 0,
+            "vit": 0
+          },
+          "partner_skills": [
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            }
+          ]
+        },
+        {
+          "change_stack": 0,
+          "idx": 3,
+          "is_change": false,
+          "is_leader": false,
+          "is_lock": false,
+          "level": 1,
+          "partner_info": {
+            "aptitudes": [],
+            "devil_id": 0,
+            "hp": 0,
+            "intimacy": 0,
+            "mag": 0,
+            "magical_attack": 0,
+            "magical_defense": 0,
+            "partner_skill": [],
+            "physical_attack": 0,
+            "physical_defense": 0,
+            "skill_change_gage": 0,
+            "soul_injection_mag": 0,
+            "soul_injection_str": 0,
+            "soul_injection_vit": 0,
+            "str": 0,
+            "vit": 0
+          },
+          "partner_skills": [
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idx": 2,
+      "is_gd": false,
+      "parameter_bonus_info": {
+        "hp_bonus": 0,
+        "magical_attack_bonus": 0,
+        "magical_defense_bonus": 0,
+        "physical_attack_bonus": 0,
+        "physical_defense_bonus": 0
+      },
+      "partner_slots": [
+        {
+          "change_stack": 0,
+          "idx": 1,
+          "is_change": false,
+          "is_leader": true,
+          "is_lock": false,
+          "level": 1,
+          "partner_info": {
+            "aptitudes": [],
+            "devil_id": 0,
+            "hp": 0,
+            "intimacy": 0,
+            "mag": 0,
+            "magical_attack": 0,
+            "magical_defense": 0,
+            "partner_skill": [],
+            "physical_attack": 0,
+            "physical_defense": 0,
+            "skill_change_gage": 0,
+            "soul_injection_mag": 0,
+            "soul_injection_str": 0,
+            "soul_injection_vit": 0,
+            "str": 0,
+            "vit": 0
+          },
+          "partner_skills": [
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            }
+          ]
+        },
+        {
+          "change_stack": 0,
+          "idx": 2,
+          "is_change": false,
+          "is_leader": false,
+          "is_lock": false,
+          "level": 1,
+          "partner_info": {
+            "aptitudes": [],
+            "devil_id": 0,
+            "hp": 0,
+            "intimacy": 0,
+            "mag": 0,
+            "magical_attack": 0,
+            "magical_defense": 0,
+            "partner_skill": [],
+            "physical_attack": 0,
+            "physical_defense": 0,
+            "skill_change_gage": 0,
+            "soul_injection_mag": 0,
+            "soul_injection_str": 0,
+            "soul_injection_vit": 0,
+            "str": 0,
+            "vit": 0
+          },
+          "partner_skills": [
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            }
+          ]
+        },
+        {
+          "change_stack": 0,
+          "idx": 3,
+          "is_change": false,
+          "is_leader": false,
+          "is_lock": false,
+          "level": 1,
+          "partner_info": {
+            "aptitudes": [],
+            "devil_id": 0,
+            "hp": 0,
+            "intimacy": 0,
+            "mag": 0,
+            "magical_attack": 0,
+            "magical_defense": 0,
+            "partner_skill": [],
+            "physical_attack": 0,
+            "physical_defense": 0,
+            "skill_change_gage": 0,
+            "soul_injection_mag": 0,
+            "soul_injection_str": 0,
+            "soul_injection_vit": 0,
+            "str": 0,
+            "vit": 0
+          },
+          "partner_skills": [
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idx": 3,
+      "is_gd": false,
+      "parameter_bonus_info": {
+        "hp_bonus": 0,
+        "magical_attack_bonus": 0,
+        "magical_defense_bonus": 0,
+        "physical_attack_bonus": 0,
+        "physical_defense_bonus": 0
+      },
+      "partner_slots": [
+        {
+          "change_stack": 0,
+          "idx": 1,
+          "is_change": false,
+          "is_leader": true,
+          "is_lock": false,
+          "level": 1,
+          "partner_info": {
+            "aptitudes": [],
+            "devil_id": 0,
+            "hp": 0,
+            "intimacy": 0,
+            "mag": 0,
+            "magical_attack": 0,
+            "magical_defense": 0,
+            "partner_skill": [],
+            "physical_attack": 0,
+            "physical_defense": 0,
+            "skill_change_gage": 0,
+            "soul_injection_mag": 0,
+            "soul_injection_str": 0,
+            "soul_injection_vit": 0,
+            "str": 0,
+            "vit": 0
+          },
+          "partner_skills": [
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            }
+          ]
+        },
+        {
+          "change_stack": 0,
+          "idx": 2,
+          "is_change": false,
+          "is_leader": false,
+          "is_lock": false,
+          "level": 1,
+          "partner_info": {
+            "aptitudes": [],
+            "devil_id": 0,
+            "hp": 0,
+            "intimacy": 0,
+            "mag": 0,
+            "magical_attack": 0,
+            "magical_defense": 0,
+            "partner_skill": [],
+            "physical_attack": 0,
+            "physical_defense": 0,
+            "skill_change_gage": 0,
+            "soul_injection_mag": 0,
+            "soul_injection_str": 0,
+            "soul_injection_vit": 0,
+            "str": 0,
+            "vit": 0
+          },
+          "partner_skills": [
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            }
+          ]
+        },
+        {
+          "change_stack": 0,
+          "idx": 3,
+          "is_change": false,
+          "is_leader": false,
+          "is_lock": false,
+          "level": 1,
+          "partner_info": {
+            "aptitudes": [],
+            "devil_id": 0,
+            "hp": 0,
+            "intimacy": 0,
+            "mag": 0,
+            "magical_attack": 0,
+            "magical_defense": 0,
+            "partner_skill": [],
+            "physical_attack": 0,
+            "physical_defense": 0,
+            "skill_change_gage": 0,
+            "soul_injection_mag": 0,
+            "soul_injection_str": 0,
+            "soul_injection_vit": 0,
+            "str": 0,
+            "vit": 0
+          },
+          "partner_skills": [
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idx": 4,
+      "is_gd": false,
+      "parameter_bonus_info": {
+        "hp_bonus": 0,
+        "magical_attack_bonus": 0,
+        "magical_defense_bonus": 0,
+        "physical_attack_bonus": 0,
+        "physical_defense_bonus": 0
+      },
+      "partner_slots": [
+        {
+          "change_stack": 0,
+          "idx": 1,
+          "is_change": false,
+          "is_leader": true,
+          "is_lock": false,
+          "level": 1,
+          "partner_info": {
+            "aptitudes": [],
+            "devil_id": 0,
+            "hp": 0,
+            "intimacy": 0,
+            "mag": 0,
+            "magical_attack": 0,
+            "magical_defense": 0,
+            "partner_skill": [],
+            "physical_attack": 0,
+            "physical_defense": 0,
+            "skill_change_gage": 0,
+            "soul_injection_mag": 0,
+            "soul_injection_str": 0,
+            "soul_injection_vit": 0,
+            "str": 0,
+            "vit": 0
+          },
+          "partner_skills": [
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            }
+          ]
+        },
+        {
+          "change_stack": 0,
+          "idx": 2,
+          "is_change": false,
+          "is_leader": false,
+          "is_lock": false,
+          "level": 1,
+          "partner_info": {
+            "aptitudes": [],
+            "devil_id": 0,
+            "hp": 0,
+            "intimacy": 0,
+            "mag": 0,
+            "magical_attack": 0,
+            "magical_defense": 0,
+            "partner_skill": [],
+            "physical_attack": 0,
+            "physical_defense": 0,
+            "skill_change_gage": 0,
+            "soul_injection_mag": 0,
+            "soul_injection_str": 0,
+            "soul_injection_vit": 0,
+            "str": 0,
+            "vit": 0
+          },
+          "partner_skills": [
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            }
+          ]
+        },
+        {
+          "change_stack": 0,
+          "idx": 3,
+          "is_change": false,
+          "is_leader": false,
+          "is_lock": false,
+          "level": 1,
+          "partner_info": {
+            "aptitudes": [],
+            "devil_id": 0,
+            "hp": 0,
+            "intimacy": 0,
+            "mag": 0,
+            "magical_attack": 0,
+            "magical_defense": 0,
+            "partner_skill": [],
+            "physical_attack": 0,
+            "physical_defense": 0,
+            "skill_change_gage": 0,
+            "soul_injection_mag": 0,
+            "soul_injection_str": 0,
+            "soul_injection_vit": 0,
+            "str": 0,
+            "vit": 0
+          },
+          "partner_skills": [
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            },
+            {
+              "id": 0,
+              "lv": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_magatama_max": false,
+  "is_tutorial": 0,
+  "limit_grade": 0
+}

@@ -1,0 +1,129 @@
+{
+  "item": [
+    {
+      "num": 2,
+      "id": 5100,
+      "is_use": true
+    }
+  ],
+  "beginner_mission": {
+    "is_badge": false,
+    "is_display": false
+  },
+  "main_mission": {
+    "currents": [],
+    "is_display": false
+  },
+  "tm": "14",
+  "enemies": [
+    {
+      "agi": 7,
+      "hpmx": 31,
+      "luk": 8,
+      "hp": 31,
+      "res_bin": 40,
+      "lv": 1,
+      "additional_skl": [],
+      "is_rare": false,
+      "dr": 0,
+      "ai_auto_type": 2,
+      "limitbreak_skl": [],
+      "atk_pr": 2,
+      "decline_lower_resist": 100,
+      "pressturn": 1,
+      "skl": [
+        {
+          "lv": 1,
+          "id": 2016
+        },
+        {
+          "lv": 1,
+          "id": 1132
+        },
+        {
+          "lv": 1,
+          "id": 3003
+        },
+        {
+          "lv": 1,
+          "id": 0
+        },
+        {
+          "lv": 1,
+          "id": 0
+        },
+        {
+          "lv": 1,
+          "id": 0
+        }
+      ],
+      "id": 11730,
+      "patk": 74,
+      "vit": 8,
+      "pdef": 68,
+      "mp": 999,
+      "mgtm_effs": [],
+      "res_inf": 40,
+      "ai_type": 2,
+      "is_dead_drama": false,
+      "str": 9,
+      "av": 0,
+      "uniq": 6,
+      "matk": 72,
+      "enemy_type": 1,
+      "mpmx": 999,
+      "rp": 0,
+      "rarity": 1,
+      "skl_exp_pr": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "res_cur": 20,
+      "atk_exp": 0,
+      "res_poi": 40,
+      "mdef": 68,
+      "limitbreak": {
+        "effect": [],
+        "open": []
+      },
+      "is_awk": false,
+      "mag": 8,
+      "skl_exp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "wk": 12,
+      "tgt_type": 0,
+      "anlz": 2147483647,
+      "skl_pr": [
+        0,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "st": 18,
+      "res_clo": 40,
+      "atk_exp_pr": 0,
+      "res_chr": 40,
+      "mgtms": []
+    }
+  ],
+  "comeback_mission": {
+    "is_badge": false,
+    "is_display": false
+  },
+  "wave": 3,
+  "wave_max": 3,
+  "res_code": 0,
+  "client_wait": 0
+}

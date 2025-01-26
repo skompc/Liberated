@@ -1,0 +1,107 @@
+{
+  "item": [
+    {
+      "num": 15,
+      "id": 5100,
+      "is_use": true
+    },
+    {
+      "num": 8,
+      "id": 5200,
+      "is_use": true
+    },
+    {
+      "num": 2,
+      "id": 5300,
+      "is_use": true
+    },
+    {
+      "num": 5,
+      "id": 5600,
+      "is_use": true
+    },
+    {
+      "num": 3,
+      "id": 5700,
+      "is_use": true
+    },
+    {
+      "num": 5,
+      "id": 5800,
+      "is_use": true
+    },
+    {
+      "num": 4,
+      "id": 5900,
+      "is_use": true
+    },
+    {
+      "num": 2,
+      "id": 6000,
+      "is_use": true
+    },
+    {
+      "num": 1,
+      "id": 6100,
+      "is_use": true
+    },
+    {
+      "num": 1,
+      "id": 6200,
+      "is_use": true
+    },
+    {
+      "num": 4,
+      "id": 7100,
+      "is_use": false
+    },
+    {
+      "num": 7,
+      "id": 7200,
+      "is_use": false
+    },
+    {
+      "num": 5,
+      "id": 7300,
+      "is_use": false
+    },
+    {
+      "num": 6,
+      "id": 7400,
+      "is_use": false
+    },
+    {
+      "num": 6,
+      "id": 7500,
+      "is_use": false
+    },
+    {
+      "num": 6,
+      "id": 7600,
+      "is_use": false
+    },
+    {
+      "num": 4,
+      "id": 7800,
+      "is_use": false
+    }
+  ],
+  "beginner_mission": {
+    "is_badge": false,
+    "is_display": false
+  },
+  "main_mission": {
+    "currents": [],
+    "is_display": false
+  },
+  "tm": "5",
+  "enemies": [],
+  "comeback_mission": {
+    "is_badge": false,
+    "is_display": false
+  },
+  "wave": 2,
+  "wave_max": 0,
+  "res_code": 0,
+  "client_wait": 0
+}

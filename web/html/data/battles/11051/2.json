@@ -1,0 +1,282 @@
+{
+  "item": [
+    {
+      "num": 7,
+      "id": 5100,
+      "is_use": true
+    },
+    {
+      "num": 1,
+      "id": 5300,
+      "is_use": true
+    },
+    {
+      "num": 2,
+      "id": 5600,
+      "is_use": true
+    },
+    {
+      "num": 2,
+      "id": 5800,
+      "is_use": true
+    },
+    {
+      "num": 1,
+      "id": 5900,
+      "is_use": true
+    },
+    {
+      "num": 1,
+      "id": 7100,
+      "is_use": false
+    },
+    {
+      "num": 1,
+      "id": 7200,
+      "is_use": false
+    },
+    {
+      "num": 1,
+      "id": 7400,
+      "is_use": false
+    },
+    {
+      "num": 1,
+      "id": 7500,
+      "is_use": false
+    },
+    {
+      "num": 1,
+      "id": 7600,
+      "is_use": false
+    },
+    {
+      "num": 1,
+      "id": 7800,
+      "is_use": false
+    }
+  ],
+  "beginner_mission": {
+    "is_badge": false,
+    "is_display": true
+  },
+  "main_mission": {
+    "currents": [
+      "Clear Mission: Fusion Training",
+      "Level up a demon to its max level",
+      "Reach the boss room entrance in the Aura Gate",
+      "Perform an upgrade to the Hideout",
+      "Clear a Strange Signal",
+      "Perform an Awakening at Pandemonium",
+      "Clear Story Ch. 2"
+    ],
+    "is_display": true
+  },
+  "enemies": [
+    {
+      "agi": 18,
+      "hpmx": 260,
+      "luk": 30,
+      "hp": 260,
+      "res_bin": 40,
+      "lv": 11,
+      "additional_skl": [],
+      "is_rare": false,
+      "dr": 4,
+      "ai_auto_type": 2,
+      "limitbreak_skl": [],
+      "atk_pr": 2,
+      "decline_lower_resist": 100,
+      "pressturn": 1,
+      "skl": [
+        {
+          "lv": 1,
+          "id": 1111
+        },
+        {
+          "lv": 1,
+          "id": 1123
+        },
+        {
+          "lv": 1,
+          "id": 3019
+        },
+        {
+          "lv": 1,
+          "id": 101004
+        },
+        {
+          "lv": 1,
+          "id": 0
+        },
+        {
+          "lv": 1,
+          "id": 0
+        }
+      ],
+      "id": 11540,
+      "patk": 191,
+      "vit": 38,
+      "pdef": 172,
+      "mp": 999,
+      "mgtm_effs": [],
+      "res_inf": 40,
+      "ai_type": 2,
+      "is_dead_drama": false,
+      "str": 38,
+      "av": 64,
+      "uniq": 97,
+      "matk": 166,
+      "enemy_type": 1,
+      "mpmx": 999,
+      "rp": 0,
+      "rarity": 3,
+      "skl_exp_pr": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "res_cur": 20,
+      "atk_exp": 0,
+      "res_poi": 40,
+      "mdef": 166,
+      "limitbreak": {
+        "effect": [],
+        "open": []
+      },
+      "is_awk": false,
+      "mag": 26,
+      "skl_exp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "wk": 8,
+      "tgt_type": 0,
+      "anlz": 0,
+      "skl_pr": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "st": 0,
+      "res_clo": 40,
+      "atk_exp_pr": 0,
+      "res_chr": 40,
+      "mgtms": []
+    },
+    {
+      "skl_exp_pr": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "agi": 22,
+      "hpmx": 210,
+      "luk": 17,
+      "hp": 210,
+      "atk_exp": 0,
+      "lv": 10,
+      "additional_skl": [],
+      "mdef": 145,
+      "is_rare": false,
+      "limitbreak": {
+        "effect": [],
+        "open": []
+      },
+      "is_awk": false,
+      "dr": 0,
+      "ai_auto_type": 2,
+      "mag": 15,
+      "limitbreak_skl": [],
+      "atk_pr": 1,
+      "skl_exp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decline_lower_resist": 100,
+      "wk": 2,
+      "pressturn": 1,
+      "skl": [
+        {
+          "lv": 1,
+          "id": 2025
+        },
+        {
+          "lv": 1,
+          "id": 1119
+        },
+        {
+          "lv": 1,
+          "id": 1126
+        },
+        {
+          "lv": 1,
+          "id": 0
+        },
+        {
+          "lv": 1,
+          "id": 0
+        },
+        {
+          "lv": 1,
+          "id": 0
+        }
+      ],
+      "tgt_type": 0,
+      "anlz": 0,
+      "id": 12210,
+      "patk": 139,
+      "skl_pr": [
+        0,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "vit": 29,
+      "st": 8,
+      "pdef": 145,
+      "mp": 999,
+      "mgtm_effs": [],
+      "atk_exp_pr": 0,
+      "ai_type": 2,
+      "is_dead_drama": false,
+      "mgtms": [],
+      "str": 16,
+      "av": 0,
+      "uniq": 98,
+      "matk": 137,
+      "enemy_type": 0,
+      "mpmx": 999,
+      "rp": 0,
+      "rarity": 1
+    }
+  ],
+  "wave": 3,
+  "res_code": 0,
+  "client_wait": 0,
+  "tm": "50",
+  "comeback_mission": {
+    "is_badge": false,
+    "is_display": false
+  },
+  "wave_max": 3
+}

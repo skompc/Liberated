@@ -1,0 +1,169 @@
+{
+    "appsflyer_enable_button": false,
+    "appsflyer_enable_view": false,
+    "asset_bundle_url": "https://d2r-dl.d2megaten.com/contents/",
+    "asset_bundle_version": "7.3.2.VAjgTdwE3u45",
+    "base_data_url": "http://d2r-sim.d2megaten.com/socialsv/",
+    "chat_url": "http://d2r-chat.d2megaten.com/socialsv/",
+    "client_wait": 0,
+    "coppa": {
+        "countries": [
+            {
+                "age": 14,
+                "id": "at",
+                "type": "consent"
+            },
+            {
+                "age": 13,
+                "id": "be",
+                "type": "consent"
+            },
+            {
+                "age": 14,
+                "id": "bg",
+                "type": "consent"
+            },
+            {
+                "age": 14,
+                "id": "cy",
+                "type": "consent"
+            },
+            {
+                "age": 15,
+                "id": "cz",
+                "type": "consent"
+            },
+            {
+                "age": 16,
+                "id": "de",
+                "type": "consent"
+            },
+            {
+                "age": 13,
+                "id": "dk",
+                "type": "consent"
+            },
+            {
+                "age": 13,
+                "id": "ee",
+                "type": "consent"
+            },
+            {
+                "age": 13,
+                "id": "es",
+                "type": "consent"
+            },
+            {
+                "age": 13,
+                "id": "fi",
+                "type": "consent"
+            },
+            {
+                "age": 15,
+                "id": "fr",
+                "type": "consent"
+            },
+            {
+                "age": 13,
+                "id": "gb",
+                "type": "consent"
+            },
+            {
+                "age": 15,
+                "id": "gr",
+                "type": "consent"
+            },
+            {
+                "age": 16,
+                "id": "hr",
+                "type": "consent"
+            },
+            {
+                "age": 16,
+                "id": "hu",
+                "type": "consent"
+            },
+            {
+                "age": 13,
+                "id": "ie",
+                "type": "consent"
+            },
+            {
+                "age": 14,
+                "id": "it",
+                "type": "consent"
+            },
+            {
+                "age": 16,
+                "id": "lt",
+                "type": "consent"
+            },
+            {
+                "age": 16,
+                "id": "lu",
+                "type": "consent"
+            },
+            {
+                "age": 13,
+                "id": "lv",
+                "type": "consent"
+            },
+            {
+                "age": 16,
+                "id": "mt",
+                "type": "consent"
+            },
+            {
+                "age": 16,
+                "id": "nl",
+                "type": "consent"
+            },
+            {
+                "age": 13,
+                "id": "pl",
+                "type": "consent"
+            },
+            {
+                "age": 13,
+                "id": "pt",
+                "type": "consent"
+            },
+            {
+                "age": 16,
+                "id": "ro",
+                "type": "consent"
+            },
+            {
+                "age": 13,
+                "id": "se",
+                "type": "consent"
+            },
+            {
+                "age": 15,
+                "id": "si",
+                "type": "consent"
+            },
+            {
+                "age": 16,
+                "id": "sk",
+                "type": "consent"
+            }
+        ]
+    },
+    "ds": "SeK11eTakAAk1",
+    "gdpr_url": "https://segacustomer.zendesk.com/hc/en-us/requests/new?ticket_form_id=7083703631385&",
+    "gdpr_ver": "2.1.00",
+    "is_need_version_up": 0,
+    "playbit_url": "https://campaign.playbit.jp/reception/",
+    "res_code": 0,
+    "server_id": "prod",
+    "server_time": 1737167402588,
+    "store_url": "https://d2-megaten-l.sega.com/webview/en/store/?platform=2&bundle_id=com.sega.d2megaten.en",
+    "sv_branch": "version/7.3.10",
+    "sv_revision": "36422",
+    "svtool_branch": "",
+    "svtool_revision": "local",
+    "tm": "1",
+    "transaction_id": "12-05A-27A99B",
+    "web_url": "https://d2-megaten-l.sega.com/webview/en/"
+}

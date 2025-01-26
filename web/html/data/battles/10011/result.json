@@ -1,0 +1,29 @@
+{
+  "is_again": true,
+  "beginner_mission": {
+    "is_badge": false,
+    "is_display": false
+  },
+  "consume_ap": 1,
+  "main_mission": {
+    "currents": [],
+    "is_display": false
+  },
+  "is_magatama_max": false,
+  "is_advice_usable": false,
+  "is_first": false,
+  "res_code": 0,
+  "client_wait": 0,
+  "is_read": true,
+  "drama": "story/capter_01/001_qa",
+  "clear_tm": 51000,
+  "best_tm": 93000,
+  "is_best_record": true,
+  "bonus_exp": 35,
+  "is_magatama_sell": false,
+  "comeback_mission": {
+    "is_badge": false,
+    "is_display": false
+  },
+  "is_card_max": false
+}

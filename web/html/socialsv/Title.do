@@ -1,0 +1,25 @@
+<?php
+// Title function to handle the request and return the content of Title.json
+function Title() {
+    $filePath = '../data/common/Title.json';
+
+    // Check if the file exists
+    if (file_exists($filePath)) {
+        // Read the file content
+        $data = file_get_contents($filePath);
+
+        // Send the response with the content of the file
+        header('Content-Type: application/json'); // Set the correct content type
+        echo $data;
+    } else {
+        // Handle error if file does not exist
+        http_response_code(404); // Send a 404 response code
+        echo json_encode(["error" => "File not found"]);
+    }
+}
+
+// Call the Title function when a GET request is received
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    Title();
+}
+?>

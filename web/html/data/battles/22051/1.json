@@ -1,0 +1,403 @@
+{
+  "item": [
+    {
+      "num": 24,
+      "id": 5100,
+      "is_use": true
+    },
+    {
+      "num": 15,
+      "id": 5200,
+      "is_use": true
+    },
+    {
+      "num": 2,
+      "id": 5300,
+      "is_use": true
+    },
+    {
+      "num": 6,
+      "id": 5600,
+      "is_use": true
+    },
+    {
+      "num": 3,
+      "id": 5700,
+      "is_use": true
+    },
+    {
+      "num": 7,
+      "id": 5800,
+      "is_use": true
+    },
+    {
+      "num": 4,
+      "id": 5900,
+      "is_use": true
+    },
+    {
+      "num": 3,
+      "id": 6000,
+      "is_use": true
+    },
+    {
+      "num": 1,
+      "id": 6100,
+      "is_use": true
+    },
+    {
+      "num": 1,
+      "id": 6200,
+      "is_use": true
+    },
+    {
+      "num": 10,
+      "id": 7100,
+      "is_use": false
+    },
+    {
+      "num": 9,
+      "id": 7200,
+      "is_use": false
+    },
+    {
+      "num": 8,
+      "id": 7300,
+      "is_use": false
+    },
+    {
+      "num": 7,
+      "id": 7400,
+      "is_use": false
+    },
+    {
+      "num": 8,
+      "id": 7500,
+      "is_use": false
+    },
+    {
+      "num": 9,
+      "id": 7600,
+      "is_use": false
+    },
+    {
+      "num": 3,
+      "id": 7700,
+      "is_use": false
+    },
+    {
+      "num": 5,
+      "id": 7800,
+      "is_use": false
+    }
+  ],
+  "beginner_mission": {
+    "is_badge": false,
+    "is_display": false
+  },
+  "main_mission": {
+    "currents": [],
+    "is_display": false
+  },
+  "enemies": [
+    {
+      "skl_exp_pr": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "agi": 179,
+      "hpmx": 1542,
+      "luk": 85,
+      "hp": 1542,
+      "atk_exp": 0,
+      "lv": 77,
+      "additional_skl": [],
+      "mdef": 824,
+      "is_rare": false,
+      "limitbreak": {
+        "effect": [],
+        "open": []
+      },
+      "is_awk": false,
+      "dr": 0,
+      "ai_auto_type": 2,
+      "mag": 231,
+      "limitbreak_skl": [],
+      "atk_pr": 1,
+      "skl_exp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decline_lower_resist": 100,
+      "wk": 48,
+      "pressturn": 1,
+      "skl": [
+        {
+          "lv": 1,
+          "id": 3008
+        },
+        {
+          "lv": 1,
+          "id": 1123
+        },
+        {
+          "lv": 1,
+          "id": 1146
+        },
+        {
+          "lv": 1,
+          "id": 3001
+        },
+        {
+          "lv": 1,
+          "id": 0
+        },
+        {
+          "lv": 1,
+          "id": 0
+        }
+      ],
+      "tgt_type": 0,
+      "anlz": 0,
+      "id": 10950,
+      "patk": 699,
+      "skl_pr": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "vit": 207,
+      "st": 1,
+      "pdef": 760,
+      "mp": 999,
+      "mgtm_effs": [],
+      "atk_exp_pr": 0,
+      "ai_type": 2,
+      "is_dead_drama": false,
+      "mgtms": [],
+      "str": 104,
+      "av": 64,
+      "uniq": 2006,
+      "matk": 966,
+      "enemy_type": 0,
+      "mpmx": 999,
+      "rp": 0,
+      "rarity": 6
+    },
+    {
+      "skl_exp_pr": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "agi": 146,
+      "hpmx": 1303,
+      "luk": 145,
+      "hp": 1303,
+      "atk_exp": 0,
+      "lv": 77,
+      "additional_skl": [],
+      "mdef": 749,
+      "is_rare": false,
+      "limitbreak": {
+        "effect": [],
+        "open": []
+      },
+      "is_awk": false,
+      "dr": 0,
+      "ai_auto_type": 0,
+      "mag": 193,
+      "limitbreak_skl": [],
+      "atk_pr": 1,
+      "skl_exp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decline_lower_resist": 100,
+      "wk": 34,
+      "pressturn": 1,
+      "skl": [
+        {
+          "lv": 1,
+          "id": 3037
+        },
+        {
+          "lv": 1,
+          "id": 1112
+        },
+        {
+          "lv": 1,
+          "id": 1027
+        },
+        {
+          "lv": 1,
+          "id": 1017
+        },
+        {
+          "lv": 1,
+          "id": 0
+        },
+        {
+          "lv": 1,
+          "id": 0
+        }
+      ],
+      "tgt_type": 0,
+      "anlz": 0,
+      "id": 12070,
+      "patk": 886,
+      "skl_pr": [
+        0,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "vit": 156,
+      "st": 0,
+      "pdef": 749,
+      "mp": 999,
+      "mgtm_effs": [],
+      "atk_exp_pr": 0,
+      "ai_type": 2,
+      "is_dead_drama": false,
+      "mgtms": [],
+      "str": 193,
+      "av": 64,
+      "uniq": 2007,
+      "matk": 886,
+      "enemy_type": 0,
+      "mpmx": 999,
+      "rp": 0,
+      "rarity": 6
+    },
+    {
+      "skl_exp_pr": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "agi": 179,
+      "hpmx": 1542,
+      "luk": 85,
+      "hp": 1542,
+      "atk_exp": 0,
+      "lv": 77,
+      "additional_skl": [],
+      "mdef": 824,
+      "is_rare": false,
+      "limitbreak": {
+        "effect": [],
+        "open": []
+      },
+      "is_awk": false,
+      "dr": 0,
+      "ai_auto_type": 2,
+      "mag": 231,
+      "limitbreak_skl": [],
+      "atk_pr": 1,
+      "skl_exp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decline_lower_resist": 100,
+      "wk": 48,
+      "pressturn": 1,
+      "skl": [
+        {
+          "lv": 1,
+          "id": 3008
+        },
+        {
+          "lv": 1,
+          "id": 1123
+        },
+        {
+          "lv": 1,
+          "id": 1146
+        },
+        {
+          "lv": 1,
+          "id": 3001
+        },
+        {
+          "lv": 1,
+          "id": 0
+        },
+        {
+          "lv": 1,
+          "id": 0
+        }
+      ],
+      "tgt_type": 0,
+      "anlz": 0,
+      "id": 10950,
+      "patk": 699,
+      "skl_pr": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "vit": 207,
+      "st": 1,
+      "pdef": 760,
+      "mp": 999,
+      "mgtm_effs": [],
+      "atk_exp_pr": 0,
+      "ai_type": 2,
+      "is_dead_drama": false,
+      "mgtms": [],
+      "str": 104,
+      "av": 64,
+      "uniq": 2008,
+      "matk": 966,
+      "enemy_type": 0,
+      "mpmx": 999,
+      "rp": 0,
+      "rarity": 6
+    }
+  ],
+  "wave": 2,
+  "res_code": 0,
+  "client_wait": 0,
+  "tm": "177",
+  "talk": {
+    "talk_start_type": 3,
+    "surrender_border": 30,
+    "talk_tgt": 2008
+  },
+  "comeback_mission": {
+    "is_badge": false,
+    "is_display": false
+  },
+  "wave_max": 2
+}

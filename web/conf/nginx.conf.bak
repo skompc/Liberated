@@ -1,0 +1,130 @@
+worker_processes 1;
+events { worker_connections 1024; 
+}
+http {
+    server {
+        listen 80;
+        server_name d2-megaten-l.sega.com d2r-dl.d2megaten.com d2r-sim.d2megaten.com d2r-chat.d2megaten.com liberated.local localhost;
+        return 301 https://$host$request_uri;
+    }
+    server {
+        listen 443 ssl;
+        server_name d2-megaten-l.sega.com;
+        ssl_certificate     ssl/d2-megaten-l.sega.com.crt;
+        ssl_certificate_key ssl/d2-megaten-l.sega.com.key;
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_ciphers HIGH:MD5;
+        root   html;
+        index  index.php index.html index.htm;
+        location / {
+            try_files $uri $uri/ =404;
+        }
+        location ~ \.php$ {
+            include fastcgi_params;
+            fastcgi_pass 127.0.0.1:9000;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include fastcgi_params;
+        }
+    }
+    server {
+        listen 443 ssl;
+        server_name d2r-dl.d2megaten.com;
+        ssl_certificate     ssl/d2r-dl.d2megaten.com.crt;
+        ssl_certificate_key ssl/d2r-dl.d2megaten.com.key;
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_ciphers HIGH:MD5;
+        root   html;
+        index  index.php index.html index.htm;
+        location / {
+            try_files $uri $uri/ =404;
+        }
+        location ~ \.php$ {
+            include fastcgi_params;
+            fastcgi_pass 127.0.0.1:9000;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include fastcgi_params;
+        }
+    }
+    server {
+        listen 443 ssl;
+        server_name d2r-sim.d2megaten.com;
+        ssl_certificate     ssl/d2r-sim.d2megaten.com.crt;
+        ssl_certificate_key ssl/d2r-sim.d2megaten.com.key;
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_ciphers HIGH:MD5;
+        root   html;
+        index  index.php index.html index.htm;
+        location / {
+            try_files $uri $uri/ =404;
+        }
+        location ~ \.php$ {
+            include fastcgi_params;
+            fastcgi_pass 127.0.0.1:9000;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include fastcgi_params;
+        }
+    }
+    server {
+        listen 443 ssl;
+        server_name d2r-chat.d2megaten.com;
+        ssl_certificate     ssl/d2r-chat.d2megaten.com.crt;
+        ssl_certificate_key ssl/d2r-chat.d2megaten.com.key;
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_ciphers HIGH:MD5;
+        root   html;
+        index  index.php index.html index.htm;
+        location / {
+            try_files $uri $uri/ =404;
+        }
+        location ~ \.php$ {
+            include fastcgi_params;
+            fastcgi_pass 127.0.0.1:9000;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include fastcgi_params;
+        }
+    }
+    server {
+        listen 443 ssl;
+        server_name liberated.local;
+        ssl_certificate     ssl/liberated.local.crt;
+        ssl_certificate_key ssl/liberated.local.key;
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_ciphers HIGH:MD5;
+        root   html;
+        index  index.php index.html index.htm;
+        location / {
+            try_files $uri $uri/ =404;
+        }
+        location ~ \.php$ {
+            include fastcgi_params;
+            fastcgi_pass 127.0.0.1:9000;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include fastcgi_params;
+        }
+    }
+    server {
+        listen 443 ssl;
+        server_name localhost;
+        ssl_certificate     ssl/localhost.crt;
+        ssl_certificate_key ssl/localhost.key;
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_ciphers HIGH:MD5;
+        root   html;
+        index  index.php index.html index.htm;
+        location / {
+            try_files $uri $uri/ =404;
+        }
+        location ~ \.php$ {
+            include fastcgi_params;
+            fastcgi_pass 127.0.0.1:9000;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include fastcgi_params;
+        }
+    }
+}
