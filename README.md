@@ -15,6 +15,8 @@ Run <code>git clone https://github.com/skompc/Liberated.git</code> to copy this 
 
 Run <code>npm install</code> to install dependencies for the scraper.
 
+Install the DNS Changer apk that is in the root directory.
+
 # Scrape The Assets
 
 Run <code>node ./scraper.js</code> to fetch assets.
@@ -41,23 +43,26 @@ If this is your first time connecting to the server, then go to <code>liberated.
 
 . Story Battles On Normal Difficulty
 
-. Story Review
+. Story Battles On Hard Difficulty (Season 1 only for now...)
 
 . Basic Party Management
 
 # What Doesn't
-.Story Battles On Harder Difficulties
+. (Some) Story Battles On Harder Difficulties
 
-.Fusion
+. Story Review
 
-.Gacha/Summoning
+. Fusion
 
-.Everything Else
+. Gacha/Summoning
+
+. Everything Else
 
 # Known bugs
 
 1. Any unimplemented endpoints will softlock the game. Simply restart the app.
-2. Story choices don't matter... just choose whatever path strikes your fancy!... I MAY NOT FIX THIS!
+2. Story choices don't matter... first you have to play the normal mode then the alternate mode... I'll change it to where the player chooses eventually...
+3. Results screen is inaccurate. Just ignore until I implement everything...
 
 # FAQ
 

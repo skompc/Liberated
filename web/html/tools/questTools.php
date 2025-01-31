@@ -8,15 +8,32 @@ function getNumbersAfterQuest($questNumber) {
         return null; // Return null if the file can't be read
     }
 
-    // Loop through each line and search for the quest number
+    // Loop through each line and search for the quest number in the first position
     foreach ($lines as $index => $line) {
-        // Check if the quest number is present in the current line
-        $numbers = explode(',', $line); // Split the line into numbers
-        if (in_array($questNumber, array_map('trim', $numbers))) {
-            // If the quest number is found, return the numbers from the next line
+        // Remove trailing comma and split into an array
+        $numbers = array_filter(array_map('trim', explode(',', rtrim($line, ','))));
+
+        // Ensure the array is not empty before accessing elements
+        if (empty($numbers)) {
+            continue;
+        }
+
+        $firstNumber = $numbers[0]; // Get the first number
+
+        if ($firstNumber == $questNumber) { // Using == to allow integer comparisons
+            // If there is a next line
             if (isset($lines[$index + 1])) {
                 $nextLine = $lines[$index + 1];
-                return array_map('trim', explode(',', $nextLine)); // Return numbers as an array
+
+                // Process the next line
+                $nextNumbers = array_filter(array_map('trim', explode(',', rtrim($nextLine, ','))));
+
+                // If the next line is just "0", return [10001]
+                if (count($nextNumbers) === 1 && $nextNumbers[0] === "0") {
+                    return [10001];
+                }
+
+                return $nextNumbers; // Otherwise, return the numbers from the next line
             }
             break; // No next line available
         }
