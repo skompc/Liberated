@@ -1,0 +1,114 @@
+{
+    "chapters": [
+        {
+            "sub": "",
+            "img": "",
+            "name": "Church of False Gods",
+            "id": 0
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Summoning Portal",
+            "id": 0
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Pandemonium",
+            "id": 0
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Store",
+            "id": 0
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Aura Gate",
+            "id": 0
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Alter-World",
+            "id": 0
+        }
+    ],
+    "list": [
+        {
+            "ctgr": 0,
+            "is_opn": true,
+            "name": "Church of False Gods",
+            "idx": 0,
+            "drm": "re_tutorial/fusion_01/001"
+        },
+        {
+            "ctgr": 0,
+            "is_opn": true,
+            "name": "Summoning Portal",
+            "idx": 1,
+            "drm": "re_tutorial/gacha_01/001"
+        },
+        {
+            "ctgr": 0,
+            "is_opn": true,
+            "name": "Pandemonium",
+            "idx": 2,
+            "drm": "re_tutorial/buildup_01/001"
+        },
+        {
+            "ctgr": 0,
+            "is_opn": false,
+            "name": "Store",
+            "idx": 3,
+            "drm": "re_tutorial/shop_01/001"
+        },
+        {
+            "ctgr": 0,
+            "is_opn": false,
+            "name": "Aura Gate 1",
+            "idx": 4,
+            "drm": "re_tutorial/gd_01/001"
+        },
+        {
+            "ctgr": 0,
+            "is_opn": false,
+            "name": "Aura Gate 2",
+            "idx": 4,
+            "drm": "re_tutorial/gd_p2_01/001"
+        },
+        {
+            "ctgr": 0,
+            "is_opn": false,
+            "name": "Bureau of Divination",
+            "idx": 5,
+            "drm": "re_tutorial/d2mode_equip_01/001"
+        },
+        {
+            "ctgr": 0,
+            "is_opn": false,
+            "name": "Alter-World",
+            "idx": 5,
+            "drm": "re_tutorial/d2mode_01/001"
+        },
+        {
+            "ctgr": 0,
+            "is_opn": false,
+            "name": "Battle Tower",
+            "idx": 5,
+            "drm": "re_tutorial/d2mode_pvp_entry_01/001"
+        },
+        {
+            "ctgr": 0,
+            "is_opn": false,
+            "name": "Tokyo Abyss",
+            "idx": 5,
+            "drm": "re_tutorial/d2mode_dungeon_top/001"
+        }
+    ],
+    "res_code": 0,
+    "client_wait": 0
+}

@@ -1,0 +1,1448 @@
+{
+    "chapters": [
+        {
+            "sub": " Akihabara",
+            "img": "prologue",
+            "name": "Prologue",
+            "id": 0
+        },
+        {
+            "sub": " Akihabara",
+            "img": "00000000",
+            "name": "Chapter 1",
+            "id": 0
+        },
+        {
+            "sub": " Shinjuku",
+            "img": "00000001",
+            "name": "Chapter 2",
+            "id": 0
+        },
+        {
+            "sub": " Kudanshita",
+            "img": "00000002",
+            "name": "Chapter 3",
+            "id": 0
+        },
+        {
+            "sub": " Shibuya",
+            "img": "00000003",
+            "name": "Chapter 4",
+            "id": 0
+        },
+        {
+            "sub": " Ikebukuro",
+            "img": "00000004",
+            "name": "Chapter 5",
+            "id": 0
+        },
+        {
+            "sub": " Akihabara Hideout",
+            "img": "00000005",
+            "name": "Chapter 6",
+            "id": 0
+        },
+        {
+            "sub": " Odaiba",
+            "img": "00000006",
+            "name": "Ch. 7 Normal",
+            "id": 0
+        },
+        {
+            "sub": " Odaiba Alternate",
+            "img": "00000007",
+            "name": "Ch. 7 Alternate",
+            "id": 0
+        }
+    ],
+    "list": [
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Prologue",
+            "idx": 0,
+            "drm": "re_tutorial/newgame_01/001"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1 Prolog",
+            "idx": 1,
+            "drm": "story/capter_01/000_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-1A",
+            "idx": 1,
+            "drm": "story/capter_01/001_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-1B",
+            "idx": 1,
+            "drm": "story/capter_01/001_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-2A",
+            "idx": 1,
+            "drm": "story/capter_01/002_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-2B",
+            "idx": 1,
+            "drm": "story/capter_01/002_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-3",
+            "idx": 1,
+            "drm": "story/capter_01/003_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-4",
+            "idx": 1,
+            "drm": "story/capter_01/004_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-5",
+            "idx": 1,
+            "drm": "story/capter_01/005_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-6A",
+            "idx": 1,
+            "drm": "story/capter_01/006_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-6B",
+            "idx": 1,
+            "drm": "story/capter_01/006_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-7",
+            "idx": 1,
+            "drm": "story/capter_01/007_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-8",
+            "idx": 1,
+            "drm": "story/capter_01/008_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-9",
+            "idx": 1,
+            "drm": "story/capter_01/009_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-10",
+            "idx": 1,
+            "drm": "story/capter_01/010_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-11A",
+            "idx": 1,
+            "drm": "story/capter_01/011_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-11B",
+            "idx": 1,
+            "drm": "story/capter_01/011_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-12A",
+            "idx": 1,
+            "drm": "story/capter_01/012_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1-12B",
+            "idx": 1,
+            "drm": "story/capter_01/012_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 1 Epilogue",
+            "idx": 1,
+            "drm": "story/capter_01/100_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2 Prologue",
+            "idx": 2,
+            "drm": "story/capter_02/000_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-1A",
+            "idx": 2,
+            "drm": "story/capter_02/001_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-1B",
+            "idx": 2,
+            "drm": "story/capter_02/001_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-2A",
+            "idx": 2,
+            "drm": "story/capter_02/002_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-2B",
+            "idx": 2,
+            "drm": "story/capter_02/002_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-3A",
+            "idx": 2,
+            "drm": "story/capter_02/003_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-3B",
+            "idx": 2,
+            "drm": "story/capter_02/003_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-4A",
+            "idx": 2,
+            "drm": "story/capter_02/004_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-4B",
+            "idx": 2,
+            "drm": "story/capter_02/004_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-5A",
+            "idx": 2,
+            "drm": "story/capter_02/005_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-5B",
+            "idx": 2,
+            "drm": "story/capter_02/005_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-6A",
+            "idx": 2,
+            "drm": "story/capter_02/006_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-6B",
+            "idx": 2,
+            "drm": "story/capter_02/006_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-7A",
+            "idx": 2,
+            "drm": "story/capter_02/007_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-7B",
+            "idx": 2,
+            "drm": "story/capter_02/007_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-8A",
+            "idx": 2,
+            "drm": "story/capter_02/008_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-8B",
+            "idx": 2,
+            "drm": "story/capter_02/008_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-9A",
+            "idx": 2,
+            "drm": "story/capter_02/009_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-9B",
+            "idx": 2,
+            "drm": "story/capter_02/009_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-10A",
+            "idx": 2,
+            "drm": "story/capter_02/010_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-10B",
+            "idx": 2,
+            "drm": "story/capter_02/010_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-11A",
+            "idx": 2,
+            "drm": "story/capter_02/011_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-11B",
+            "idx": 2,
+            "drm": "story/capter_02/011_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-12A",
+            "idx": 2,
+            "drm": "story/capter_02/012_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-12B",
+            "idx": 2,
+            "drm": "story/capter_02/012_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-13A",
+            "idx": 2,
+            "drm": "story/capter_02/013_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-13B",
+            "idx": 2,
+            "drm": "story/capter_02/013_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-14A",
+            "idx": 2,
+            "drm": "story/capter_02/014_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2-14B",
+            "idx": 2,
+            "drm": "story/capter_02/014_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 2 Epilogue",
+            "idx": 2,
+            "drm": "story/capter_02/100_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3 Prologue",
+            "idx": 3,
+            "drm": "story/capter_03/000_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-1A",
+            "idx": 3,
+            "drm": "story/capter_03/001_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-1B",
+            "idx": 3,
+            "drm": "story/capter_03/001_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-2",
+            "idx": 3,
+            "drm": "story/capter_03/002_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-3",
+            "idx": 3,
+            "drm": "story/capter_03/003_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-4",
+            "idx": 3,
+            "drm": "story/capter_03/004_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-5",
+            "idx": 3,
+            "drm": "story/capter_03/005_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-6",
+            "idx": 3,
+            "drm": "story/capter_03/006_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-7",
+            "idx": 3,
+            "drm": "story/capter_03/007_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-8",
+            "idx": 3,
+            "drm": "story/capter_03/008_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-9",
+            "idx": 3,
+            "drm": "story/capter_03/009_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-10",
+            "idx": 3,
+            "drm": "story/capter_03/010_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-11",
+            "idx": 3,
+            "drm": "story/capter_03/011_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-12",
+            "idx": 3,
+            "drm": "story/capter_03/012_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-13",
+            "idx": 3,
+            "drm": "story/capter_03/013_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-14",
+            "idx": 3,
+            "drm": "story/capter_03/014_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-15A",
+            "idx": 3,
+            "drm": "story/capter_03/015_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-15B",
+            "idx": 3,
+            "drm": "story/capter_03/015_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-16",
+            "idx": 3,
+            "drm": "story/capter_03/016_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-17A",
+            "idx": 3,
+            "drm": "story/capter_03/017_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3-17B",
+            "idx": 3,
+            "drm": "story/capter_03/017_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 3 Epilogue",
+            "idx": 3,
+            "drm": "story/capter_03/100_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4 Prologue",
+            "idx": 4,
+            "drm": "story/capter_04/000_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-1A",
+            "idx": 4,
+            "drm": "story/capter_04/001_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-1B",
+            "idx": 4,
+            "drm": "story/capter_04/001_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-2A",
+            "idx": 4,
+            "drm": "story/capter_04/002_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-2B",
+            "idx": 4,
+            "drm": "story/capter_04/002_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-3A",
+            "idx": 4,
+            "drm": "story/capter_04/003_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-3B",
+            "idx": 4,
+            "drm": "story/capter_04/003_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-4A",
+            "idx": 4,
+            "drm": "story/capter_04/004_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-4B",
+            "idx": 4,
+            "drm": "story/capter_04/004_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-5A",
+            "idx": 4,
+            "drm": "story/capter_04/005_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-5B",
+            "idx": 4,
+            "drm": "story/capter_04/005_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-6A",
+            "idx": 4,
+            "drm": "story/capter_04/006_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-6B",
+            "idx": 4,
+            "drm": "story/capter_04/006_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-7A",
+            "idx": 4,
+            "drm": "story/capter_04/007_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-7B",
+            "idx": 4,
+            "drm": "story/capter_04/007_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-8A",
+            "idx": 4,
+            "drm": "story/capter_04/008_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-8B",
+            "idx": 4,
+            "drm": "story/capter_04/008_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-9A",
+            "idx": 4,
+            "drm": "story/capter_04/009_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-9B",
+            "idx": 4,
+            "drm": "story/capter_04/009_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-10A",
+            "idx": 4,
+            "drm": "story/capter_04/010_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-10B",
+            "idx": 4,
+            "drm": "story/capter_04/010_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-11A",
+            "idx": 4,
+            "drm": "story/capter_04/011_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-11B",
+            "idx": 4,
+            "drm": "story/capter_04/011_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-12A",
+            "idx": 4,
+            "drm": "story/capter_04/012_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-12B",
+            "idx": 4,
+            "drm": "story/capter_04/012_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-13A",
+            "idx": 4,
+            "drm": "story/capter_04/013_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-13B",
+            "idx": 4,
+            "drm": "story/capter_04/013_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-14A",
+            "idx": 4,
+            "drm": "story/capter_04/014_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-14B",
+            "idx": 4,
+            "drm": "story/capter_04/014_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-15",
+            "idx": 4,
+            "drm": "story/capter_04/015_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-16A",
+            "idx": 4,
+            "drm": "story/capter_04/016_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4-16B",
+            "idx": 4,
+            "drm": "story/capter_04/016_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 4 Epilogue",
+            "idx": 4,
+            "drm": "story/capter_04/100_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5 Prologue",
+            "idx": 5,
+            "drm": "story/capter_05/000_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-1A",
+            "idx": 5,
+            "drm": "story/capter_05/001_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-1B",
+            "idx": 5,
+            "drm": "story/capter_05/001_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-2",
+            "idx": 5,
+            "drm": "story/capter_05/002_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-3",
+            "idx": 5,
+            "drm": "story/capter_05/003_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-4",
+            "idx": 5,
+            "drm": "story/capter_05/004_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-5",
+            "idx": 5,
+            "drm": "story/capter_05/005_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-6",
+            "idx": 5,
+            "drm": "story/capter_05/006_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-7",
+            "idx": 5,
+            "drm": "story/capter_05/007_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-8",
+            "idx": 5,
+            "drm": "story/capter_05/008_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-9",
+            "idx": 5,
+            "drm": "story/capter_05/009_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-10",
+            "idx": 5,
+            "drm": "story/capter_05/010_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-11A",
+            "idx": 5,
+            "drm": "story/capter_05/011_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-11B",
+            "idx": 5,
+            "drm": "story/capter_05/011_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-12",
+            "idx": 5,
+            "drm": "story/capter_05/012_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-13",
+            "idx": 5,
+            "drm": "story/capter_05/013_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-14",
+            "idx": 5,
+            "drm": "story/capter_05/014_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-15",
+            "idx": 5,
+            "drm": "story/capter_05/015_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-16A",
+            "idx": 5,
+            "drm": "story/capter_05/016_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5-16B",
+            "idx": 5,
+            "drm": "story/capter_05/016_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 5 Epilogue",
+            "idx": 5,
+            "drm": "story/capter_05/100_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6 Prologue",
+            "idx": 6,
+            "drm": "story/capter_06/000_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-1A",
+            "idx": 6,
+            "drm": "story/capter_06/001_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-1B",
+            "idx": 6,
+            "drm": "story/capter_06/001_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-2A",
+            "idx": 6,
+            "drm": "story/capter_06/002_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-2B",
+            "idx": 6,
+            "drm": "story/capter_06/002_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-3A",
+            "idx": 6,
+            "drm": "story/capter_06/003_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-3B",
+            "idx": 6,
+            "drm": "story/capter_06/003_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-4A",
+            "idx": 6,
+            "drm": "story/capter_06/004_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-4B",
+            "idx": 6,
+            "drm": "story/capter_06/004_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-5A",
+            "idx": 6,
+            "drm": "story/capter_06/005_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-5B",
+            "idx": 6,
+            "drm": "story/capter_06/005_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-6A",
+            "idx": 6,
+            "drm": "story/capter_06/006_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-6B",
+            "idx": 6,
+            "drm": "story/capter_06/006_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-7A",
+            "idx": 6,
+            "drm": "story/capter_06/007_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-7B",
+            "idx": 6,
+            "drm": "story/capter_06/007_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-8",
+            "idx": 6,
+            "drm": "story/capter_06/008_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-9",
+            "idx": 6,
+            "drm": "story/capter_06/009_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-10A",
+            "idx": 6,
+            "drm": "story/capter_06/010_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-10B",
+            "idx": 6,
+            "drm": "story/capter_06/010_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-11A",
+            "idx": 6,
+            "drm": "story/capter_06/011_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-11B",
+            "idx": 6,
+            "drm": "story/capter_06/011_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-12",
+            "idx": 6,
+            "drm": "story/capter_06/012_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-13",
+            "idx": 6,
+            "drm": "story/capter_06/013_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-14A",
+            "idx": 6,
+            "drm": "story/capter_06/014_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-14B",
+            "idx": 6,
+            "drm": "story/capter_06/014_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-15A",
+            "idx": 6,
+            "drm": "story/capter_06/015_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6-15B",
+            "idx": 6,
+            "drm": "story/capter_06/015_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Chapter 6 Epilogue",
+            "idx": 6,
+            "drm": "story/capter_06/100_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 6 Epilogue Alternate",
+            "idx": 6,
+            "drm": "story/capter_06/100_qb_b"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7 Normal Prologue ",
+            "idx": 7,
+            "drm": "story/capter_07/000_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-1 Normal",
+            "idx": 7,
+            "drm": "story/capter_07/001_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-2 Normal",
+            "idx": 7,
+            "drm": "story/capter_07/002_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-3 Normal",
+            "idx": 7,
+            "drm": "story/capter_07/003_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-4 Normal",
+            "idx": 7,
+            "drm": "story/capter_07/004_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-5 Normal",
+            "idx": 7,
+            "drm": "story/capter_07/005_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-6 Normal",
+            "idx": 7,
+            "drm": "story/capter_07/006_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-7 Normal",
+            "idx": 7,
+            "drm": "story/capter_07/007_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-8 Normal",
+            "idx": 7,
+            "drm": "story/capter_07/008_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-9 Normal",
+            "idx": 7,
+            "drm": "story/capter_07/009_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-10 Normal",
+            "idx": 7,
+            "drm": "story/capter_07/010_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-11 Normal",
+            "idx": 7,
+            "drm": "story/capter_07/011_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-12 Normal",
+            "idx": 7,
+            "drm": "story/capter_07/012_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-13 Normal",
+            "idx": 7,
+            "drm": "story/capter_07/013_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-14 Normal A",
+            "idx": 7,
+            "drm": "story/capter_07/014_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-14 Normal B",
+            "idx": 7,
+            "drm": "story/capter_07/014_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-15 Normal",
+            "idx": 7,
+            "drm": "story/capter_07/015_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-16 Normal A",
+            "idx": 7,
+            "drm": "story/capter_07/016_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-16 Normal B",
+            "idx": 7,
+            "drm": "story/capter_07/016_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7 Normal Epilogue",
+            "idx": 7,
+            "drm": "story/capter_07/100_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7 Alternate Prologue ",
+            "idx": 8,
+            "drm": "story/capter_07b/000_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-1 Alternate A",
+            "idx": 8,
+            "drm": "story/capter_07b/001_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-1 Alternate B",
+            "idx": 8,
+            "drm": "story/capter_07b/001_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-2 Alternate A",
+            "idx": 8,
+            "drm": "story/capter_07b/002_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-2 Alternate B",
+            "idx": 8,
+            "drm": "story/capter_07b/002_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-3 Alternate A",
+            "idx": 8,
+            "drm": "story/capter_07b/003_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-3 Alternate B",
+            "idx": 8,
+            "drm": "story/capter_07b/003_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-4 Alternate",
+            "idx": 8,
+            "drm": "story/capter_07b/004_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-5 Alternate A",
+            "idx": 8,
+            "drm": "story/capter_07b/005_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-5 Alternate B",
+            "idx": 8,
+            "drm": "story/capter_07b/005_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-6 Alternate A",
+            "idx": 8,
+            "drm": "story/capter_07b/006_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-6 Alternate B",
+            "idx": 8,
+            "drm": "story/capter_07b/006_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-7 Alternate A",
+            "idx": 8,
+            "drm": "story/capter_07b/007_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-7 Alternate B",
+            "idx": 8,
+            "drm": "story/capter_07b/007_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-8 Alternate",
+            "idx": 8,
+            "drm": "story/capter_07b/008_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-9 Alternate A",
+            "idx": 8,
+            "drm": "story/capter_07b/009_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-9 Alternate B",
+            "idx": 8,
+            "drm": "story/capter_07b/009_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-10 Alternate",
+            "idx": 8,
+            "drm": "story/capter_07b/010_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-11 Alternate",
+            "idx": 8,
+            "drm": "story/capter_07b/011_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-12 Alternate",
+            "idx": 8,
+            "drm": "story/capter_07b/012_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-13 Alternate A",
+            "idx": 8,
+            "drm": "story/capter_07b/013_qb"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7-13 Alternate B",
+            "idx": 8,
+            "drm": "story/capter_07b/013_qa"
+        },
+        {
+            "ctgr": 1,
+            "is_opn": true,
+            "name": "Ch. 7 Alternate Epilogue",
+            "idx": 8,
+            "drm": "story/capter_07b/100_qb"
+        }
+    ],
+    "res_code": 0,
+    "client_wait": 0
+}

@@ -1,0 +1,808 @@
+{
+    "chapters": [
+        {
+            "sub": "",
+            "img": "",
+            "name": "Main character",
+            "id": 1
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Megakin",
+            "id": 3
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Templar Dragon",
+            "id": 4
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Chalk Eater",
+            "id": 5
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Eileen",
+            "id": 6
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Kangaroo Boxer",
+            "id": 7
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Shionyan",
+            "id": 8
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Meat Balloon",
+            "id": 9
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Seiran Saikawa",
+            "id": 10
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Xana",
+            "id": 12
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Carbon Black",
+            "id": 11
+        },
+        {
+            "sub": "",
+            "img": "",
+            "name": "Honey Sweet",
+            "id": 13
+        }
+    ],
+    "list": [
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Prologue",
+            "idx": 0,
+            "drm": "summoner/hero_01/000_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1A",
+            "idx": 0,
+            "drm": "summoner/hero_01/001_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1B",
+            "idx": 0,
+            "drm": "summoner/hero_01/001_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2A",
+            "idx": 0,
+            "drm": "summoner/hero_01/002_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2B",
+            "idx": 0,
+            "drm": "summoner/hero_01/002_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3A",
+            "idx": 0,
+            "drm": "summoner/hero_01/003_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3B",
+            "idx": 0,
+            "drm": "summoner/hero_01/003_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 4A",
+            "idx": 0,
+            "drm": "summoner/hero_01/004_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 4B",
+            "idx": 0,
+            "drm": "summoner/hero_01/004_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 5A",
+            "idx": 0,
+            "drm": "summoner/hero_01/005_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 5B",
+            "idx": 0,
+            "drm": "summoner/hero_01/005_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 6A",
+            "idx": 0,
+            "drm": "summoner/hero_01/006_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 6B",
+            "idx": 0,
+            "drm": "summoner/hero_01/006_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 7A",
+            "idx": 0,
+            "drm": "summoner/hero_01/007_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 7B",
+            "idx": 0,
+            "drm": "summoner/hero_01/007_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Epilogue",
+            "idx": 0,
+            "drm": "summoner/hero_01/100_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Prologue",
+            "idx": 1,
+            "drm": "summoner/taro_01/000_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1A",
+            "idx": 1,
+            "drm": "summoner/taro_01/001_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1B",
+            "idx": 1,
+            "drm": "summoner/taro_01/001_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2A",
+            "idx": 1,
+            "drm": "summoner/taro_01/002_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2B",
+            "idx": 1,
+            "drm": "summoner/taro_01/002_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3A",
+            "idx": 1,
+            "drm": "summoner/taro_01/003_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3B",
+            "idx": 1,
+            "drm": "summoner/taro_01/003_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Epilogue",
+            "idx": 1,
+            "drm": "summoner/taro_01/100_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Prologue",
+            "idx": 2,
+            "drm": "summoner/rika_01/000_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1A",
+            "idx": 2,
+            "drm": "summoner/rika_01/001_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1B",
+            "idx": 2,
+            "drm": "summoner/rika_01/001_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2A",
+            "idx": 2,
+            "drm": "summoner/rika_01/002_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2B",
+            "idx": 2,
+            "drm": "summoner/rika_01/002_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3A",
+            "idx": 2,
+            "drm": "summoner/rika_01/003_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3B",
+            "idx": 2,
+            "drm": "summoner/rika_01/003_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Epilogue",
+            "idx": 2,
+            "drm": "summoner/rika_01/100_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Prologue",
+            "idx": 3,
+            "drm": "summoner/son_01/000_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1A",
+            "idx": 3,
+            "drm": "summoner/son_01/001_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1B",
+            "idx": 3,
+            "drm": "summoner/son_01/001_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2A",
+            "idx": 3,
+            "drm": "summoner/son_01/002_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2B",
+            "idx": 3,
+            "drm": "summoner/son_01/002_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3A",
+            "idx": 3,
+            "drm": "summoner/son_01/003_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3B",
+            "idx": 3,
+            "drm": "summoner/son_01/003_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Epilogue",
+            "idx": 3,
+            "drm": "summoner/son_01/100_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Prologue",
+            "idx": 4,
+            "drm": "summoner/ririn_01/000_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1A",
+            "idx": 4,
+            "drm": "summoner/ririn_01/001_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1B",
+            "idx": 4,
+            "drm": "summoner/ririn_01/001_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2A",
+            "idx": 4,
+            "drm": "summoner/ririn_01/002_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2B",
+            "idx": 4,
+            "drm": "summoner/ririn_01/002_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3A",
+            "idx": 4,
+            "drm": "summoner/ririn_01/003_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3B",
+            "idx": 4,
+            "drm": "summoner/ririn_01/003_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Epilogue",
+            "idx": 4,
+            "drm": "summoner/ririn_01/100_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Prologue",
+            "idx": 5,
+            "drm": "summoner/tsai_01/000_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1A",
+            "idx": 5,
+            "drm": "summoner/tsai_01/001_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1B",
+            "idx": 5,
+            "drm": "summoner/tsai_01/001_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2A",
+            "idx": 5,
+            "drm": "summoner/tsai_01/002_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2B",
+            "idx": 5,
+            "drm": "summoner/tsai_01/002_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3A",
+            "idx": 5,
+            "drm": "summoner/tsai_01/003_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3B",
+            "idx": 5,
+            "drm": "summoner/tsai_01/003_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Epilogue",
+            "idx": 5,
+            "drm": "summoner/tsai_01/100_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Prologue",
+            "idx": 6,
+            "drm": "summoner/siori_01/000_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1A",
+            "idx": 6,
+            "drm": "summoner/siori_01/001_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1B",
+            "idx": 6,
+            "drm": "summoner/siori_01/001_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2A",
+            "idx": 6,
+            "drm": "summoner/siori_01/002_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2B",
+            "idx": 6,
+            "drm": "summoner/siori_01/002_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3A",
+            "idx": 6,
+            "drm": "summoner/siori_01/003_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3B",
+            "idx": 6,
+            "drm": "summoner/siori_01/003_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Epilogue",
+            "idx": 6,
+            "drm": "summoner/siori_01/100_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Prologue",
+            "idx": 7,
+            "drm": "summoner/gakuto_01/000_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1A",
+            "idx": 7,
+            "drm": "summoner/gakuto_01/001_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1B",
+            "idx": 7,
+            "drm": "summoner/gakuto_01/001_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2A",
+            "idx": 7,
+            "drm": "summoner/gakuto_01/002_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2B",
+            "idx": 7,
+            "drm": "summoner/gakuto_01/002_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3A",
+            "idx": 7,
+            "drm": "summoner/gakuto_01/003_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3B",
+            "idx": 7,
+            "drm": "summoner/gakuto_01/003_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Epilogue",
+            "idx": 7,
+            "drm": "summoner/gakuto_01/100_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Prologue",
+            "idx": 8,
+            "drm": "summoner/seiran_01/000_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Part 1A",
+            "idx": 8,
+            "drm": "summoner/seiran_01/001_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Part 1B",
+            "idx": 8,
+            "drm": "summoner/seiran_01/001_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Part 2A",
+            "idx": 8,
+            "drm": "summoner/seiran_01/002_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Part 2B",
+            "idx": 8,
+            "drm": "summoner/seiran_01/002_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Part 3A",
+            "idx": 8,
+            "drm": "summoner/seiran_01/003_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Part 3B",
+            "idx": 8,
+            "drm": "summoner/seiran_01/003_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Epilogue",
+            "idx": 8,
+            "drm": "summoner/seiran_01/100_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Prologue",
+            "idx": 9,
+            "drm": "summoner/xana_01/000_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Part 1A",
+            "idx": 9,
+            "drm": "summoner/xana_01/001_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Part 1B",
+            "idx": 9,
+            "drm": "summoner/xana_01/001_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Part 2A",
+            "idx": 9,
+            "drm": "summoner/xana_01/002_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Part 2B",
+            "idx": 9,
+            "drm": "summoner/xana_01/002_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Part 3A",
+            "idx": 9,
+            "drm": "summoner/xana_01/003_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Part 3B",
+            "idx": 9,
+            "drm": "summoner/xana_01/003_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": false,
+            "name": "Epilogue",
+            "idx": 9,
+            "drm": "summoner/xana_01/100_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Prologue",
+            "idx": 10,
+            "drm": "summoner/vince_01/000_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1A",
+            "idx": 10,
+            "drm": "summoner/vince_01/001_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1B",
+            "idx": 10,
+            "drm": "summoner/vince_01/001_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2A",
+            "idx": 10,
+            "drm": "summoner/vince_01/002_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2B",
+            "idx": 10,
+            "drm": "summoner/vince_01/002_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3A",
+            "idx": 10,
+            "drm": "summoner/vince_01/003_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3B",
+            "idx": 10,
+            "drm": "summoner/vince_01/003_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Epilogue",
+            "idx": 10,
+            "drm": "summoner/vince_01/100_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Prologue",
+            "idx": 11,
+            "drm": "summoner/honeysweet_01/000_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1A",
+            "idx": 11,
+            "drm": "summoner/honeysweet_01/001_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 1B",
+            "idx": 11,
+            "drm": "summoner/honeysweet_01/001_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2A",
+            "idx": 11,
+            "drm": "summoner/honeysweet_01/002_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 2B",
+            "idx": 11,
+            "drm": "summoner/honeysweet_01/002_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3A",
+            "idx": 11,
+            "drm": "summoner/honeysweet_01/003_qb"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Part 3B",
+            "idx": 11,
+            "drm": "summoner/honeysweet_01/003_qa"
+        },
+        {
+            "ctgr": 3,
+            "is_opn": true,
+            "name": "Epilogue",
+            "idx": 11,
+            "drm": "summoner/honeysweet_01/100_qb"
+        }
+    ],
+    "res_code": 0,
+    "client_wait": 0
+}

@@ -1,0 +1,644 @@
+{
+    "chapters": [
+        {
+            "sub": "Intermission",
+            "img": "00000101",
+            "name": "Intermission Prelude",
+            "id": 0
+        },
+        {
+            "sub": "Intermission",
+            "img": "00000001",
+            "name": "Intermission Ep. 1",
+            "id": 0
+        },
+        {
+            "sub": "Intermission",
+            "img": "00000002",
+            "name": "Intermission Ep. 2",
+            "id": 0
+        },
+        {
+            "sub": "Intermission",
+            "img": "00000003",
+            "name": "Intermission Ep. 3",
+            "id": 0
+        },
+        {
+            "sub": "Intermission",
+            "img": "00000004",
+            "name": "Intermission Ep. 4",
+            "id": 0
+        },
+        {
+            "sub": "Intermission",
+            "img": "00000005",
+            "name": "Intermission Ep. 5",
+            "id": 0
+        },
+        {
+            "sub": "Intermission",
+            "img": "00000006",
+            "name": "Intermission Ep. 6",
+            "id": 0
+        },
+        {
+            "sub": "Intermission",
+            "img": "00000007",
+            "name": "Intermission Epilogue",
+            "id": 0
+        }
+    ],
+    "list": [
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Intermission Prelude",
+            "idx": 0,
+            "drm": "story/inter_00/000_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 1 Prologue",
+            "idx": 1,
+            "drm": "story/inter_01/000_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 1-1A",
+            "idx": 1,
+            "drm": "story/inter_01/001_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 1-1B",
+            "idx": 1,
+            "drm": "story/inter_01/001_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 1-2A",
+            "idx": 1,
+            "drm": "story/inter_01/002_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 1-2B",
+            "idx": 1,
+            "drm": "story/inter_01/002_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 1-3A",
+            "idx": 1,
+            "drm": "story/inter_01/003_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 1-3B",
+            "idx": 1,
+            "drm": "story/inter_01/003_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 1-4A",
+            "idx": 1,
+            "drm": "story/inter_01/004_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 1-4B",
+            "idx": 1,
+            "drm": "story/inter_01/004_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 1-5A",
+            "idx": 1,
+            "drm": "story/inter_01/005_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 1-5B",
+            "idx": 1,
+            "drm": "story/inter_01/005_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 1-6A",
+            "idx": 1,
+            "drm": "story/inter_01/006_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 1-6B",
+            "idx": 1,
+            "drm": "story/inter_01/006_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 1 Epilogue",
+            "idx": 1,
+            "drm": "story/inter_01/100_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 2 Prologue",
+            "idx": 2,
+            "drm": "story/inter_02/000_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 2-1A",
+            "idx": 2,
+            "drm": "story/inter_02/001_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 2-1B",
+            "idx": 2,
+            "drm": "story/inter_02/001_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 2-2A",
+            "idx": 2,
+            "drm": "story/inter_02/002_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 2-2B",
+            "idx": 2,
+            "drm": "story/inter_02/002_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 2-3A",
+            "idx": 2,
+            "drm": "story/inter_02/003_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 2-3B",
+            "idx": 2,
+            "drm": "story/inter_02/003_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 2-4A",
+            "idx": 2,
+            "drm": "story/inter_02/004_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 2-4B",
+            "idx": 2,
+            "drm": "story/inter_02/004_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 2-5A",
+            "idx": 2,
+            "drm": "story/inter_02/005_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 2-5B",
+            "idx": 2,
+            "drm": "story/inter_02/005_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 2-6A",
+            "idx": 2,
+            "drm": "story/inter_02/006_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 2-6B",
+            "idx": 2,
+            "drm": "story/inter_02/006_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 2 Epilogue",
+            "idx": 2,
+            "drm": "story/inter_02/100_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 3 Prologue",
+            "idx": 3,
+            "drm": "story/inter_03/000_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 3-1A",
+            "idx": 3,
+            "drm": "story/inter_03/001_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 3-1B",
+            "idx": 3,
+            "drm": "story/inter_03/001_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 3-2A",
+            "idx": 3,
+            "drm": "story/inter_03/002_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 3-2B",
+            "idx": 3,
+            "drm": "story/inter_03/002_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 3-3A",
+            "idx": 3,
+            "drm": "story/inter_03/003_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 3-3B",
+            "idx": 3,
+            "drm": "story/inter_03/003_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 3-4A",
+            "idx": 3,
+            "drm": "story/inter_03/004_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 3-4B",
+            "idx": 3,
+            "drm": "story/inter_03/004_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 3-5A",
+            "idx": 3,
+            "drm": "story/inter_03/005_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 3-5B",
+            "idx": 3,
+            "drm": "story/inter_03/005_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 3 Epilogue",
+            "idx": 3,
+            "drm": "story/inter_03/100_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 4 Prologue",
+            "idx": 4,
+            "drm": "story/inter_04/000_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 4-1A",
+            "idx": 4,
+            "drm": "story/inter_04/001_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 4-1B",
+            "idx": 4,
+            "drm": "story/inter_04/001_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 4-2A",
+            "idx": 4,
+            "drm": "story/inter_04/002_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 4-2B",
+            "idx": 4,
+            "drm": "story/inter_04/002_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 4-3A",
+            "idx": 4,
+            "drm": "story/inter_04/003_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 4-3B",
+            "idx": 4,
+            "drm": "story/inter_04/003_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 4-4A",
+            "idx": 4,
+            "drm": "story/inter_04/004_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 4-4B",
+            "idx": 4,
+            "drm": "story/inter_04/004_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 4-5A",
+            "idx": 4,
+            "drm": "story/inter_04/005_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 4-5B",
+            "idx": 4,
+            "drm": "story/inter_04/005_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 4-6A",
+            "idx": 4,
+            "drm": "story/inter_04/006_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 4-6B",
+            "idx": 4,
+            "drm": "story/inter_04/006_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 4 Epilogue",
+            "idx": 4,
+            "drm": "story/inter_04/100_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 5 Prologue",
+            "idx": 5,
+            "drm": "story/inter_05/000_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 5-1A",
+            "idx": 5,
+            "drm": "story/inter_05/001_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 5-1B",
+            "idx": 5,
+            "drm": "story/inter_05/001_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 5-2A",
+            "idx": 5,
+            "drm": "story/inter_05/002_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 5-2B",
+            "idx": 5,
+            "drm": "story/inter_05/002_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 5-3A",
+            "idx": 5,
+            "drm": "story/inter_05/003_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 5-3B",
+            "idx": 5,
+            "drm": "story/inter_05/003_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 5-4A",
+            "idx": 5,
+            "drm": "story/inter_05/004_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 5-4B",
+            "idx": 5,
+            "drm": "story/inter_05/004_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 5-5A",
+            "idx": 5,
+            "drm": "story/inter_05/005_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 5-5B",
+            "idx": 5,
+            "drm": "story/inter_05/005_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 5-6A",
+            "idx": 5,
+            "drm": "story/inter_05/006_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 5-6B",
+            "idx": 5,
+            "drm": "story/inter_05/006_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 5 Epilogue",
+            "idx": 5,
+            "drm": "story/inter_05/100_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 6 Prologue",
+            "idx": 6,
+            "drm": "story/inter_06/000_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 6-1A",
+            "idx": 6,
+            "drm": "story/inter_06/001_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 6-1B",
+            "idx": 6,
+            "drm": "story/inter_06/001_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 6-2A",
+            "idx": 6,
+            "drm": "story/inter_06/002_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 6-2B",
+            "idx": 6,
+            "drm": "story/inter_06/002_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 6-3A",
+            "idx": 6,
+            "drm": "story/inter_06/003_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 6-3B",
+            "idx": 6,
+            "drm": "story/inter_06/003_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 6-4A",
+            "idx": 6,
+            "drm": "story/inter_06/004_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 6-4B",
+            "idx": 6,
+            "drm": "story/inter_06/004_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 6-5A",
+            "idx": 6,
+            "drm": "story/inter_06/005_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 6-5B",
+            "idx": 6,
+            "drm": "story/inter_06/005_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 6-6A",
+            "idx": 6,
+            "drm": "story/inter_06/006_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 6-6B",
+            "idx": 6,
+            "drm": "story/inter_06/006_qa"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Episode 6 Epilogue",
+            "idx": 6,
+            "drm": "story/inter_06/100_qb"
+        },
+        {
+            "ctgr": 18,
+            "is_opn": true,
+            "name": "Intermission Epilogue",
+            "idx": 7,
+            "drm": "story/inter_10/000_qb"
+        }
+    ],
+    "res_code": 0,
+    "client_wait": 0
+}
