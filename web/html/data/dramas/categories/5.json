@@ -8938,259 +8938,259 @@
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Prologue",
             "idx": 122,
             "drm": "event/multibattle_202411/pro"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1",
             "idx": 122,
             "drm": "event/multibattle_202411/001"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2",
             "idx": 122,
             "drm": "event/multibattle_202411/002"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3",
             "idx": 122,
             "drm": "event/multibattle_202411/003"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4",
             "idx": 122,
             "drm": "event/multibattle_202411/004"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5",
             "idx": 122,
             "drm": "event/multibattle_202411/005"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Epilogue",
             "idx": 122,
             "drm": "event/multibattle_202411/epi"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Prologue",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/000_qb"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/001_qb"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/001_qa"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/002_qb"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/002_qa"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/003_qb"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 6",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/003_qa"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 7",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/004_qb"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 8",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/004_qa"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 9",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/005_qb"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 10",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/005_qa"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 11",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/006_qb"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 12",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/006_qa"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 13",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/007_qb"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 14",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/007_qa"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 15",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/008_qb"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 16",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/008_qa"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 17",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/009_qb"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 18",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/009_qa"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 19",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/010_qb"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 20",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/010_qa"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 21",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/011_qb"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 22",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/011_qa"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 23",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/012_qb"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 24",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/012_qa"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 25",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/013_qb"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 26",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/013_qa"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 27",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/014_qb"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 28",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/014_qa"
         },
         {
             "ctgr": 14,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Epilogue",
             "idx": 123,
             "drm": "event/fionnmaccumhaill_202501/100_qb"

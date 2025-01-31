@@ -46,490 +46,490 @@
     "list": [
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1A",
             "idx": 0,
             "drm": "story/d2mode_phy/001_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1B",
             "idx": 0,
             "drm": "story/d2mode_phy/001_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2A",
             "idx": 0,
             "drm": "story/d2mode_phy/002_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2B",
             "idx": 0,
             "drm": "story/d2mode_phy/002_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3A",
             "idx": 0,
             "drm": "story/d2mode_phy/003_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3B",
             "idx": 0,
             "drm": "story/d2mode_phy/003_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4A",
             "idx": 0,
             "drm": "story/d2mode_phy/004_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4B",
             "idx": 0,
             "drm": "story/d2mode_phy/004_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5A",
             "idx": 0,
             "drm": "story/d2mode_phy/005_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5B",
             "idx": 0,
             "drm": "story/d2mode_phy/005_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1A",
             "idx": 1,
             "drm": "story/d2mode_fire/001_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1B",
             "idx": 1,
             "drm": "story/d2mode_fire/001_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2A",
             "idx": 1,
             "drm": "story/d2mode_fire/002_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2B",
             "idx": 1,
             "drm": "story/d2mode_fire/002_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3A",
             "idx": 1,
             "drm": "story/d2mode_fire/003_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3B",
             "idx": 1,
             "drm": "story/d2mode_fire/003_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4A",
             "idx": 1,
             "drm": "story/d2mode_fire/004_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4B",
             "idx": 1,
             "drm": "story/d2mode_fire/004_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5A",
             "idx": 1,
             "drm": "story/d2mode_fire/005_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5B",
             "idx": 1,
             "drm": "story/d2mode_fire/005_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1A",
             "idx": 2,
             "drm": "story/d2mode_ice/001_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1B",
             "idx": 2,
             "drm": "story/d2mode_ice/001_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2A",
             "idx": 2,
             "drm": "story/d2mode_ice/002_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2B",
             "idx": 2,
             "drm": "story/d2mode_ice/002_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3A",
             "idx": 2,
             "drm": "story/d2mode_ice/003_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3B",
             "idx": 2,
             "drm": "story/d2mode_ice/003_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4A",
             "idx": 2,
             "drm": "story/d2mode_ice/004_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4B",
             "idx": 2,
             "drm": "story/d2mode_ice/004_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5A",
             "idx": 2,
             "drm": "story/d2mode_ice/005_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5B",
             "idx": 2,
             "drm": "story/d2mode_ice/005_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1A",
             "idx": 3,
             "drm": "story/d2mode_force/001_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1B",
             "idx": 3,
             "drm": "story/d2mode_force/001_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2A",
             "idx": 3,
             "drm": "story/d2mode_force/002_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2B",
             "idx": 3,
             "drm": "story/d2mode_force/002_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3A",
             "idx": 3,
             "drm": "story/d2mode_force/003_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3B",
             "idx": 3,
             "drm": "story/d2mode_force/003_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4A",
             "idx": 3,
             "drm": "story/d2mode_force/004_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4B",
             "idx": 3,
             "drm": "story/d2mode_force/004_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5A",
             "idx": 3,
             "drm": "story/d2mode_force/005_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5B",
             "idx": 3,
             "drm": "story/d2mode_force/005_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1A",
             "idx": 4,
             "drm": "story/d2mode_elec/001_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1B",
             "idx": 4,
             "drm": "story/d2mode_elec/001_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2A",
             "idx": 4,
             "drm": "story/d2mode_elec/002_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2B",
             "idx": 4,
             "drm": "story/d2mode_elec/002_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3A",
             "idx": 4,
             "drm": "story/d2mode_elec/003_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3B",
             "idx": 4,
             "drm": "story/d2mode_elec/003_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4A",
             "idx": 4,
             "drm": "story/d2mode_elec/004_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4B",
             "idx": 4,
             "drm": "story/d2mode_elec/004_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5A",
             "idx": 4,
             "drm": "story/d2mode_elec/005_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5B",
             "idx": 4,
             "drm": "story/d2mode_elec/005_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1A",
             "idx": 5,
             "drm": "story/d2mode_light/001_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1B",
             "idx": 5,
             "drm": "story/d2mode_light/001_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2A",
             "idx": 5,
             "drm": "story/d2mode_light/002_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2B",
             "idx": 5,
             "drm": "story/d2mode_light/002_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3A",
             "idx": 5,
             "drm": "story/d2mode_light/003_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3B",
             "idx": 5,
             "drm": "story/d2mode_light/003_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4A",
             "idx": 5,
             "drm": "story/d2mode_light/004_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4B",
             "idx": 5,
             "drm": "story/d2mode_light/004_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5A",
             "idx": 5,
             "drm": "story/d2mode_light/005_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5B",
             "idx": 5,
             "drm": "story/d2mode_light/005_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1A",
             "idx": 6,
             "drm": "story/d2mode_dark/001_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 1B",
             "idx": 6,
             "drm": "story/d2mode_dark/001_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2A",
             "idx": 6,
             "drm": "story/d2mode_dark/002_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 2B",
             "idx": 6,
             "drm": "story/d2mode_dark/002_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3A",
             "idx": 6,
             "drm": "story/d2mode_dark/003_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 3B",
             "idx": 6,
             "drm": "story/d2mode_dark/003_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4A",
             "idx": 6,
             "drm": "story/d2mode_dark/004_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 4B",
             "idx": 6,
             "drm": "story/d2mode_dark/004_qa"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5A",
             "idx": 6,
             "drm": "story/d2mode_dark/005_qb"
         },
         {
             "ctgr": 24,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Part 5B",
             "idx": 6,
             "drm": "story/d2mode_dark/005_qa"

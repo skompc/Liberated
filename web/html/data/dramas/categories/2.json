@@ -16,1134 +16,1134 @@
     "list": [
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "1F (A)",
             "idx": 0,
             "drm": "ag/ag1_20/002_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "1F (B)",
             "idx": 0,
             "drm": "ag/ag1_20/002_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "3F",
             "idx": 0,
             "drm": "ag/ag1_20/004_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "5F",
             "idx": 0,
             "drm": "ag/ag1_20/005_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "6F",
             "idx": 0,
             "drm": "ag/ag1_20/006_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "7F",
             "idx": 0,
             "drm": "ag/ag1_20/007_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "9F (A)",
             "idx": 0,
             "drm": "ag/ag1_20/009_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "9F (B)",
             "idx": 0,
             "drm": "ag/ag1_20/009_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "10F (A)",
             "idx": 0,
             "drm": "ag/ag1_20/010_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "10F (B)",
             "idx": 0,
             "drm": "ag/ag1_20/010_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "10F (C)",
             "idx": 0,
             "drm": "ag/ag1_20/010_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "11F",
             "idx": 0,
             "drm": "ag/ag1_20/011_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "13F",
             "idx": 0,
             "drm": "ag/ag1_20/013_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "14F",
             "idx": 0,
             "drm": "ag/ag1_20/014_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "15F (A)",
             "idx": 0,
             "drm": "ag/ag1_20/015_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "15F (B)",
             "idx": 0,
             "drm": "ag/ag1_20/015_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "17F (A)",
             "idx": 0,
             "drm": "ag/ag1_20/017_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "17F (B)",
             "idx": 0,
             "drm": "ag/ag1_20/017_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "18F",
             "idx": 0,
             "drm": "ag/ag1_20/018_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "20F (A)",
             "idx": 0,
             "drm": "ag/ag1_20/020_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "20F (B)",
             "idx": 0,
             "drm": "ag/ag1_20/020_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "20F (C)",
             "idx": 0,
             "drm": "ag/ag1_20/020_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "21F",
             "idx": 0,
             "drm": "ag/ag21_40/021_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "23F",
             "idx": 0,
             "drm": "ag/ag21_40/023_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "25F",
             "idx": 0,
             "drm": "ag/ag21_40/025_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "26F",
             "idx": 0,
             "drm": "ag/ag21_40/026_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "29F",
             "idx": 0,
             "drm": "ag/ag21_40/029_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "30F (A)",
             "idx": 0,
             "drm": "ag/ag21_40/030_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "30F (B)",
             "idx": 0,
             "drm": "ag/ag21_40/030_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "30F (C)",
             "idx": 0,
             "drm": "ag/ag21_40/030_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "31F",
             "idx": 0,
             "drm": "ag/ag21_40/031_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "33F",
             "idx": 0,
             "drm": "ag/ag21_40/033_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "35F",
             "idx": 0,
             "drm": "ag/ag21_40/035_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "37F",
             "idx": 0,
             "drm": "ag/ag21_40/037_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "38F",
             "idx": 0,
             "drm": "ag/ag21_40/038_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "40F (A)",
             "idx": 0,
             "drm": "ag/ag21_40/040_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "40F (B)",
             "idx": 0,
             "drm": "ag/ag21_40/040_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "40F (C)",
             "idx": 0,
             "drm": "ag/ag21_40/040_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "41F",
             "idx": 0,
             "drm": "ag/ag41_50/041_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "43F",
             "idx": 0,
             "drm": "ag/ag41_50/043_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "45F",
             "idx": 0,
             "drm": "ag/ag41_50/045_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "46F",
             "idx": 0,
             "drm": "ag/ag41_50/046_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "47F",
             "idx": 0,
             "drm": "ag/ag41_50/047_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "48F",
             "idx": 0,
             "drm": "ag/ag41_50/048_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "49F",
             "idx": 0,
             "drm": "ag/ag41_50/049_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "50F (A)",
             "idx": 0,
             "drm": "ag/ag41_50/050_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "50F (B)",
             "idx": 0,
             "drm": "ag/ag41_50/050_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "50F (C)",
             "idx": 0,
             "drm": "ag/ag41_50/050_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "1F (A)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/001_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "1F (B)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/001_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "1F (C)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/001_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "2F (A)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/002_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "2F (B)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/002_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "2F (C)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/002_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "3F (A)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/003_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "3F (B)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/003_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "3F (C)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/003_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "4F (A)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/004_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "4F (B)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/004_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "4F (C)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/004_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "5F (A)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/005_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "5F (B)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/005_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "5F (C)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/005_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "6F",
             "idx": 1,
             "drm": "aura2/ag02_1_10/006_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "7F",
             "idx": 1,
             "drm": "aura2/ag02_1_10/007_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "8F (A)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/008_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "8F (B)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/008_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "8F (C)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/008_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "9F",
             "idx": 1,
             "drm": "aura2/ag02_1_10/009_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "10F (A)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/010_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "10F (B)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/010_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "10F (C)",
             "idx": 1,
             "drm": "aura2/ag02_1_10/010_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "11F (A)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/011_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "11F (B)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/011_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "11F (C)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/011_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "12F (A)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/012_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "12F (B)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/012_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "12F (C)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/012_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "13F (A)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/013_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "13F (B)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/013_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "13F (C)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/013_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "14F (A)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/014_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "14F (B)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/014_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "14F (C)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/014_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "16F (A)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/016_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "16F (B)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/016_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "16F (C)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/016_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "18F (A)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/018_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "18F (B)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/018_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "19F (A)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/019_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "19F (B)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/019_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "19F (C)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/019_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "20F (A)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/020_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "20F (B)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/020_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "20F (C)",
             "idx": 1,
             "drm": "aura2/ag02_11_20/020_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "21F (A)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/021_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "21F (B)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/021_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "21F (C)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/021_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "22F (A)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/022_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "22F (B)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/022_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "23F (A)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/023_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "23F (B)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/023_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "23F (C)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/023_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "24F (A)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/024_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "24F (B)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/024_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "26F (A)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/026_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "26F (B)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/026_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "26F (C)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/026_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "28F (A)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/028_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "28F (B)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/028_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "29F (A)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/029_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "29F (B)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/029_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "30F (A)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/030_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "30F (B)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/030_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "30F (C)",
             "idx": 1,
             "drm": "aura2/ag02_21_30/030_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "31F (A)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/031_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "31F (B)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/031_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "31F (C)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/031_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "32F (A)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/032_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "32F (B)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/032_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "33F",
             "idx": 1,
             "drm": "aura2/ag02_31_40/033_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "34F (A)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/034_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "34F (B)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/034_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "35F (A)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/035_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "35F (B)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/035_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "35F (C)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/035_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "36F",
             "idx": 1,
             "drm": "aura2/ag02_31_40/036_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "37F",
             "idx": 1,
             "drm": "aura2/ag02_31_40/037_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "38F (A)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/038_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "38F (B)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/038_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "38F (C)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/038_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "39F (A)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/039_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "39F (B)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/039_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "40F (A)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/040_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "40F (B)",
             "idx": 1,
             "drm": "aura2/ag02_31_40/040_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "41F(A)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/041_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "41F(B)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/041_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "41F(C)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/041_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "42F(A)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/042_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "42F(B)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/042_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "42F(C)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/042_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "43F(A)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/043_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "43F(B)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/043_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "43F(C)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/043_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "44F(A)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/044_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "44F(B)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/044_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "44F(C)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/044_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "45F(A)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/045_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "45F(B)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/045_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "46F(A)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/046_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "46F(B)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/046_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "47F(A)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/047_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "47F(B)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/047_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "47F(C)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/047_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "48F(A)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/048_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "48F(B)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/048_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "48F(C)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/048_003"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "49F(A)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/049_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "49F(B)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/049_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "50F(A)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/050_001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "50F(B)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/050_002"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "50F(C)",
             "idx": 1,
             "drm": "aura2/ag02_41_50/050_003"

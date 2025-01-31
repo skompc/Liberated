@@ -61,49 +61,49 @@
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Store",
             "idx": 3,
             "drm": "re_tutorial/shop_01/001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Aura Gate 1",
             "idx": 4,
             "drm": "re_tutorial/gd_01/001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Aura Gate 2",
             "idx": 4,
             "drm": "re_tutorial/gd_p2_01/001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Bureau of Divination",
             "idx": 5,
             "drm": "re_tutorial/d2mode_equip_01/001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Alter-World",
             "idx": 5,
             "drm": "re_tutorial/d2mode_01/001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Battle Tower",
             "idx": 5,
             "drm": "re_tutorial/d2mode_pvp_entry_01/001"
         },
         {
             "ctgr": 0,
-            "is_opn": false,
+            "is_opn": true,
             "name": "Tokyo Abyss",
             "idx": 5,
             "drm": "re_tutorial/d2mode_dungeon_top/001"
