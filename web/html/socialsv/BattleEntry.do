@@ -104,7 +104,7 @@ function BattleEntry($param) {
 
     // Save additional data
     file_put_contents("../saves/players/0/temp/devil_add.json", '{"devils": []}');
-    file_put_contents("../saves/players/0/temp/item.json", '{"items": {}}');
+    file_put_contents("../saves/players/0/temp/item.json", '{"item": {}}');
 
     // Update quest data
     $data['parties'] = $parties;

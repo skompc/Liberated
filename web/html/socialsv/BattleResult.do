@@ -9,6 +9,8 @@ function BattleResult() {
     // Get the 'param' from the request body and decrypt it
     $params = stringToJsonObject(decrypt($_POST['param']));
 
+    //$stage = $_GET['stage'];
+
     // Load the result file based on the stage
     $resultFilePath = "../data/battles/" . $params['stage'] . "/result.json";
     $resultFile = json_decode(file_get_contents($resultFilePath), true);
@@ -23,7 +25,7 @@ function BattleResult() {
     // Load previous data for devils, summoners, and items
     $dvlBefore = json_decode(file_get_contents("../saves/players/0/temp/dvl_before.json"), true)['dvl_before'];
     $smnBefore = json_decode(file_get_contents("../saves/players/0/temp/smn_before.json"), true)['smn_before'];
-    $items = json_decode(file_get_contents("../saves/players/0/temp/item.json"), true)['items'];
+    $item = json_decode(file_get_contents("../saves/players/0/temp/item.json"), true)['item'];
     $usr = json_decode(file_get_contents("../saves/players/0/usr.json"), true)['usr'];
 
     $partyData = json_decode(file_get_contents("../saves/players/0/party.json"), true);
@@ -61,6 +63,15 @@ function BattleResult() {
 
         $dvlLv[] = $dvlLv2Add;
     }
+
+    $resultFile['transaction_id'] = "AB-CDE-123456";
+    $resultFile['usr'] = $usr;
+    $resultFile['reward']['dvl_before'] = $dvlBefore;
+    $resultFile['reward']['smn'] = $smnBefore;
+    $resultFile['reward']['smn_skill_ids'] = $smnSkillIds;
+    $resultFile['reward']['item'] = $item;
+    $resultFile['reward']['dvl'] = $dvl;
+    $resultFile['reward']['dvl_lv'] = $dvlLv;
 
     // Update quest based on the battle result
     if ($result == 1) {

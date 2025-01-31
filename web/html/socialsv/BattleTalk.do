@@ -33,7 +33,7 @@ function BattleTalk() {
         ];
 
         // Add item to temp item file (using jsonTools.addTo)
-        addToJson("../saves/players/0/temp/item.json", "item", $devil2add);
+        addToArray("../saves/players/0/temp/item.json", "item", $devil2add);
     }
 
     // Read the talk file based on devilId and select

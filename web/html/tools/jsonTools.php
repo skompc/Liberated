@@ -25,6 +25,27 @@ function addToJson($filepath, $param, $value) {
     file_put_contents($filepath, $stringToWrite);
 }
 
+function addToArray($filepath, $param, $value) {
+    // Check if file exists
+    if (!file_exists($filepath)) {
+        $data = [];
+    } else {
+        $file = file_get_contents($filepath);
+        $data = json_decode($file, true) ?? []; // Ensure it's an array
+    }
+
+    // If the parameter exists and is an array, append to it
+    if (isset($data[$param]) && is_array($data[$param])) {
+        $data[$param][] = $value;
+    } else {
+        $data[$param] = [$value]; // Convert to an array and add the value
+    }
+
+    // Write back to file
+    $stringToWrite = json_encode($data, JSON_PRETTY_PRINT);
+    file_put_contents($filepath, $stringToWrite);
+}
+
 function makeuniq($numChars) {
     $ID = "";
     $characters = "123456789";

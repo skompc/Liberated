@@ -58,7 +58,6 @@ If this is your first time connecting to the server, then go to <code>liberated.
 
 1. Any unimplemented endpoints will softlock the game. Simply restart the app.
 2. Story choices don't matter... just choose whatever path strikes your fancy!... I MAY NOT FIX THIS!
-3. Battle Results seem to crash the game most of the time... just restart the app... I'm trying my best to fix this...
 
 # FAQ
 
