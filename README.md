@@ -43,14 +43,14 @@ If this is your first time connecting to the server, then go to <code>liberated.
 
 . Story Battles On Normal Difficulty
 
-. Story Battles On Hard Difficulty (Season 1 only for now...)
+. Story Battles On Hard Difficulty (Season 2 not available for now...)
+
+. Story Review
 
 . Basic Party Management
 
 # What Doesn't
 . (Some) Story Battles On Harder Difficulties
-
-. Story Review
 
 . Fusion
 
@@ -61,7 +61,7 @@ If this is your first time connecting to the server, then go to <code>liberated.
 # Known bugs
 
 1. Any unimplemented endpoints will softlock the game. Simply restart the app.
-2. Story choices don't matter... first you have to play the normal mode then the alternate mode... I'll change it to where the player chooses eventually...
+2. Story choices don't matter... just choose the path you want... I won't fix this!
 3. Results screen is inaccurate. Just ignore until I implement everything...
 
 # FAQ
