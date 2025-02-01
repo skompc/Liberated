@@ -49,6 +49,8 @@ If this is your first time connecting to the server, then go to <code>liberated.
 
 . Basic Party Management
 
+. Alterworld
+
 # What Doesn't
 . (Some) Story Battles On Harder Difficulties
 
@@ -62,7 +64,7 @@ If this is your first time connecting to the server, then go to <code>liberated.
 
 1. Any unimplemented endpoints will softlock the game. Simply restart the app.
 2. Story choices don't matter... just choose the path you want... I won't fix this!
-3. Results screen is inaccurate. Just ignore until I implement everything...
+3. Results screen is inaccurate sometimes. Just ignore until I implement everything...
 
 # FAQ
 

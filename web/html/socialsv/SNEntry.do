@@ -1,7 +1,7 @@
 <?php
 function SNEntry() {
     // Send the response as JSON
-    header('Content-Type: application/json');
+    
     echo json_encode([
         'res_code' => 0,
         'client_wait' => 0,

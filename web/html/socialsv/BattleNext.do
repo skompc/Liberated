@@ -26,7 +26,7 @@ function BattleNext() {
         addToJson("../saves/players/0/temp/battle.json", "enemies", $data["enemies"]);
 
         // Send the response as JSON
-        header('Content-Type: application/json');
+        
         echo json_encode($data);
     } else {
         // Handle error if the file does not exist

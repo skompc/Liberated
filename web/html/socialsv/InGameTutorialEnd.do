@@ -38,7 +38,7 @@ function IngameTutorialEnd() {
         "client_wait" => 0
     ];
 
-    header('Content-Type: application/json');
+    
     echo json_encode($response);
 }
 

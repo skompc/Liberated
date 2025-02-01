@@ -4,7 +4,7 @@ require_once "../tools/questTools.php";
 
 function DramaEnd() {
     // Send the initial response as JSON before processing
-    header('Content-Type: application/json');
+    
     echo json_encode(['res_code' => 0, 'client_wait' => 0]);
 
     // Decrypting parameters from the query string

@@ -33,7 +33,8 @@ function RegistAccount() {
         "society.json",
         "party.json",
         "usr.json",
-        "home.json"
+        "home.json",
+        "d2mode/home.json"
     ];
 
     // Copy the files

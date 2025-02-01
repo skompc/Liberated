@@ -12,7 +12,7 @@ function ReadBack() {
     $response = json_decode(file_get_contents("../data/dramas/categories/{$id}.json"), true);
 
     // Send the response as JSON
-    header('Content-Type: application/json');
+    
     echo json_encode($response);
 }
 

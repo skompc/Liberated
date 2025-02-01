@@ -9,7 +9,7 @@ function Map() {
         $data = file_get_contents($filePath);
 
         // Send the response with the content of the file
-        header('Content-Type: application/json'); // Set the correct content type
+         // Set the correct content type
         echo $data;
     } else {
         // Handle error if file does not exist

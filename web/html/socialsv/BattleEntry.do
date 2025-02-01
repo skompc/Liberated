@@ -112,7 +112,7 @@ function BattleEntry($param) {
     $data['helper'] = new stdClass();
 
     // Respond with updated data
-    header('Content-Type: application/json');
+    
     echo json_encode($data);
 }
 ?>

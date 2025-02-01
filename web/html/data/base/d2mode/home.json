@@ -1,0 +1,156 @@
+{
+    "armaments": [
+        {
+            "remaining_enhance_rate": 100,
+            "skills": [
+                {
+                    "lv": 1,
+                    "id": 1001
+                },
+                {
+                    "lv": 1,
+                    "id": 1006
+                }
+            ],
+            "limitbreak_skl": [],
+            "effects": [
+                {
+                    "remaining_rate": 100,
+                    "effect_type": 4,
+                    "value": 9
+                },
+                {
+                    "remaining_rate": 100,
+                    "effect_type": 11,
+                    "value": 2
+                },
+                {
+                    "remaining_rate": 100,
+                    "effect_type": 16,
+                    "value": 2
+                },
+                {
+                    "remaining_rate": 100,
+                    "effect_type": 21,
+                    "value": 2
+                }
+            ],
+            "uniq_skill": {
+                "lv": 1,
+                "id": 120001
+            },
+            "is_new": true,
+            "uniq": 30000269605,
+            "skill_locks": [
+                false,
+                false
+            ],
+            "is_d2mode_pvp_entry": false,
+            "id": 1012450,
+            "limitbreak": {
+                "effect": [],
+                "num": 0,
+                "open": []
+            },
+            "is_equipped": true
+        },
+        {
+            "remaining_enhance_rate": 100,
+            "skills": [
+                {
+                    "lv": 1,
+                    "id": 103012
+                },
+                {
+                    "lv": 1,
+                    "id": 103201
+                }
+            ],
+            "limitbreak_skl": [],
+            "effects": [
+                {
+                    "remaining_rate": 100,
+                    "effect_type": 2,
+                    "value": 9
+                },
+                {
+                    "remaining_rate": 100,
+                    "effect_type": 6,
+                    "value": 8
+                },
+                {
+                    "remaining_rate": 100,
+                    "effect_type": 10,
+                    "value": 2
+                },
+                {
+                    "remaining_rate": 100,
+                    "effect_type": 28,
+                    "value": 1
+                }
+            ],
+            "uniq_skill": {
+                "lv": 1,
+                "id": 125001
+            },
+            "is_new": true,
+            "uniq": 30000269606,
+            "skill_locks": [
+                false,
+                false
+            ],
+            "is_d2mode_pvp_entry": false,
+            "id": 2011820,
+            "limitbreak": {
+                "effect": [],
+                "num": 0,
+                "open": []
+            },
+            "is_equipped": true
+        }
+    ],
+    "accessories": [],
+    "bonus_ticket_cur": 100,
+    "quest_badge": true,
+    "pvp_badge": false,
+    "avatar": {
+        "armament_uniqs": [
+            30000269605,
+            30000269606
+        ],
+        "avatar_id": 1,
+        "pure_parameter": {
+            "str": 180,
+            "vit": 160,
+            "mag": 170,
+            "agi": 150,
+            "luk": 150
+        },
+        "dungeon_id": 2001,
+        "last_parameter": {
+            "pdef": 643,
+            "hp": 1335,
+            "matk": 687,
+            "mdef": 602,
+            "patk": 771
+        },
+        "uniq": 130000040481,
+        "style": 0,
+        "accessories_uniqs": [
+            0,
+            0,
+            0
+        ],
+        "base_parameter": {
+            "pdef": 596,
+            "hp": 1234,
+            "matk": 687,
+            "mdef": 591,
+            "patk": 708
+        }
+    },
+    "res_code": 0,
+    "client_wait": 0,
+    "dungeon_badge": false,
+    "pvp_ticket_cur": 0
+}

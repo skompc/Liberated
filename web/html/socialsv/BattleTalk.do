@@ -43,7 +43,7 @@ function BattleTalk() {
         $data = json_decode($fileContent, true);
 
         // Send the response as JSON
-        header('Content-Type: application/json');
+        
         echo json_encode($data);
     } else {
         // Handle error if the file does not exist

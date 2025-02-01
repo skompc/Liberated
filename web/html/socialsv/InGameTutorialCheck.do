@@ -22,7 +22,7 @@ function IngameTutorialCheck() {
     ];
 
     // Send the response as JSON
-    header('Content-Type: application/json');
+    
     echo json_encode($response);
 }
 

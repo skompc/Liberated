@@ -40,7 +40,7 @@ function Login() {
     setcookie('JSESSIONID', $sid, time() + 3600, '/', '', true, true); // Secure and HttpOnly flags
 
     // Send the response as JSON
-    header('Content-Type: application/json');
+    
     echo json_encode($data);
 }
 

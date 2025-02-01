@@ -30,7 +30,7 @@ function GetUrl($check_code) {
     }
 
     // Send the response as JSON
-    header('Content-Type: application/json');
+    
     echo json_encode($transformedData);
 }
 ?>

@@ -11,7 +11,7 @@ function TutorialBattleEntry() {
     $data['helper'] = new stdClass();
 
     // Send the response as JSON
-    header('Content-Type: application/json');
+    
     echo json_encode($data);
 }
 

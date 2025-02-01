@@ -21,7 +21,7 @@ function TutorialFinish() {
     file_put_contents($mainFilePath, json_encode($mainData, JSON_PRETTY_PRINT));
 
     // Send the response as JSON
-    header('Content-Type: application/json');
+    
     echo json_encode([
         'res_code' => 0,
         'client_wait' => 0

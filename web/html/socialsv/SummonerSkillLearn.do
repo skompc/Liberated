@@ -13,7 +13,7 @@ function SummonerSkillLearn() {
     $result = learnSkill($uniq, $skill_id);
     
     // Send the response as JSON
-    header('Content-Type: application/json');
+    
     echo json_encode([
         'summoner' => $result,
         'res_code' => 0,

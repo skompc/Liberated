@@ -1,0 +1,147 @@
+{
+    "is_magatama_max": false,
+    "bonus_ticket_cur": 100,
+    "is_accessory_max": false,
+    "res_code": 0,
+    "client_wait": 0,
+    "is_card_max": false,
+    "party": {
+        "devils": [
+            {
+                "agi": 150,
+                "exceed_info": {
+                    "opened_num": 0
+                },
+                "hpmx": 1335,
+                "luk": 150,
+                "devicon_power": 0,
+                "hp": 1335,
+                "recommend_type": 0,
+                "lv": 1,
+                "additional_skl": [],
+                "mdef": 602,
+                "limitbreak": {
+                    "effect": [],
+                    "open": []
+                },
+                "is_awk": false,
+                "dr": 0,
+                "talent_skl": [
+                    {
+                        "lv": 1,
+                        "id": 120001
+                    },
+                    {
+                        "lv": 1,
+                        "id": 125001
+                    }
+                ],
+                "ai_auto_type": 0,
+                "lock_skl_id": [],
+                "is_lck": true,
+                "mag": 170,
+                "patk_bns": 63,
+                "mdef_bns": 11,
+                "limitbreak_skl": [],
+                "arc": 0,
+                "wk": 0,
+                "skl": [
+                    {
+                        "lv": 1,
+                        "id": 1001
+                    },
+                    {
+                        "lv": 1,
+                        "id": 1006
+                    },
+                    {
+                        "lv": 1,
+                        "id": 103012
+                    },
+                    {
+                        "lv": 1,
+                        "id": 103201
+                    }
+                ],
+                "id": 1,
+                "patk": 771,
+                "exp": 0,
+                "vit": 160,
+                "is_released_learn_only_skill": false,
+                "st": 0,
+                "pdef": 643,
+                "mp": 15,
+                "mgtm_effs": [],
+                "pdef_bns": 47,
+                "mgtms": [],
+                "str": 180,
+                "av": 0,
+                "spt": 0,
+                "uniq": 130000040481,
+                "matk": 687,
+                "equipment_effects": [
+                    {
+                        "effect_type": 11,
+                        "value": 2
+                    },
+                    {
+                        "effect_type": 16,
+                        "value": 2
+                    },
+                    {
+                        "effect_type": 21,
+                        "value": 2
+                    },
+                    {
+                        "effect_type": 28,
+                        "value": 1
+                    }
+                ],
+                "mpmx": 15,
+                "rp": 0,
+                "hp_bns": 101,
+                "rarity": 1,
+                "contents_type": 1
+            },
+            null,
+            null,
+            null
+        ],
+        "avatar": {
+            "armament_uniqs": [
+                30000269605,
+                30000269606
+            ],
+            "avatar_id": 1,
+            "pure_parameter": {
+                "str": 180,
+                "vit": 160,
+                "mag": 170,
+                "agi": 150,
+                "luk": 150
+            },
+            "dungeon_id": 2002,
+            "last_parameter": {
+                "pdef": 643,
+                "hp": 1335,
+                "matk": 687,
+                "mdef": 602,
+                "patk": 771
+            },
+            "uniq": 130000040481,
+            "style": 0,
+            "accessories_uniqs": [
+                0,
+                0,
+                0
+            ],
+            "base_parameter": {
+                "pdef": 596,
+                "hp": 1234,
+                "matk": 687,
+                "mdef": 591,
+                "patk": 708
+            }
+        }
+    }
+}

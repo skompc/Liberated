@@ -54,7 +54,7 @@ function Home() {
     $data['res_code'] = 0;
 
     // Send response
-    header('Content-Type: application/json');
+    
     echo json_encode($data);
 }
 
