@@ -5,25 +5,22 @@ require_once "../tools/dec_enc.php";
 
 // Listen for the GET request and handle it
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['param'])) {
-    BattleEntry($_GET['param']);
+    GateDungeonBattleEntry($_GET['param']);
 }
 
-function BattleEntry($param) {
+function GateDungeonBattleEntry($param) {
     // Decrypt the input parameters
     $params = StringToJsonObject(Decrypt($param));
 
-    $stage = $params['stage'];
+    $floor = $params['floor'];
     $main_smn = $params['main_smn'];
     $sub_smn = $params['sub_smn'];
     $main_idx = $params['main_idx'];
     $sub_idx = $params['sub_idx'];
-    $smn_id = $params['smn_id'];
-    $helper = $params['helper'];
-    $is_auto = $params['is_auto'];
 
     // Define files and read data
     $files = [
-        "../data/battles/$stage/0.json"
+        "../data/battles/aura/$floor/floor_entry.json"
     ];
     $data = combineFiles($files);
 
@@ -74,46 +71,81 @@ function BattleEntry($param) {
     $devils = array_values(array_filter($array2filter, fn($element) => !isset($element['remove_me'])));
     $sub_devils = array_values(array_filter($array2filter2, fn($element) => !isset($element['remove_me'])));
 
+    // Filter out devils that are marked for removal
+    $array2filter3 = [$devil0, $devil1, $devil2, $devil3, $sub_devil0, $sub_devil1, $sub_devil2, $sub_devil3];
+
+    $devils3 = array_values(array_filter($array2filter, fn($element) => !isset($element['remove_me'])));
 
     // Find summoners
     $summoner = findSummoner($main_smn);
     $sub_summoner = findSummoner($sub_smn);
+
+    $data['ctx']['devils'] = $devils3;
+
+    $data['ctx']['party'] = [
+        [
+            "devils" => [
+                $uniq0,
+                $uniq1,
+                $uniq2,
+                $uniq3
+            ],
+            "summoner" => $main_smn
+        ],
+        [
+            "devils" => [
+                $sub_uniq0,
+                $sub_uniq1,
+                $sub_uniq2,
+                $sub_uniq3
+            ],
+            "summoner" => $sub_smn
+        ]
+    ];
 
     // Prepare parties
     $parties = [
         [
             "devils" => $devils,
             "summoner" => $summoner
+        ],
+        [
+            "devils" => $sub_devils,
+            "summoner" => $sub_summoner
         ]
-        //[
-        //    "devils" => $sub_devils,
-        //    "summoner" => $sub_summoner
-        //]
-    ];
-
-    // Save battle data
-    file_put_contents("../saves/players/0/temp/battle.json", "{}");
-    addToJson("../saves/players/0/temp/battle.json", "enemies", $data['enemies']);
-
-    // Save devil data
-    $allDevils = array_merge($devils, $sub_devils);
-    file_put_contents("../saves/players/0/temp/dvl_before.json", "{}");
-    addToJson("../saves/players/0/temp/dvl_before.json", "dvl_before", $allDevils);
-
-    // Save summoner data
-    $allSmn = [$summoner, $sub_summoner];
-    $allSmn = array_filter($allSmn);
-    file_put_contents("../saves/players/0/temp/smn_before.json", "{}");
-    addToJson("../saves/players/0/temp/smn_before.json", "smn_before", $allSmn);
-
-    // Save additional data
-    file_put_contents("../saves/players/0/temp/devil_add.json", '{"devils": []}');
-    file_put_contents("../saves/players/0/temp/item.json", '{"item": {}}');
-
-    // Update quest data
-    $data['parties'] = $parties;
+    ]; 
 
     $data['helper'] = new stdClass();
+
+    // update temp files
+    $temp_file_name = "../saves/players/0/temp/aura/floor.txt";
+    // Write the floor number into the file
+    if (file_put_contents($temp_file_name, $floor) !== false) {
+        //echo "Successfully wrote 1 to $temp_file_name";
+    } else {
+        //echo "Failed to write to $temp_file_name";
+    }
+
+    $temp_file_name = "../saves/players/0/temp/aura/parties.json";
+    if (file_put_contents($temp_file_name, json_encode($parties)) !== false) {
+        //echo "Successfully wrote 1 to $temp_file_name";
+    } else {
+        //echo "Failed to write to $temp_file_name";
+    }
+
+    $temp_file_name = "../saves/players/0/temp/aura/party.json";
+    if (file_put_contents($temp_file_name, json_encode($data['ctx']['party'])) !== false) {
+        //echo "Successfully wrote 1 to $temp_file_name";
+    } else {
+        //echo "Failed to write to $temp_file_name";
+    }
+
+    $temp_file_name = "../saves/players/0/temp/aura/devils.json";
+    if (file_put_contents($temp_file_name, json_encode($data['ctx']['devils'])) !== false) {
+        //echo "Successfully wrote 1 to $temp_file_name";
+    } else {
+        //echo "Failed to write to $temp_file_name";
+    }
 
     // Respond with updated data
     

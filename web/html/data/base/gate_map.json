@@ -1,0 +1,1329 @@
+{
+    "dungeon": {
+        "party_heal_cost": 10,
+        "auto_heal": 0,
+        "open_floor": 50,
+        "gk_lose_heal": 50,
+        "trap_good_lv3": 50,
+        "end_ts": 1738378500000,
+        "trap_good_lv2": 100,
+        "name": "Aura Gate1",
+        "stages": [
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": true,
+                        "is_raid": false,
+                        "num": 1,
+                        "prize_once": {
+                            "num": 1000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 2,
+                        "prize_once": {
+                            "num": 1000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 3,
+                        "prize_once": {
+                            "num": 1000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": true,
+                        "num": 4,
+                        "prize_once": {
+                            "num": 1000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 5,
+                        "prize_once": {
+                            "num": 30,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 20,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true
+                    }
+                ],
+                "is_open": true,
+                "name": "Level 1",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 11220,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 12250,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": []
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.1."
+                    },
+                    "lv": "Average: over Lv.5",
+                    "gk_id": 2111
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 6,
+                        "prize_once": {
+                            "num": 1000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 7,
+                        "prize_once": {
+                            "num": 1000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 8,
+                        "prize_once": {
+                            "num": 1000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 9,
+                        "prize_once": {
+                            "num": 1000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": true,
+                        "num": 10,
+                        "prize_once": {
+                            "num": 50,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 20,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 2",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 11120,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 12360,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": []
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.2."
+                    },
+                    "lv": "Average: over Lv.10",
+                    "gk_id": 2112
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 11,
+                        "prize_once": {
+                            "num": 2000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": true,
+                        "num": 12,
+                        "prize_once": {
+                            "num": 2000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 13,
+                        "prize_once": {
+                            "num": 2000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 14,
+                        "prize_once": {
+                            "num": 2000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 15,
+                        "prize_once": {
+                            "num": 30,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 20,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 3",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 11540,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 10610,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": []
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.3."
+                    },
+                    "lv": "Average: over Lv.15",
+                    "gk_id": 2113
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 16,
+                        "prize_once": {
+                            "num": 2000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 17,
+                        "prize_once": {
+                            "num": 2000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": true,
+                        "num": 18,
+                        "prize_once": {
+                            "num": 2000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 19,
+                        "prize_once": {
+                            "num": 2000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 20,
+                        "prize_once": {
+                            "num": 60,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 20,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 4",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 12250,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 11420,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": []
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.4."
+                    },
+                    "lv": "Average: over Lv.20",
+                    "gk_id": 2114
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 21,
+                        "prize_once": {
+                            "num": 3000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": true,
+                        "num": 22,
+                        "prize_once": {
+                            "num": 3000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 23,
+                        "prize_once": {
+                            "num": 3000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 24,
+                        "prize_once": {
+                            "num": 3000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 25,
+                        "prize_once": {
+                            "num": 30,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 20,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 5",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 11040,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 12260,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": []
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.5."
+                    },
+                    "lv": "Average: over Lv.25",
+                    "gk_id": 2119
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 26,
+                        "prize_once": {
+                            "num": 3000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 27,
+                        "prize_once": {
+                            "num": 3000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": true,
+                        "num": 28,
+                        "prize_once": {
+                            "num": 3000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 29,
+                        "prize_once": {
+                            "num": 3000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 30,
+                        "prize_once": {
+                            "num": 70,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 20,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 6",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 10610,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 11960,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": []
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.6."
+                    },
+                    "lv": "Average: over Lv.30",
+                    "gk_id": 2117
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 31,
+                        "prize_once": {
+                            "num": 4000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 32,
+                        "prize_once": {
+                            "num": 4000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 33,
+                        "prize_once": {
+                            "num": 4000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 34,
+                        "prize_once": {
+                            "num": 4000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 35,
+                        "prize_once": {
+                            "num": 30,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 20,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 7",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 11750,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 11230,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": []
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.7."
+                    },
+                    "lv": "Average: over Lv.35",
+                    "gk_id": 0
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": true,
+                        "num": 36,
+                        "prize_once": {
+                            "num": 4000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 37,
+                        "prize_once": {
+                            "num": 4000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 38,
+                        "prize_once": {
+                            "num": 4000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 39,
+                        "prize_once": {
+                            "num": 4000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 40,
+                        "prize_once": {
+                            "num": 80,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 20,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 8",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 12260,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 10430,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": []
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.8."
+                    },
+                    "lv": "Average: over Lv.40",
+                    "gk_id": 2120
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 41,
+                        "prize_once": {
+                            "num": 5000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": true,
+                        "num": 42,
+                        "prize_once": {
+                            "num": 5000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 43,
+                        "prize_once": {
+                            "num": 5000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 44,
+                        "prize_once": {
+                            "num": 5000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 45,
+                        "prize_once": {
+                            "num": 30,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 20,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 9",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 11610,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 10440,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": [
+                                    {
+                                        "id": 23310,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23320,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23330,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23340,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.9."
+                    },
+                    "lv": "Average: over Lv.40",
+                    "gk_id": 2118
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 46,
+                        "prize_once": {
+                            "num": 5000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 47,
+                        "prize_once": {
+                            "num": 5000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 48,
+                        "prize_once": {
+                            "num": 5000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 49,
+                        "prize_once": {
+                            "num": 5000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 50,
+                        "prize_once": {
+                            "num": 1,
+                            "is_bonus": false,
+                            "id": 9200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 20,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 10",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 10430,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 11140,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": [
+                                    {
+                                        "id": 23310,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23320,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23330,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23340,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.10."
+                    },
+                    "lv": "Average: over Lv.40",
+                    "gk_id": 0
+                }
+            }
+        ],
+        "trap_bad_lv1": 1,
+        "trap_good_lv1": 100,
+        "id": 4,
+        "trap_bad_lv3": 20,
+        "trap_bad_lv2": 10,
+        "cur_floor": 1
+    },
+    "res_code": 0,
+    "client_wait": 0,
+    "moon": {
+        "next": 8,
+        "cur": 7,
+        "next_change_ts": 1738376099998,
+        "max": 8,
+        "ages": [
+            {
+                "sec": 600,
+                "eff": [
+                    {
+                        "eff_desc": "Increases obtained Exp by 100%.",
+                        "eff_id": 1,
+                        "eff_param": 100
+                    }
+                ],
+                "num": 0,
+                "desc": "Effect's details 1"
+            },
+            {
+                "sec": 420,
+                "eff": [],
+                "num": 1,
+                "desc": "Effect's details 2"
+            },
+            {
+                "sec": 420,
+                "eff": [],
+                "num": 2,
+                "desc": "Effect's details 3"
+            },
+            {
+                "sec": 420,
+                "eff": [],
+                "num": 3,
+                "desc": "Effect's details 4"
+            },
+            {
+                "sec": 420,
+                "eff": [],
+                "num": 4,
+                "desc": "Effect's details 5"
+            },
+            {
+                "sec": 420,
+                "eff": [],
+                "num": 5,
+                "desc": "Effect's details 6"
+            },
+            {
+                "sec": 420,
+                "eff": [],
+                "num": 6,
+                "desc": "Effect's details 7"
+            },
+            {
+                "sec": 420,
+                "eff": [],
+                "num": 7,
+                "desc": "Effect's details 8"
+            },
+            {
+                "sec": 600,
+                "eff": [
+                    {
+                        "eff_desc": "Increases obtained MAGNETITE by 100%.",
+                        "eff_id": 3,
+                        "eff_param": 100
+                    }
+                ],
+                "num": 8,
+                "desc": "Effect's details 9"
+            }
+        ]
+    },
+    "usr": {
+        "pp": 255,
+        "dp_spn": 60,
+        "pp_spn": 1800,
+        "pp_rec_ts": 0,
+        "lv": 60,
+        "dp": 100,
+        "ap_itm": 0,
+        "pvppt": 0,
+        "rnknm": "NEWCOMER",
+        "dp_rec_ts": 0,
+        "dp_itm": 0,
+        "usr_id": 225973463,
+        "smn_id": 1,
+        "mc": 6065965,
+        "pp_itm": 0,
+        "fndmx": 34,
+        "pp_boost": 0,
+        "dpmx": 100,
+        "mg": 9873267,
+        "gnd": 0,
+        "exp": 780636,
+        "ppmx": 5,
+        "gb_exchange_ticket": 0,
+        "gpmx": 2,
+        "gp": 0,
+        "cp": 11071,
+        "rnk": "E5",
+        "ap": 22,
+        "nlv_exp": 810000,
+        "qst_skp_ticket": 30,
+        "clv_exp": 775358,
+        "apmx": 55,
+        "name": "Iku",
+        "guild_id": 0,
+        "ap_rec_ts": 1738376039998,
+        "ap_spn": 180,
+        "fame": 10
+    }
+}

@@ -12,8 +12,7 @@ echo.
 
 start dnsserver.exe
 
-cd php
-start php-cgi -b 9000
+start monitor.bat
 
 cd ../web
 call "nginx.exe"

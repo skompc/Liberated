@@ -1,0 +1,255 @@
+1001 Cleave
+1002 Fatal Sword
+1003 Berserker God
+1004 Megaton Raid
+1005 God's Hand
+1006 Mow Down
+1007 Herculean Strike
+1008 Hades Blast
+1009 Vorpal Blade
+1010 Gigantomachia
+1011 Lunge
+1012 Oni-Kagura
+1013 Mortal Jihad
+1014 Heat Wave
+1015 Megaton Press
+1016 Titanomachia
+1017 Rampage
+1018 Deathbound
+1019 Madness Nails
+1020 Nihil Claw
+1021 Tempest Slash
+1022 Myriad Arrows
+1023 Toxic Sting
+1024 Binding Claw
+1025 Dark Sword
+1026 Sweet Bite
+1027 Eat Whole
+1028 Binge Eating
+1029 Power Hit
+1030 Fatal Sword L
+1031 Bleeder
+1032 Muscle Punch
+1033 Earthquake
+1034 Blight
+1035 Tempest Slash +
+1036 Lai Isshin
+1038 Cleaving Aura
+1039 Boar Rush
+1040 Fire Slash
+1041 Ice Slash
+1042 Thunder Slash
+1043 Wind Slash
+1044 White Slash
+1045 Black Slash
+1046 Rending Fire
+1047 Rending Ice
+1048 Rending Thunder
+1049 Rending Wind
+1050 Rending White
+1051 Rending Black
+1052 Cleaving Thunder
+1053 Cleaving Light
+1101 Agi
+1102 Agilao
+1103 Agidyne
+1104 Trisagion
+1105 Maragi
+1106 Maragion
+1107 Maragidyne
+1108 Fire Breath
+1109 Hellfire
+1110 Bufu
+1111 Bufula
+1112 Bufudyne
+1113 Ice Age
+1114 Mabufu
+1115 Mabufula
+1116 Mabufudyne
+1117 Ice Breath
+1118 Glacial Blast
+1119 Zio
+1120 Zionga
+1121 Ziodyne
+1122 Thunder Reign
+1123 Mazio
+1124 Mazionga
+1125 Maziodyne
+1126 Shock
+1127 Bolt Storm
+1128 Zan
+1129 Zanma
+1130 Zandyne
+1131 Killing Wind
+1132 Mazan
+1133 Mazanma
+1134 Mazandyne
+1135 Wind Breath
+1136 Twister
+1137 Hama
+1138 Hamaon
+1139 Hamadyne
+1140 Thunderclap
+1141 Mahama
+1142 Mahamaon
+1143 Mahamydyne
+1144 Judgement Light
+1145 Holy Wrath
+1146 Mudo
+1147 Mudoon
+1148 Mudodyne
+1149 Hell Gaze
+1150 Mamudo
+1151 Mamudoon
+1152 Mamudodyne
+1153 Evil Gaze
+1154 Purgatory
+1155 Poisma
+1156 Poismaon
+1157 Mahapoisma
+1158 Mahapoismaon
+1159 Toxic Cloud
+1160 Shibaboo
+1161 Shibabooon
+1162 Mahashibaboo
+1163 Mahashibabooon
+1164 Binding Cry
+1165 Marin Karin
+1166 Marin Kainon
+1167 Mahamarin Karin
+1168 Mahamarin Karinon
+1169 Sexy Dance
+1170 Makajam
+1171 Makajamaon
+1172 Mahamakajam
+1173 Mahamakajamaon
+1174 White Noise
+1175 Life Drain
+1176 Deathtouch
+1177 Spirit Drain
+1178 Energy Drain
+1179 Soul Drain
+1180 Megido
+1181 Megidola
+1182 Megidolaon
+1183 Sea of Chaos
+1184 Judgement
+1185 Mind Break
+1186 Ju
+1187 Juon
+1188 Mahoju
+1189 Mahajuon
+1190 Vengeance
+1191 Dezoreto
+1192 Dezoreton
+1193 Madezoreto
+1194 Madezoreton
+1195 Outbreak
+1196 Mind Blast
+1197 Demon Birth Cry
+1198 Necro Dogma
+1199 Rattle
+1200 Foresight
+1201 Agilao L
+1202 Bufula L
+1203 Zionga L
+1204 Zanma L
+1205 Hamaon L
+1206 Mudoon L
+1301 Maragi L
+1302 Mabufu L
+1303 Mazio L
+1304 Mazon L
+1305 Mahama L
+1306 Mamudo L
+1307 Herculean Strike L
+1308 Mediara L
+1309 Maragidyne H
+1310 Mabufudyne H
+1311 Maziodyne H
+1312 Mazandyne H
+1313 Mahamadyne H
+1314 Mamudodyne H
+1315 Vorpal Blade H
+1316 Mediarahan H
+1317 Gigantomachia H
+1318 Ars Magna
+1325 Maragibarion
+1326 Mabufubarion
+1327 Maziobarion
+1328 Mazonbarion
+1329 Mahamabarion
+1330 Mamudobarion
+1331 Fiery Soul Prison
+1332 Frozen World
+1333 Thunderous Advent
+1334 Turbulent Advent
+1335 Divine Massacre
+1336 Eternal Hell
+1337 Godly Judgement
+2001 Dia
+2002 Diara
+2003 Diarama
+2004 Diarahan
+2005 Media
+2006 Mediara
+2007 Mediarama
+2008 Mediarahan
+2009 Salvation
+2010 Posumudi
+2011 Meposumudi
+2012 Mutudi
+2013 Memutudi
+2014 Paraladi
+2015 Mepararladi
+2016 Charmdi
+2017 Mecharmdi
+2018 Amrita
+2019 Prayer
+2020 Silent Prayer
+2021 Recarm
+2022 Samrecarm
+2023 Recarmdra
+2024 Cursedi
+2025 Weakdi
+2026 Mekasudi
+2027 Meweakdi
+2028 Diara L
+2030 Goddess' Embrace
+3001 Tarukaja
+3002 Rakukaja
+3003 Sudukaja
+3007 Tarunda
+3008 Rakunda
+3009 Sukunda
+3013 Dekaja
+3014 Dekunda
+3015 Luster Candy
+3016 Debilitate
+3017 War Cry
+3018 Acid Breath
+3019 Fog Breath
+3020 Taunt
+3021 Tetraja
+3022 Tetrakarn
+3023 Makarakarn
+3024 Tetra Break
+3025 Makara Break
+3026 Charge
+3027 Concentrate
+3028 Rebellion
+3029 Discord
+3030 Sabbatma
+3033 Tag
+3034 Barrier
+3035 Lydia
+3036 Barrier Break
+3037 Lydia Break
+3039 War Dance
+3040 Nocturn
+3041 Blood Rush
+3042 Offensive Cry
+3043 Defensive Cry
+3044 Agile Cry
+3049 Invasion
+3058 Chief God's Haki

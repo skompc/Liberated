@@ -20,7 +20,7 @@ function updateDevils($input) {
     file_put_contents("../saves/players/0/devils.json", json_encode($data, JSON_PRETTY_PRINT));
 }
 
-function makeDevil($id, $rarity, $lvl, $str, $vit, $mag, $agi, $luk, $arc, $skills, $ai_type, $dr, $wk, $av, $spt, $rp, $ct, $uniq, $exp) {
+function makeDevil($id, $rarity, $lvl, $str, $vit, $mag, $agi, $luk, $arc, $skills, $ai_type, $dr, $wk, $av, $rp, $spt, $ct, $uniq, $exp) {
     $devil = [
         "skl" => $skills,
         "id" => $id,
@@ -28,8 +28,8 @@ function makeDevil($id, $rarity, $lvl, $str, $vit, $mag, $agi, $luk, $arc, $skil
         "str" => $str,
         "vit" => $vit,
         "mag" => $mag,
-        "mp" => $mag,
-        "mpmx" => $mag,
+        "mp" => 10,
+        "mpmx" => 10,
         "ai_auto_type" => $ai_type,
         "agi" => $agi,
         "luk" => $luk,
@@ -49,7 +49,7 @@ function makeDevil($id, $rarity, $lvl, $str, $vit, $mag, $agi, $luk, $arc, $skil
             "num" => 60,
             "open" => []
         ],
-        "is_awk" => false,
+        "is_awk" => true,
         "dr" => $dr,
         "wk" => $wk,
         "av" => $av,
@@ -312,6 +312,14 @@ function mergeDevils() {
     $outputFile = "../saves/players/0/devils.json";
     $updatedJson = json_encode($data1, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
     file_put_contents($outputFile, $updatedJson);
+}
+
+function sendToStorage($uniq){
+    $devil2Send = devilSearch($uniq);
+    $storage_file_name = "../saves/players/0/storage.json";
+    $storage_file = json_decode(file_get_contents($storage_file_name), true);
+    $storage_file['devils'][] = $devil2Send;
+    file_put_contents($storage_file_name, json_encode($storage_file, JSON_PRETTY_PRINT));
 }
 
 ?>

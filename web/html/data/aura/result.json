@@ -1,0 +1,30 @@
+{
+    "macca": 70,
+    "transaction_id": "AB-CDE-123456",
+    "magnetite": 219,
+    "totalStep": 17,
+    "duraration": 1723,
+    "res_code": 0,
+    "client_wait": 0,
+    "expPlayer": 33,
+    "clearEnd": 0,
+    "gd2_warning": 0,
+    "prizes": [
+        {
+            "num": 1,
+            "is_bonus": false,
+            "id": 41007,
+            "type": 2
+        },
+        {
+            "param": "0",
+            "num": 1,
+            "is_bonus": false,
+            "id": 12420,
+            "type": 1
+        }
+    ],
+    "exp": 77,
+    "clearStart": 0,
+    "battleCount": 1
+}
