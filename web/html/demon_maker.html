@@ -1,422 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown Autofill</title>
-    <style>
-        /* Dark mode styling */
-        body {
-            background-color: #121212;
-            color: white;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        select,
-        input {
-            background-color: #333;
-            color: white;
-            border: 1px solid #555;
-            padding: 8px;
-            margin-bottom: 15px;
-            width: 200px;
-        }
-
-        select:focus,
-        input:focus {
-            border-color: #1e90ff;
-            outline: none;
-        }
-
-        /* Vertical alignment */
-        .form-container {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-container>* {
-            margin-bottom: 20px;
-        }
-
-        .input-group {
-            display: flex;
-            align-items: center;
-        }
-
-        .input-group input[type="number"] {
-            width: 80px;
-            margin-left: 10px;
-        }
-
-        .input-group input[type="number"].large {
-            width: 120px;
-        }
-
-        /* New styling for additional dropdowns */
-        .additional-dropdowns {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .additional-dropdowns label {
-            margin-right: 10px;
-        }
-
-        .additional-dropdowns select {
-            width: 120px;
-        }
-
-        /* Styling for the skills array output */
-        #skillsOutput {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            margin-top: 20px;
-            white-space: pre-wrap;
-            /* Preserve formatting */
-            word-wrap: break-word;
-            width: 100%;
-            height: 100px;
-            overflow-y: auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Autofill with Persistent Selection</title>
+  <style>
+    /* Dark mode styling */
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    select,
+    input,
+    textarea {
+      background-color: #333;
+      color: white;
+      border: 1px solid #555;
+      padding: 8px;
+      margin-bottom: 15px;
+      width: 200px;
+    }
+    select:focus,
+    input:focus,
+    textarea:focus {
+      border-color: #1e90ff;
+      outline: none;
+    }
+    /* Vertical alignment */
+    .form-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-container > * {
+      margin-bottom: 20px;
+    }
+    .input-group {
+      display: flex;
+      align-items: center;
+    }
+    .input-group input[type="number"] {
+      width: 80px;
+      margin-left: 10px;
+    }
+    .input-group input[type="number"].large {
+      width: 120px;
+    }
+    /* New styling for additional dropdowns */
+    .additional-dropdowns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .additional-dropdowns label {
+      margin-right: 10px;
+    }
+    .additional-dropdowns select {
+      width: 120px;
+    }
+    /* Styling for the skills array output */
+    #skillsOutput {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      width: 100%;
+      height: 100px;
+      overflow-y: auto;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="form-container">
-        <div class="input-group">
-            <label for="selection1">Demon:</label>
-            <select id="selection1" onchange="fillNumber('selection1', 'number1')">
-                <option value="">--Select--</option>
-                <input type="text" id="number1" readonly>
-            </select>
-            <input type="number" id="level" min="1" max="99" placeholder="Level (1-99)">
-            <input type="number" id="hp" min="1" max="999" placeholder="HP">
-            <input type="number" id="rarity" min="1" max="6" placeholder="rarity">
-            <input type="number" id="str" min="1" max="999" placeholder="str">
-            <input type="number" id="vit" min="1" max="999" placeholder="vit">
-            <input type="number" id="mag" min="1" max="999" placeholder="mag">
-            <input type="number" id="agil" min="1" max="999" placeholder="agi">
-            <input type="number" id="luk" min="1" max="999" placeholder="luk">
-        </div>
-
-        <!-- Additional dropdowns for the devil -->
-        <div class="additional-dropdowns">
-            <div class="input-group">
-                <label for="phys">Phys:</label>
-                <select id="phys">
-                    <option value="none">None</option>
-                    <option value="weak">Weak</option>
-                    <option value="repel">Repel</option>
-                    <option value="avoid">Avoid</option>
-                    <option value="drain">Drain</option>
-                </select>
-            </div>
-
-            <div class="input-group">
-                <label for="agi">Agi:</label>
-                <select id="agi">
-                    <option value="none">None</option>
-                    <option value="weak">Weak</option>
-                    <option value="repel">Repel</option>
-                    <option value="avoid">Avoid</option>
-                    <option value="drain">Drain</option>
-                </select>
-            </div>
-
-            <div class="input-group">
-                <label for="bufu">Bufu:</label>
-                <select id="bufu">
-                    <option value="none">None</option>
-                    <option value="weak">Weak</option>
-                    <option value="repel">Repel</option>
-                    <option value="avoid">Avoid</option>
-                    <option value="drain">Drain</option>
-                </select>
-            </div>
-
-            <div class="input-group">
-                <label for="zio">Zio:</label>
-                <select id="zio">
-                    <option value="none">None</option>
-                    <option value="weak">Weak</option>
-                    <option value="repel">Repel</option>
-                    <option value="avoid">Avoid</option>
-                    <option value="drain">Drain</option>
-                </select>
-            </div>
-
-            <div class="input-group">
-                <label for="zan">Zan:</label>
-                <select id="zan">
-                    <option value="none">None</option>
-                    <option value="weak">Weak</option>
-                    <option value="repel">Repel</option>
-                    <option value="avoid">Avoid</option>
-                    <option value="drain">Drain</option>
-                </select>
-            </div>
-
-            <div class="input-group">
-                <label for="hama">Hama:</label>
-                <select id="hama">
-                    <option value="none">None</option>
-                    <option value="weak">Weak</option>
-                    <option value="repel">Repel</option>
-                    <option value="avoid">Avoid</option>
-                    <option value="drain">Drain</option>
-                </select>
-            </div>
-
-            <div class="input-group">
-                <label for="mudo">Mudo:</label>
-                <select id="mudo">
-                    <option value="none">None</option>
-                    <option value="weak">Weak</option>
-                    <option value="repel">Repel</option>
-                    <option value="avoid">Avoid</option>
-                    <option value="drain">Drain</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="input-group">
-            <label for="skill1">Skill 1:</label>
-            <select id="skill1" onchange="updateSkills()">
-                <option value="">--Select--</option>
-            </select>
-            <input type="number" id="level1" min="1" max="3" placeholder="Level (1-3)">
-        </div>
-
-        <div class="input-group">
-            <label for="skill2">Skill 2:</label>
-            <select id="skill2" onchange="updateSkills()">
-                <option value="">--Select--</option>
-            </select>
-            <input type="number" id="level2" min="1" max="3" placeholder="Level (1-3)">
-        </div>
-
-        <div class="input-group">
-            <label for="skill3">Skill 3:</label>
-            <select id="skill3" onchange="updateSkills()">
-                <option value="">--Select--</option>
-            </select>
-            <input type="number" id="level3" min="1" max="3" placeholder="Level (1-3)">
-        </div>
-
-        <div class="input-group">
-            <label for="skill4">Skill 4:</label>
-            <select id="skill4" onchange="updateSkills()">
-                <option value="">--Select--</option>
-            </select>
-            <input type="number" id="level4" min="1" max="3" placeholder="Level (1-3)">
-        </div>
-
-        <div class="input-group">
-            <label for="skill5">Skill 5:</label>
-            <select id="skill5" onchange="updateSkills()">
-                <option value="">--Select--</option>
-            </select>
-            <input type="number" id="level5" min="1" max="3" placeholder="Level (1-3)">
-        </div>
-
-        <div class="input-group">
-            <label for="skill6">Skill 6:</label>
-            <select id="skill6" onchange="updateSkills()">
-                <option value="">--Select--</option>
-            </select>
-            <input type="number" id="level6" min="1" max="3" placeholder="Level (1-3)">
-        </div>
-
-        <!-- Textbox to display the skills array -->
-        <div>
-            <label for="skillsOutput">Skills Array:</label>
-            <textarea id="skillsOutput" readonly></textarea>
-        </div>
+  <div class="form-container">
+    <!-- Demon Search Bar -->
+    <div class="input-group">
+      <label for="demonSearch">Search Demon:</label>
+      <input type="text" id="demonSearch" placeholder="Type to search demon...">
     </div>
 
-    <button onclick="callMakeDevil()">Make Devil</button>
+    <!-- Demon Dropdown and Other Inputs -->
+    <div class="input-group">
+      <label for="selection1">Demon:</label>
+      <select id="selection1" onchange="fillNumber('selection1', 'number1')">
+        <option value="">--Select--</option>
+      </select>
+      <input type="text" id="number1" readonly>
+      <input type="number" id="level" min="1" max="99" placeholder="Level (1-99)">
+      <input type="number" id="hp" min="1" max="999" placeholder="HP">
+      <input type="number" id="rarity" min="1" max="6" placeholder="Rarity">
+      <input type="number" id="str" min="1" max="999" placeholder="STR">
+      <input type="number" id="vit" min="1" max="999" placeholder="VIT">
+      <input type="number" id="mag" min="1" max="999" placeholder="MAG">
+      <input type="number" id="agil" min="1" max="999" placeholder="AGI">
+      <input type="number" id="luk" min="1" max="999" placeholder="LUK">
+    </div>
 
-    <script>
-        let skills = []
+    <!-- Additional Dropdowns for Devil Statuses -->
+    <div class="additional-dropdowns">
+      <div class="input-group">
+        <label for="phys">Phys:</label>
+        <select id="phys">
+          <option value="none">None</option>
+          <option value="weak">Weak</option>
+          <option value="repel">Repel</option>
+          <option value="avoid">Avoid</option>
+          <option value="drain">Drain</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="agi">Agi:</label>
+        <select id="agi">
+          <option value="none">None</option>
+          <option value="weak">Weak</option>
+          <option value="repel">Repel</option>
+          <option value="avoid">Avoid</option>
+          <option value="drain">Drain</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="bufu">Bufu:</label>
+        <select id="bufu">
+          <option value="none">None</option>
+          <option value="weak">Weak</option>
+          <option value="repel">Repel</option>
+          <option value="avoid">Avoid</option>
+          <option value="drain">Drain</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="zio">Zio:</label>
+        <select id="zio">
+          <option value="none">None</option>
+          <option value="weak">Weak</option>
+          <option value="repel">Repel</option>
+          <option value="avoid">Avoid</option>
+          <option value="drain">Drain</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="zan">Zan:</label>
+        <select id="zan">
+          <option value="none">None</option>
+          <option value="weak">Weak</option>
+          <option value="repel">Repel</option>
+          <option value="avoid">Avoid</option>
+          <option value="drain">Drain</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="hama">Hama:</label>
+        <select id="hama">
+          <option value="none">None</option>
+          <option value="weak">Weak</option>
+          <option value="repel">Repel</option>
+          <option value="avoid">Avoid</option>
+          <option value="drain">Drain</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="mudo">Mudo:</label>
+        <select id="mudo">
+          <option value="none">None</option>
+          <option value="weak">Weak</option>
+          <option value="repel">Repel</option>
+          <option value="avoid">Avoid</option>
+          <option value="drain">Drain</option>
+        </select>
+      </div>
+    </div>
 
-        function loadOptions(selectId, fileName) {
-            fetch(fileName)
-                .then(response => response.text())
-                .then(data => {
-                    const lines = data.split('\n').filter(line => line.trim() !== '');
-                    const select = document.getElementById(selectId);
+    <!-- Skill Search Bar -->
+    <div class="input-group">
+      <label for="skillSearch">Search Skill:</label>
+      <input type="text" id="skillSearch" placeholder="Type to search skill...">
+    </div>
 
-                    const options = lines.map(line => {
-                        const parts = line.split(' ');
-                        return { number: parts[0], firstWord: parts[1], secondWord: parts.slice(2).join(' ') };
-                    });
+    <!-- Skill Dropdowns -->
+    <div class="input-group">
+      <label for="skill1">Skill 1:</label>
+      <select id="skill1" onchange="updateSkills()">
+        <option value="">--Select--</option>
+      </select>
+      <input type="number" id="level1" min="1" max="3" placeholder="Level (1-3)">
+    </div>
+    <div class="input-group">
+      <label for="skill2">Skill 2:</label>
+      <select id="skill2" onchange="updateSkills()">
+        <option value="">--Select--</option>
+      </select>
+      <input type="number" id="level2" min="1" max="3" placeholder="Level (1-3)">
+    </div>
+    <div class="input-group">
+      <label for="skill3">Skill 3:</label>
+      <select id="skill3" onchange="updateSkills()">
+        <option value="">--Select--</option>
+      </select>
+      <input type="number" id="level3" min="1" max="3" placeholder="Level (1-3)">
+    </div>
+    <div class="input-group">
+      <label for="skill4">Skill 4:</label>
+      <select id="skill4" onchange="updateSkills()">
+        <option value="">--Select--</option>
+      </select>
+      <input type="number" id="level4" min="1" max="3" placeholder="Level (1-3)">
+    </div>
+    <div class="input-group">
+      <label for="skill5">Skill 5:</label>
+      <select id="skill5" onchange="updateSkills()">
+        <option value="">--Select--</option>
+      </select>
+      <input type="number" id="level5" min="1" max="3" placeholder="Level (1-3)">
+    </div>
+    <div class="input-group">
+      <label for="skill6">Skill 6:</label>
+      <select id="skill6" onchange="updateSkills()">
+        <option value="">--Select--</option>
+      </select>
+      <input type="number" id="level6" min="1" max="3" placeholder="Level (1-3)">
+    </div>
 
-                    options.forEach(option => {
-                        const opt = document.createElement("option");
-                        opt.value = option.number;
-                        opt.textContent = `${option.firstWord} ${option.secondWord}`;
-                        select.appendChild(opt);
-                    });
-                })
-                .catch(error => console.error('Error loading the list:', error));
-        }
+    <!-- Textarea to Display the Skills Array -->
+    <div>
+      <label for="skillsOutput">Skills Array:</label>
+      <textarea id="skillsOutput" readonly></textarea>
+    </div>
+  </div>
 
-        function updateSkills() {
-            skills = [
-                { lv: document.getElementById('level1').value || 1, id: document.getElementById('skill1').value || 0 },
-                { lv: document.getElementById('level2').value || 1, id: document.getElementById('skill2').value || 0 },
-                { lv: document.getElementById('level3').value || 1, id: document.getElementById('skill3').value || 0 },
-                { lv: document.getElementById('level4').value || 1, id: document.getElementById('skill4').value || 0 },
-                { lv: document.getElementById('level5').value || 1, id: document.getElementById('skill5').value || 0 },
-                { lv: document.getElementById('level6').value || 1, id: document.getElementById('skill6').value || 0 },
-            ];
+  <button onclick="callMakeDevil()">Make Devil</button>
 
-            const skillsOutput = document.getElementById('skillsOutput');
-            skillsOutput.value = `skills = [\n  ${skills.map(skill => `["lv": ${skill.lv}, "id": ${skill.id}]`).join(',\n  ')}\n];`;
-        }
+  <script>
+    let skills = [];
 
-        // Load the files for the dropdowns
-        loadOptions('skill1', 'skill_list.txt');
-        loadOptions('skill2', 'skill_list.txt');
-        loadOptions('skill3', 'skill_list.txt');
-        loadOptions('skill4', 'skill_list.txt');
-        loadOptions('skill5', 'skill_list.txt');
-        loadOptions('skill6', 'skill_list.txt');
-        loadOptions('selection1', 'demon_list.txt'); // You may use a different list for demon
-
-        // Function to fill the demon number automatically
-        function fillNumber(selectionId, numberId) {
-            const select = document.getElementById(selectionId);
-            const numberInput = document.getElementById(numberId);
-            const selectedValue = select.value;
-
-            // You can add logic here to set the number based on the selected demon
-            numberInput.value = selectedValue ? selectedValue : "";
-        }
-
-        // Define variables to hold the elemental values for each status
-        let weak = 0;
-        let avoid = 0;
-        let repel = 0;
-        let drain = 0;
-
-        function getDevilStatuses() {
-            // Get the values of the selected options from the dropdowns
-            const statuses = {
-                phys: document.getElementById('phys').value,
-                agi: document.getElementById('agi').value,
-                bufu: document.getElementById('bufu').value,
-                zio: document.getElementById('zio').value,
-                zan: document.getElementById('zan').value,
-                hama: document.getElementById('hama').value,
-                mudo: document.getElementById('mudo').value
+    // Loads options from an external file and stores the full list for filtering.
+    function loadOptions(selectId, fileName) {
+      fetch(fileName)
+        .then(response => response.text())
+        .then(data => {
+          const lines = data.split('\n').filter(line => line.trim() !== '');
+          const select = document.getElementById(selectId);
+          const options = lines.map(line => {
+            const parts = line.split(' ');
+            return { 
+              number: parts[0], 
+              firstWord: parts[1], 
+              secondWord: parts.slice(2).join(' ') 
             };
+          });
+          // Save the full list for later filtering.
+          select.originalOptions = options;
+          // Populate the select with all options initially.
+          updateSelectOptions(select, "");
+        })
+        .catch(error => console.error('Error loading the list:', error));
+    }
 
-            // Reset the elemental variables
-            weak = 0;
-            avoid = 0;
-            repel = 0;
-            drain = 0;
+    // Updates a select element's options based on the search term.
+    // The currently selected option is always included.
+    function updateSelectOptions(select, searchTerm) {
+      const currentVal = select.value;
+      select.innerHTML = "";
+      // Always add a default option.
+      const defaultOpt = document.createElement("option");
+      defaultOpt.value = "";
+      defaultOpt.textContent = "--Select--";
+      select.appendChild(defaultOpt);
 
-            // Iterate through the statuses and add the respective values
-            for (let key in statuses) {
-                const value = statuses[key];
+      const options = select.originalOptions || [];
+      let foundSelected = false;
 
-                if (value === "weak") {
-                    weak += getElementalValue(key);  // Add the corresponding elemental value
-                } else if (value === "avoid") {
-                    avoid += getElementalValue(key);  // Add the corresponding elemental value
-                } else if (value === "repel") {
-                    repel += getElementalValue(key);  // Add the corresponding elemental value
-                } else if (value === "drain") {
-                    drain += getElementalValue(key);  // Add the corresponding elemental value
-                }
-            }
-
-            // You can display or use these updated variables (weak, avoid, repel, drain) as needed
-            console.log(`Weak: ${weak}, Avoid: ${avoid}, Repel: ${repel}, Drain: ${drain}`);
+      options.forEach(option => {
+        const optionText = option.firstWord + " " + option.secondWord;
+        // Include the option if it matches the search OR if it is the currently selected value.
+        if (optionText.toLowerCase().includes(searchTerm.toLowerCase()) || option.number === currentVal) {
+          const opt = document.createElement("option");
+          opt.value = option.number;
+          opt.textContent = optionText;
+          if (option.number === currentVal) {
+            opt.selected = true;
+            foundSelected = true;
+          }
+          select.appendChild(opt);
         }
+      });
 
-        // Helper function to return the elemental value for a given key
-        function getElementalValue(element) {
-            switch (element) {
-                case 'phys': return 1;
-                case 'agi': return 2;
-                case 'bufu': return 4;
-                case 'zio': return 8;
-                case 'zan': return 16;
-                case 'hama': return 32;
-                case 'mudo': return 64;
-                default: return 0;
-            }
+      // If a value is selected but wasn't added in the loop, add it manually.
+      if (currentVal && !foundSelected) {
+        const curOption = options.find(opt => opt.number === currentVal);
+        if (curOption) {
+          const opt = document.createElement("option");
+          opt.value = curOption.number;
+          opt.textContent = curOption.firstWord + " " + curOption.secondWord;
+          opt.selected = true;
+          select.appendChild(opt);
         }
+      }
+    }
 
-        // Add event listeners to update the elemental variables whenever a dropdown value changes
-        document.getElementById('phys').addEventListener('change', getDevilStatuses);
-        document.getElementById('agi').addEventListener('change', getDevilStatuses);
-        document.getElementById('bufu').addEventListener('change', getDevilStatuses);
-        document.getElementById('zio').addEventListener('change', getDevilStatuses);
-        document.getElementById('zan').addEventListener('change', getDevilStatuses);
-        document.getElementById('hama').addEventListener('change', getDevilStatuses);
-        document.getElementById('mudo').addEventListener('change', getDevilStatuses);
+    // Updates the skills array based on the selected skills and their levels.
+    function updateSkills() {
+      skills = [
+        { lv: document.getElementById('level1').value || 1, id: document.getElementById('skill1').value || 0 },
+        { lv: document.getElementById('level2').value || 1, id: document.getElementById('skill2').value || 0 },
+        { lv: document.getElementById('level3').value || 1, id: document.getElementById('skill3').value || 0 },
+        { lv: document.getElementById('level4').value || 1, id: document.getElementById('skill4').value || 0 },
+        { lv: document.getElementById('level5').value || 1, id: document.getElementById('skill5').value || 0 },
+        { lv: document.getElementById('level6').value || 1, id: document.getElementById('skill6').value || 0 },
+      ];
+      const skillsOutput = document.getElementById('skillsOutput');
+      skillsOutput.value = `skills = [\n  ${skills.map(skill => `["lv": ${skill.lv}, "id": ${skill.id}]`).join(',\n  ')}\n];`;
+    }
 
+    // Load dropdown options from external files.
+    loadOptions('skill1', 'skill_list.txt');
+    loadOptions('skill2', 'skill_list.txt');
+    loadOptions('skill3', 'skill_list.txt');
+    loadOptions('skill4', 'skill_list.txt');
+    loadOptions('skill5', 'skill_list.txt');
+    loadOptions('skill6', 'skill_list.txt');
+    loadOptions('selection1', 'demon_list.txt');
 
-        function callMakeDevil() {
-            // Prepare the data to send
-            const data = {
-                id: document.getElementById('number1').value,
-                rarity: document.getElementById('rarity').value,
-                lvl: document.getElementById('level').value,
-                str: document.getElementById('str').value,
-                vit: document.getElementById('vit').value,
-                mag: document.getElementById('mag').value,
-                agi: document.getElementById('agil').value,
-                luk: document.getElementById('luk').value,
-                arc: 0,
-                skills: skills,  // This is an array, make sure it's handled as JSON
-                ai_type: 0,
-                dr: drain,
-                wk: weak,
-                av: avoid,
-                rp: repel,
-                spt: 0,
-                ct: 0,
-                uniq: Math.floor((Math.random() * 9999999) + 1000000),
-                exp: 0
-            };
+    // Event listener for the demon search bar.
+    document.getElementById('demonSearch').addEventListener('input', function() {
+      const searchTerm = this.value;
+      const demonSelect = document.getElementById('selection1');
+      updateSelectOptions(demonSelect, searchTerm);
+    });
 
-            console.log('Sending Data:', data);
+    // Event listener for the skill search bar (updates all six skill dropdowns).
+    document.getElementById('skillSearch').addEventListener('input', function() {
+      const searchTerm = this.value;
+      for (let i = 1; i <= 6; i++) {
+        const skillSelect = document.getElementById(`skill${i}`);
+        updateSelectOptions(skillSelect, searchTerm);
+      }
+    });
 
-            fetch('makeDevil.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data) // Convert the entire object to JSON
-            })
-                .then(response => response.text())  // Get raw response
-                .then(result => {
-                    console.log('Raw Response:', result);
-                    try {
-                        let json = JSON.parse(result);
-                        console.log('Parsed JSON:', json);
-                    } catch (e) {
-                        console.error('Invalid JSON:', e);
-                    }
-                })
-                .catch(error => console.error('Fetch error:', error));
+    // Automatically fill the demon number based on the selected demon.
+    function fillNumber(selectionId, numberId) {
+      const select = document.getElementById(selectionId);
+      const numberInput = document.getElementById(numberId);
+      const selectedValue = select.value;
+      numberInput.value = selectedValue ? selectedValue : "";
+    }
+
+    // Variables for elemental statuses.
+    let weak = 0;
+    let avoid = 0;
+    let repel = 0;
+    let drain = 0;
+
+    // Update elemental statuses based on the dropdown selections.
+    function getDevilStatuses() {
+      const statuses = {
+        phys: document.getElementById('phys').value,
+        agi: document.getElementById('agi').value,
+        bufu: document.getElementById('bufu').value,
+        zio: document.getElementById('zio').value,
+        zan: document.getElementById('zan').value,
+        hama: document.getElementById('hama').value,
+        mudo: document.getElementById('mudo').value
+      };
+
+      weak = 0;
+      avoid = 0;
+      repel = 0;
+      drain = 0;
+
+      for (let key in statuses) {
+        const value = statuses[key];
+        if (value === "weak") {
+          weak += getElementalValue(key);
+        } else if (value === "avoid") {
+          avoid += getElementalValue(key);
+        } else if (value === "repel") {
+          repel += getElementalValue(key);
+        } else if (value === "drain") {
+          drain += getElementalValue(key);
         }
+      }
 
-    </script>
+      console.log(`Weak: ${weak}, Avoid: ${avoid}, Repel: ${repel}, Drain: ${drain}`);
+    }
+
+    // Returns the elemental value based on the key.
+    function getElementalValue(element) {
+      switch (element) {
+        case 'phys': return 1;
+        case 'agi': return 2;
+        case 'bufu': return 4;
+        case 'zio': return 8;
+        case 'zan': return 16;
+        case 'hama': return 32;
+        case 'mudo': return 64;
+        default: return 0;
+      }
+    }
+
+    // Attach event listeners to the devil status dropdowns.
+    document.getElementById('phys').addEventListener('change', getDevilStatuses);
+    document.getElementById('agi').addEventListener('change', getDevilStatuses);
+    document.getElementById('bufu').addEventListener('change', getDevilStatuses);
+    document.getElementById('zio').addEventListener('change', getDevilStatuses);
+    document.getElementById('zan').addEventListener('change', getDevilStatuses);
+    document.getElementById('hama').addEventListener('change', getDevilStatuses);
+    document.getElementById('mudo').addEventListener('change', getDevilStatuses);
+
+    // Prepare and send the data.
+    function callMakeDevil() {
+      const data = {
+        id: document.getElementById('number1').value,
+        rarity: document.getElementById('rarity').value,
+        lvl: document.getElementById('level').value,
+        str: document.getElementById('str').value,
+        vit: document.getElementById('vit').value,
+        mag: document.getElementById('mag').value,
+        agi: document.getElementById('agil').value,
+        luk: document.getElementById('luk').value,
+        arc: 0,
+        skills: skills,
+        ai_type: 0,
+        dr: drain,
+        wk: weak,
+        av: avoid,
+        rp: repel,
+        spt: 0,
+        ct: 0,
+        uniq: Math.floor((Math.random() * 9999999) + 1000000),
+        exp: 0
+      };
+
+      console.log('Sending Data:', data);
+
+      fetch('makeDevil.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.text())
+      .then(result => {
+        console.log('Raw Response:', result);
+        try {
+          let json = JSON.parse(result);
+          console.log('Parsed JSON:', json);
+        } catch (e) {
+          console.error('Invalid JSON:', e);
+        }
+      })
+      .catch(error => console.error('Fetch error:', error));
+    }
+  </script>
 </body>
-
 </html>

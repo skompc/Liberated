@@ -14,5 +14,6 @@ start dnsserver.exe
 
 start monitor.bat
 
-cd ../web
+echo calling nginx
+cd web
 call "nginx.exe"

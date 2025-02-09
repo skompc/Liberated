@@ -69,7 +69,6 @@ If this is your first time connecting to the server, then go to <code>liberated.
 1. Any unimplemented endpoints will softlock the game. Simply restart the app.
 2. Story choices don't matter... just choose the path you want... I won't fix this!
 3. Results screen is inaccurate sometimes. Just ignore until I implement everything...
-4. The Demon Maker is all wonky when it comes to skills... I'll need to experiment and see what the client really expects.
 
 # FAQ
 

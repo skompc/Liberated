@@ -1,4 +1,8 @@
 <?php
+
+ini_set('memory_limit', '1024M');
+
+
 require_once "../tools/jsonTools.php";
 require_once "../tools/devilTools.php";
 require_once "../tools/dec_enc.php";
@@ -26,6 +30,14 @@ function BattleEntry($param) {
         "../data/battles/$stage/0.json"
     ];
     $data = combineFiles($files);
+
+    $filename = "../data/common/skl_data.json";
+
+    $skl_data = json_decode(file_get_contents($filename), true);
+
+    $skills = $skl_data['dvl_skl'];
+
+    $data['btl_bd']['dvl_skl'] = $skills;
 
     // Initialize variables for the devils
     $devil0 = [];

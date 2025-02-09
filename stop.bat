@@ -10,6 +10,7 @@ if %ERRORLEVEL% equ 0 (
 )
 
 REM Stop PHP-CGI
+start monitor_stop.bat
 taskkill /F /IM php-cgi.exe >nul 2>&1
 if %ERRORLEVEL% equ 0 (
     echo PHP-CGI stopped successfully.

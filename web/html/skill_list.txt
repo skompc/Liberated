@@ -33,7 +33,7 @@
 1033 Earthquake
 1034 Blight
 1035 Tempest Slash +
-1036 Lai Isshin
+1036 Iai Isshin
 1038 Cleaving Aura
 1039 Boar Rush
 1040 Fire Slash
@@ -50,6 +50,7 @@
 1051 Rending Black
 1052 Cleaving Thunder
 1053 Cleaving Light
+1054 Breakneck Dance
 1101 Agi
 1102 Agilao
 1103 Agidyne
@@ -92,7 +93,7 @@
 1140 Thunderclap
 1141 Mahama
 1142 Mahamaon
-1143 Mahamydyne
+1143 Mahamadyne
 1144 Judgement Light
 1145 Holy Wrath
 1146 Mudo
@@ -115,7 +116,6 @@
 1163 Mahashibabooon
 1164 Binding Cry
 1165 Marin Karin
-1166 Marin Kainon
 1167 Mahamarin Karin
 1168 Mahamarin Karinon
 1169 Sexy Dance
@@ -137,7 +137,7 @@
 1185 Mind Break
 1186 Ju
 1187 Juon
-1188 Mahoju
+1188 Mahaju
 1189 Mahajuon
 1190 Vengeance
 1191 Dezoreto
@@ -159,7 +159,7 @@
 1301 Maragi L
 1302 Mabufu L
 1303 Mazio L
-1304 Mazon L
+1304 Mazan L
 1305 Mahama L
 1306 Mamudo L
 1307 Herculean Strike L
@@ -170,14 +170,13 @@
 1312 Mazandyne H
 1313 Mahamadyne H
 1314 Mamudodyne H
-1315 Vorpal Blade H
 1316 Mediarahan H
 1317 Gigantomachia H
 1318 Ars Magna
 1325 Maragibarion
 1326 Mabufubarion
 1327 Maziobarion
-1328 Mazonbarion
+1328 Mazanbarion
 1329 Mahamabarion
 1330 Mamudobarion
 1331 Fiery Soul Prison
@@ -201,7 +200,7 @@
 2012 Mutudi
 2013 Memutudi
 2014 Paraladi
-2015 Mepararladi
+2015 Meparaladi
 2016 Charmdi
 2017 Mecharmdi
 2018 Amrita
@@ -218,7 +217,7 @@
 2030 Goddess' Embrace
 3001 Tarukaja
 3002 Rakukaja
-3003 Sudukaja
+3003 Sukukaja
 3007 Tarunda
 3008 Rakunda
 3009 Sukunda
@@ -239,17 +238,790 @@
 3027 Concentrate
 3028 Rebellion
 3029 Discord
-3030 Sabbatma
 3033 Tag
 3034 Barrier
 3035 Lydia
 3036 Barrier Break
 3037 Lydia Break
+3038 Lydia Break
 3039 War Dance
-3040 Nocturn
+3040 Nocturne
 3041 Blood Rush
 3042 Offensive Cry
 3043 Defensive Cry
 3044 Agile Cry
 3049 Invasion
 3058 Chief God's Haki
+4001 Dark Technique
+4009 Deity's Melody
+4018 Mother Goddess's Fury
+4041 Black Sabbath
+4079 Malicious Scale
+4082 Four Raging Calamities
+4091 What a Handful!
+4128 Call of the Dead
+4135 Discipline
+4142 Impartial Fist
+4152 Astral Saintstrike
+4160 Macha Slash
+4165 Wind Trick
+4170 Heartless Flames
+4180 Hero-Killing Venom
+4190 Thunder Fist
+4205 Crimson Judgement
+4209 Zenith Flare
+4210 Destructive Light
+4220 Seven Keys of the Guardian Gods
+4246 Moon-White Blade
+4250 Noble Bright
+4258 Dancing Strike
+8488 Gigantomachia
+8970 Crimson Judgement
+8973 Destructive Light
+9001 Barong Dance
+9002 Fire of Sinai
+9003 Trial of Hate
+9004 Pralaya
+9005 Kusanagi
+9007 Apocalypse
+9008 Ce Acatls' Return
+9010 Mjolnir
+9011 Gae Bulg
+9012 Morning Star
+9013 Hell Thrust
+9014 Ragnarok
+9016 Tenson Korin
+9017 Allure
+9018 Cold World
+9019 Gluttony
+9020 Gungnir
+9021 God's Bow
+9022 Red Zone
+9023 Divine Bows' Allure
+9024 Paralyzing Bite
+9025 Mist Slashes
+9026 Orlean Prayer
+9027 Brahmastra
+9028 Yinglong Killer
+9029 Hell Claw
+9030 Mega Boost
+9031 Mother Creation
+9032 Five Elements
+9034 Lotus Dance
+9035 Ouas
+9036 God's Malice
+9037 Mesopotamian Star
+9039 Dark Pandemic
+9040 MahaLantine
+9041 Babylon Goblet
+9046 Plague of Babylon
+9050 Occult Flash
+9054 Gomorrah (B)
+9056 Gomorrah (J)
+9060 Beloved Slash
+9061 Third Eye
+9063 Million Stab
+9064 Overture
+9070 Cleansing Shout
+9073 Dragon Blade
+9080 Lightning Shower
+9083 Ashura
+9088 Wrathful Flame
+9096 Ascension
+9098 Tempest
+9099 Tailwind
+9101 Sunrise
+9103 Halahala
+9106 Violent Slash
+9113 Blade of Terror
+9120 Vengeful Frost Fist
+9121 Gale Talon
+9126 Kuyo Flash
+9128 Slaughter All
+9130 Barbed Spear
+9132 Aztec Pulse
+9137 Path of Prominence
+9142 Hell's Trivia
+9147 Last Resort
+9148 Light Devourer
+9149 Amakusa Uprising
+9151 Dragon Slayer
+9153 Elemental Magic
+9157 Summon Elementals
+9161 Sword of Actuation
+9165 Thunderstorm
+9167 Virtuous Prosperity
+9170 Dark Premonition
+9174 Do Me A Favor
+9178 Flames of Gomorrah
+9182 Violent Dance
+9184 Goddess' Fan
+9189 Iron Judgement
+9193 Daylight Blade
+9198 Glorious Bolt
+9201 Woven Fate
+9203 Measured Fate
+9205 Severed Fate
+9216 Black Lullaby
+9221 Guillotine Blaze
+9223 50 mm Grenade Launcher
+9224 Ghost Hack
+9227 Temptation
+9229 Iron Fist
+9233 Ruin and Grace
+9235 16 Scourges
+9239 Berserk
+9242 Rip
+9244 Blade of the Absolute
+9247 Heavenly Sword
+9251 Baptisma
+9257 Blasphemy
+9264 Soul Break
+9266 Thunderous Hammer
+9270 Eruption
+9273 Blossoming Cyclone
+9276 Soul Hunt
+9290 Spin Dash
+9293 Great Chaos
+9295 Death Flyers
+9306 Noblewoman Aid
+9312 Dynamic Evil Spear
+9314 Soaring Blades
+9318 SEBURO C-40A
+9321 Bemusing Rhapsody
+9327 Ark
+9329 Physical Hunt
+9332 Fury Raid
+9336 Freezing Gale
+9340 Sacrificial Inferno
+9343 Hell Blaze
+9355 Lord Astaroth
+9362 Lionfall
+9366 Otherworldly Force
+9368 Scarlet Inferno
+9372 Yohuallipoca
+9376 Lost Sanity
+9380 Raijin Koryu Palm Strike
+9384 Nirvana
+9391 Flying High
+9396 Stout Horn
+9405 Demonsbane
+9408 Solar Flare
+9418 Hell Stream
+9424 El Rey
+9427 Arms Dance
+9431 Sanction
+9436 Exorcise Evil
+9442 Mark of Punishment
+9448 Abyss Flare
+9452 Abyss Flame
+9453 Divine Spear Gungnir
+9469 Mighty Blow
+9472 Fortune's Kiss
+9473 Fortune's Blessing
+9474 Scarlet Chop
+9482 Sword of Izumo
+9487 My Harvest!
+9491 Keraunos
+9502 Mantra
+9523 Crushing Force
+9535 Accursed Lightning
+9538 Vile Lightning
+9539 Dark Gift
+9544 Sea Dragon's Fury
+9567 Great Waterfall Torrent
+9568 Ratnamaru
+9575 Holy Lance of Longinus
+9582 Fangs of Vengeance
+9608 Sword of Fealty
+9630 Quivering Flames
+9632 All-Consuming Furnace
+9636 Impure Sword of Light
+9642 Demonic Sword
+9648 Last Nemesis
+9653 Ray of Ruin
+9654 Black Drill Destruction
+9655 Destructive Light Wave
+9656 Destructive Beam
+9661 Invisible Mischief
+9667 Lethal Flood
+9671 Teardrop
+9676 Tathlum Strike
+9681 Ruler of the Skies
+9684 Dragon King's Rage
+9697 Primordial Vortex
+9704 Ruthless Death Gale
+9710 Bloody Frenzy
+9711 Dance of Rebellion
+9720 Robust Fire Dance
+9721 Fatal Burn
+9737 Everlasting Ice Dance
+9740 Griffe de Tonnerre
+9743 Cuailnge
+9747 Queen's Fury
+9758 Gallows
+9764 Love Pain
+9770 Fallen Down
+9775 Merciful Slaughter
+9783 Einherjar
+9788 Goddess's Prank
+9794 Soul Levy
+9807 Heavenly Sword Stroke
+9817 Roaring Torrent
+9823 Hell Blaze
+9824 Barbed Spear
+9825 Barbed Spear
+9826 Barbed Spear
+9827 Barbed Spear
+9828 Barbed Spear
+9829 Barbed Spear
+9847 Light of Ruin
+9857 Weird Pain
+9869 Scapulimancy
+9878 Enigma's Rage
+9881 Underworld Miasma
+9898 Radiant Blast
+9901 Frost Comet
+9907 Jet-Black Light
+9930 Souljack
+9943 Great Calamity
+9950 It'll be all right
+9955 I'll Finish Up Alone
+9965 Salvation's Melody
+9972 Barrier's Blessing
+9990 Fire Technique
+9992 Ice Technique
+9994 Elec Technique
+9996 Force Technique
+9998 Light Technique
+35016 Dancing Strike
+80032 Lydia
+80033 Barrier
+80042 Faith in Wealth
+101001 Resist Phys
+101002 Resist Fire
+101003 Resist Ice
+101004 Resist Elec
+101005 Resist Force
+101006 Resist Light
+101007 Resist Dark
+101101 Null Phys
+101102 Null Fire
+101103 Null Ice
+101104 Null Elec
+101105 Null Force
+101106 Null Light
+101107 Null Dark
+101109 Null Mortal
+101201 Repel Phys
+101202 Repel Fire
+101203 Repel Ice
+101204 Repel Elec
+101205 Repel Force
+101206 Repel Light
+101207 Repel Dark
+101301 Drain Phys
+101302 Drain Fire
+101303 Drain Ice
+101304 Drain Elec
+101305 Drain Force
+101306 Drain Light
+101307 Drain Dark
+101309 Godly Shield
+101401 Null Poison
+101402 Null Bind
+101403 Null Charm
+101404 Null Mute
+101405 Resist Poison
+101406 Resist Bind
+101407 Resist Charm
+101408 Resist Mute
+101410 Null Curse
+101411 Null Weak
+101412 Resist Curse
+101413 Resist Weak
+101417 Godly Bastion
+101501 Phys Pierce
+101502 Fire Pierce
+101503 Ice Pierce
+101504 Elec Pierce
+101505 Force Pierce
+101507 Dark Pierce
+101701 Repel Pierce
+101702 Drain Pierce
+102101 Phys Boost
+102102 Phys Amp
+102103 Fire Boost
+102104 Fire Amp
+102105 Ice Boost
+102106 Ice Amp
+102107 Elec Boost
+102108 Elec Amp
+102109 Force Boost
+102110 Force Amp
+102111 Light Boost
+102112 Light Amp
+102113 Dark Boost
+102114 Dark Amp
+102117 Recovery Boost
+102118 Recovery Amp
+102119 Assassin
+102120 Master Assassin
+102121 Serial Killer
+102122 Butcher
+102123 Deadly Poison
+102124 Deadly Bondage
+102125 Deadly Charm
+102126 Deadly Mute
+102127 Deadly Curse
+102130 Phys Enhancement
+102131 Fire Enhancement
+102132 Ice Enhancement
+102133 Elec Enhancement
+102134 Force Enhancement
+102135 Light Enhancement
+102136 Dark Enhancement
+102139 Almighty Amp
+102140 Phys Prana
+102141 Fire Prana
+102142 Ice Prana
+102143 Elec Prana
+102144 Force Prana
+102145 Light Prana
+102146 Dark Prana
+102148 Phys Survivor
+102149 Fire Survivor
+102150 Ice Survivor
+102151 Elec Survivor
+102152 Force Survivor
+102153 Light Survivor
+102154 Dark Survivor
+102155 Almighty Survivor
+102156 Ailment Survivor
+102157 Phys Debuff
+102158 Fire Debuff
+102159 Ice Debuff
+102160 Elec Debuff
+102161 Force Debuff
+102162 Light Debuff
+102163 Dark Debuff
+102164 Almighty Debuff
+102165 Heal Survivor
+102166 Phys Accele
+102167 Fire Accele
+102168 Ice Accele
+102169 Elec Accele
+102170 Force Accele
+102171 Light Accele
+102172 Dark Accele
+102173 Almighty Accele
+102174 Phys Slowda
+102175 Fire Slowda
+102176 Ice Slowda
+102178 Force Slowda
+102179 Light Slowda
+102180 Dark Slowda
+102181 Almighty Slowda
+102182 Yin Yang Cycle
+102183 Godly Power
+102184 Radiant Light
+102185 Chief God's Mastery
+102187 Fire Avoid
+102188 Ice Avoid
+102189 Elec Avoid
+102190 Force Avoid
+102191 Light Avoid
+102192 Dark Avoid
+102194 Centurion's Spearmanship
+102195 Fire Vital
+102196 Phys Vital
+102197 Ice Vital
+102198 Elec Vital
+102199 Force Vital
+102200 Light Vital
+102201 Dark Vital
+102202 Almighty Vital
+102203 Radiant White Storm
+102204 Dragon King's Pride
+102206 Sage of Slaughter
+102207 Fatal Vital
+102209 Seventh Survivor
+102210 Hit Survivor
+103007 Strength Amp I
+103008 Magic Amp I
+103009 Vitality Amp I
+103010 Agility Amp I
+103011 Luck Amp I
+103012 Strength Amp II
+103013 Magic Amp II
+103014 Vitality Amp II
+103015 Agility Amp II
+103016 Luck Amp II
+103017 Strength Amp III
+103018 Magic Amp III
+103019 Vitality Amp III
+103020 Agility Amp III
+103021 Luck Amp III
+103023 Good Aim
+103024 Great Aim
+103025 Dodge
+103026 Evade
+103027 Madness
+103028 Insanity
+103029 Hellish Mask
+103030 Infernal Mask
+103031 Fast Recovery
+103032 Epic Recovery
+103036 Bloody Glee
+103037 Savage Glee
+103038 Wild Guess
+103039 Wild Instinct
+103040 Epitome of Aggression
+103041 Epitome of Madness
+103042 Epitome of Carnage
+103043 Epitome of Fortitude
+103044 Epitome of Swiftness
+103045 Epitome of Endurance
+103046 Epitome of Wisdom
+103047 Epitome of Illusion
+103051 Epitome of Finesse
+103053 Epitome of Hardiness
+103054 6th Sense Survivor
+103055 Great Idea
+103056 Epitome of Interception
+103057 Epitome of Wisdom
+103058 Epitome of Martial Arts
+103060 Fortunate Visitor
+103061 Epitome of Valor
+103062 Epitome of Witchcraft
+103063 Brawny Visitor
+103201 Life Bonus
+103202 Life Gain
+103203 Life Surge
+103204 Mana Bonus
+103205 Mana Gain
+103206 Mana Surge
+103207 Counter
+103208 Retaliate
+103209 Death Counter
+103210 Endure
+103211 Enduring Soul
+103212 Life Aid
+103213 Mana Aid
+103216 Infinite Chakra
+103217 Faithful Counter
+103219 Zealous Rebel
+103301 Tetraka Shift
+103302 Makaraka Shift
+103304 Auto-Taruka
+103305 Auto-Rakuka
+103306 Auto-Sukuka
+103307 Intimidating Stance
+103308 Speedster
+103310 Back Attack
+103311 Merciless Blow
+103315 Auto-Tarunda
+103316 Auto-Rakunda
+103317 Auto-Sukunda
+103320 Death Blow
+103325 Barrier Survivor
+103326 Wicked Strike
+103327 Tar Flexi
+103329 Rak Flexi
+103331 Suk Flexi
+103333 Wretched Blow
+104003 Dmg Panel Immunity
+104004 Void Dark Zones
+108303 Auto-Rebellion
+108304 Auto-Luster Candy
+108305 Auto-Debilitate
+109001 Trickster
+109002 Lunar Blessing
+109003 Stealth
+109004 Luck
+109005 Trap Free
+109006 Mutant
+109007 Arms Mastery
+109008 Avatar
+109009 Vahana
+109010 Faith in Wealth
+109012 Superior Power
+109013 Dragon Sense
+109014 Kongo Zaou
+109015 Curse of Distress
+109016 Curse of Anguish
+109017 Guards of Tartarus
+109019 Rasetsu
+109020 Death Lust
+109021 You're Next
+109022 Euphoric Frenzy
+109023 Yomotsu Okami
+109025 Harmonious Death
+109026 Yaxche
+109027 Law of Hell
+109029 Hell's Gate
+109031 Fruit of the Dead
+109033 Meslamtaea
+109034 Fog of Death
+109035 Call to Helheim
+109036 Warlord's Wrath
+109037 Arcane Ritual
+109039 Sass
+109040 Nightlife
+109041 Madama Stomp
+109042 Madama Uppercut
+109043 Pussyfoot
+109045 Lord of the Abyss
+109046 Ishvara
+109047 Rapid Shot
+109048 Voltage
+109049 Shadow-Shock
+109050 Griffon-Bolt
+109051 Preach
+109052 Andalucia
+109053 Loyal God of War
+109054 New Hope
+109055 Final Opposition
+109056 Earth Sacrifice
+109057 Unyielding Phalanx
+109059 Joy Song
+109060 Lord of Clouds
+109061 Terror of London
+109062 Master Prankster
+109063 Magna Mater
+109065 Three Faces Six Arms
+109066 Enma's Judgement
+109067 Guilty
+109068 Skanda
+109070 The Great Darkness
+109071 Ignite
+109072 God's Word
+109073 God's Blessing
+109074 God's Fire
+109075 Rains of Canaan
+109077 Garden of Eden
+109079 Golden Greed
+109081 Nastrond
+109083 Heavenly Valor
+109084 Judgement of Nahar
+109087 Soul Divide
+109088 Pestilence
+109089 Bloodshed
+109090 Famine
+109091 Plague
+109092 Shogun's Order
+109093 Icy Rage
+109095 Brilliant Wings
+109096 Guardian of the East
+109097 Endless War
+109099 Culann's Hound
+109100 Ce Acatl
+109101 Radiant Mantra
+109102 War Aid
+109103 Lunar Awakening
+109104 North Wind
+109106 Thunder of Destiny
+109107 Hell's Ministry
+109109 Flag of Salvation
+109111 The Struggler
+109112 Foe of Demons
+109113 Bloody Scripture
+109114 God 1000 Fist Cannon
+109115 Killer Impulse
+109119 Sins of Sodom
+109121 Call of the Dead
+109123 Hand of Glory
+109124 Goddess of Slaughter
+109127 Desperate Hit
+109131 Shimmer Arrow
+109136 Black Beckoning
+109141 Fallen Grigori
+109147 Everything Evil
+109150 Supreme Creator
+109162 Mark of the Beast
+109164 Soul Judgement
+109165 Megingjord
+109171 Cry of the Poor
+109173 Alder King
+109177 Power of Life
+109186 Omniscient Guidance
+109187 Duke of Hell
+109189 Dragon of Defense
+109190 Tachikoma Support
+109191 God of Light
+109193 Deadly Melody
+109195 Goddess Aid
+109196 Fox Sin of Greed
+109198 Trillion Dark
+109199 Dragon of Hesperia
+109201 Fecund Womb
+109202 Sword Deity's Might
+109206 Sun God's Majesty
+109207 Hell Hound
+109209 Stella Maris
+109211 Miracle of Fatima
+109214 Master of Hell
+109222 Crawling Chaos
+109224 Drunken Giant
+109226 Ome Acatl
+109229 Call of R'lyeh
+109232 Between Heaven & Earth
+109233 God of Ubiquity
+109235 Iwato Priestess
+109236 Mask of Veiled Beauty
+109239 Path of the Mage
+109241 Thunderforce
+109244 Bifrost Keeper
+109246 Hero of Prophecy
+109249 Light of Elohim
+109252 Aqua Grace
+109255 Endless One
+109256 Endless One
+109257 Shaddai's Eye
+109259 Omen of Rebellion
+109263 Sabaoth's Voice
+109271 Covenant Bless
+109277 Demonic Flame's Aid
+109280 Chief God's Rage
+109290 Strength Blessing
+109293 Fortune's Light
+109296 Guardian Deity's Aid
+109301 Jingu's Divine Light
+109305 Kunitsukami's Pride
+109307 Kunitsukami's Might
+109309 Kunitsukami's Conviction
+109310 Elusis's Blessing
+109315 Omniscience and Omnipotence
+109318 Elec Avatar
+109321 Supreme Might
+109325 Prodigious Ability
+109327 Dark Eclipse Voltage
+109331 Hedonistic Reaper
+109339 Eternal Order
+109343 Enma's Conviction
+109344 Centurion
+109349 Tempestuous Malice
+109353 Chaos Incarnate
+109365 Kangiten's Mystery
+109368 Kangiten's Dharma
+109370 Burgundy's Resentment
+109375 Support from the Shadows
+109386 Blood Cradle
+109389 Eruption of Madness
+109391 One Who Sees God
+109396 Demonized Form
+109398 Impregnable
+109403 Brightness Incarnate
+109404 Rejection
+109409 Demonic Training
+109410 Demonic Growth
+109411 Spirit Phenomenon
+109414 Swordsman in Boots
+109416 Law of the Sea God
+109418 Lady of the Lake
+109425 Ice Avatar
+109426 Samildanach
+109431 Dragon King's Pride
+109448 War Goddess
+109458 Goddess of Madness
+109462 Bloodstained Divine Queen
+109465 Demon Dog's Conviction
+109466 Azure Demon Dog
+109469 Divine Proxy
+109471 Ashihara no Nakatsukuni's Might
+109473 Descent of Ice and Snow
+109477 Kushinokami's Conviction
+109478 Blood-Starved Werewolf
+109482 Lurking Shadow
+109484 Queen of the Night
+109488 World Tree
+109490 Great Trunk
+109494 Towering Tree
+109495 Narcissism
+109499 Merciless Love
+109500 Narcissus in Full Bloom
+109502 The Beautiful One
+109503 Life Force Survivor
+109506 Strongest Magic Caster
+109508 Holy Immunity
+109510 Pure-White Devil
+109514 The Bloody Valkyrie
+109517 Golden Apple
+109523 Destroyer of Virtue
+109526 Light of Eternal Youth
+109529 Determined Hero
+109535 Ascended General
+109536 Patriotic General
+109538 Hell's Gunner
+109543 Great Trunk
+109544 Nine-Headed Dragon
+109558 Sinister Malice
+109564 Unknown Predator
+109570 Force Avatar
+109574 Five Divine Attendants
+109580 Good Fortune
+109582 Inventio
+109588 Power of Black Forest
+109592 Peerless Beauty
+109598 Frost Queen
+109605 The Wings of Darkness
+109617 Eternize
+109621 Boundless Wave
+109635 Play's Editor
+109636 Play's Editor
+109637 Play's Editor
+109640 Play's Editor
+109645 My Prayer
+109646 My Prayer
+109647 My Prayer
+109650 My Prayer
+109652 Time Traveler
+109653 Time Traveler
+109655 Origin Avatar
+109658 Leisurely Guidance
+109659 Fierce Guidance
+109660 Guardian of Records
+109666 God of Wisdom
+109669 Corrosion's Wisdom
+109671 Recovery's Wisdom
+109672 Sorcery's Wisdom
+109673 Control's Wisdom
+109675 Iron Defense's Wisdom
+109677 Intimidation's Wisdom
+109705 The Seven Mes
+109736 Divine's Wisdom
+109743 Chaos Seeker
+109746 Black Sabbath
+109758 Poison Dragon's Sympathy
+109770 6th Day Miracle
+109782 Eternal Flames
+109796 Tiny Partner
+109824 Strengthening Function
+109825 Defense Function
+109843 Power of the Three Jewels
+109847 Pure Maiden
+109852 Moon's Luster
+109855 Red-Feathered Macha
+109861 Harpyia's Wings
+109866 Blazing Sacrifice
+109876 Bloodstained Demon King
+109877 Immortal Sea Serpent
+109889 Marshland Monster
+109892 Archangel's Revelation
+109895 Shimmer Arrow
+109896 Destruction's Origin
+109898 Cruel Malice
+109907 Indestructible Leader
+109908 Indomitable Leader
+109910 Heavy Metal, Dark Fantasy
+109914 Iron Lightning Anthem
+109920 The Extremely Handsome Protagonist
+109924 Infernal Onslaught
+109930 Empress of Thunder
+109940 Proof of Determination
+109945 Mother Goddess Embracing the Earth
+109952 Majesty of the Creator
+109959 River Goddess
+109960 The Three Crimson Sovereigns
+109970 Fortune's Snowman
+150135 Samildanach

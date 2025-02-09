@@ -57,7 +57,7 @@ function makeDevil($data) {
             "num" => 60,
             "open" => []
         ],
-        "is_awk" => false,
+        "is_awk" => true,
         "dr" => $data['dr'],
         "wk" => $data['wk'],
         "av" => $data['av'],

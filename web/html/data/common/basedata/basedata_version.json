@@ -2,19 +2,19 @@
     "basedata_version": [
         {
             "type": "data1",
-            "version": "1b5b4e0fede3ea08b33537531748ea3f"
+            "version": "ffffffffffffffffffffffffffffffff"
         },
         {
             "type": "data2",
-            "version": "26d6a97232a53b95d71f34a2f80ab3c6"
+            "version": "ffffffffffffffffffffffffffffffff"
         },
         {
             "type": "data3",
-            "version": "f58e39cc53be2bd47ca8191364fa0962"
+            "version": "ffffffffffffffffffffffffffffffff"
         },
         {
             "type": "data4",
-            "version": "f62a100ef1d11c0b7198b47209cdced5"
+            "version": "ffffffffffffffffffffffffffffffff"
         }
     ],
     "res_code": 0,
