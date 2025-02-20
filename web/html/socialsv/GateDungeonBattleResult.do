@@ -15,9 +15,22 @@ function BattleEntry($param) {
 
     // Define files and read data
     $files = [
-        "../data/battles/aura/$floor/battles/0/result.json"
+        "../data/aura/$floor/battles/0/result.json"
     ];
     $data = combineFiles($files);
+
+    $mapFile = "../saves/players/0/temp/aura/map.txt";
+    $mapContents = trim(file_get_contents($mapFile));
+
+    // Check if it's JSON (array format)
+    if (str_starts_with($mapContents, '[') && str_ends_with($mapContents, ']')) {
+        $data['ctx']['floor']['unit'] = json_decode($mapContents, true);
+    } else {
+        // Fallback to normal line-by-line reading
+        $data['ctx']['floor']['unit'] = array_map('intval', file($mapFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
+    }
+
+
 
     // Prepare parties
     $parties = json_decode(file_get_contents("../saves/players/0/temp/aura/parties.json"), true);

@@ -766,28 +766,7 @@
     ]
   },
   "is_again": false,
-  "beginner_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
   "consume_ap": 3,
-  "main_mission": {
-    "currents": [
-      "Clear Mission: Fusion Training",
-      "Reach the boss room entrance in the Aura Gate",
-      "Clear a Strange Signal",
-      "Perform an Awakening at Pandemonium",
-      "Participate in Dx2 Duel",
-      "Perform a Transfer at Pandemonium",
-      "Clear an Eclipse once",
-      "Limit Break a Dx2",
-      "Clear an Alter-World Quest 1 time.",
-      "Battle in Hell's Park",
-      "Clear Story Ch. 5",
-      "Perform an Evolution at Pandemonium"
-    ],
-    "is_display": true
-  },
   "is_magatama_max": false,
   "is_advice_usable": false,
   "is_first": true,
@@ -845,9 +824,5 @@
   "is_magatama_sell": false,
   "tm": "57",
   "bonus_player_exp": 100,
-  "comeback_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
   "is_card_max": false
 }

@@ -2,6 +2,7 @@
 require_once "../tools/jsonTools.php";
 require_once "../tools/devilTools.php";
 require_once "../tools/dec_enc.php";
+require_once "../tools/maze.php";
 
 // Listen for the GET request and handle it
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['param'])) {
@@ -18,11 +19,26 @@ function GateDungeonBattleEntry($param) {
     $main_idx = $params['main_idx'];
     $sub_idx = $params['sub_idx'];
 
+    $maze = makeMaze(11,7);
+
+
     // Define files and read data
-    $files = [
-        "../data/battles/aura/$floor/floor_entry.json"
-    ];
-    $data = combineFiles($files);
+    $jsonContent = file_get_contents("../data/aura/$floor/floor_entry.json");
+    $data = json_decode($jsonContent, true);
+
+    $map = json_decode($maze['txt'], true);
+    $data['ctx']['floor']['unit'] = $map;
+
+    $data['ctx']['floor']['size_y'] = 11;
+    $data['ctx']['floor']['size_x'] = 7;
+
+    $file2mod = json_decode(file_get_contents("../data/aura/$floor/refresh.json"), true);
+    $file2mod['update'] = $maze['maze']['update'];
+    file_put_contents("../data/aura/$floor/refresh.json", json_encode($file2mod));
+
+    $file2make = "../data/aura/$floor/full.json";
+    file_put_contents($file2make, json_encode($maze['full']['update']));
+
 
     // Initialize variables for the devils
     $devil0 = [];
@@ -146,6 +162,10 @@ function GateDungeonBattleEntry($param) {
     } else {
         //echo "Failed to write to $temp_file_name";
     }
+    
+    $temp_file_name = "../saves/players/0/temp/aura/map.txt";
+    // Write the map data into the file
+    file_put_contents($temp_file_name, json_encode($map, JSON_PRETTY_PRINT));
 
     // Respond with updated data
     

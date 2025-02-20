@@ -655,15 +655,7 @@
     ]
   },
   "is_again": false,
-  "beginner_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
   "consume_ap": 4,
-  "main_mission": {
-    "currents": [],
-    "is_display": false
-  },
   "is_magatama_max": false,
   "is_advice_usable": false,
   "is_first": true,
@@ -722,9 +714,5 @@
   "bonus_exp": 25,
   "is_magatama_sell": false,
   "tm": "12",
-  "comeback_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
   "is_card_max": false
 }

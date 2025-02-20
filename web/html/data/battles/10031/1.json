@@ -11,14 +11,6 @@
       "is_use": true
     }
   ],
-  "beginner_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
-  "main_mission": {
-    "currents": [],
-    "is_display": false
-  },
   "enemies": [
     {
       "skl_exp_pr": [
@@ -215,9 +207,5 @@
   "res_code": 0,
   "client_wait": 0,
   "tm": "9",
-  "comeback_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
   "wave_max": 2
 }

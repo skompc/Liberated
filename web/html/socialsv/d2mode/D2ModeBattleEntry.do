@@ -1,4 +1,7 @@
 <?php
+
+ini_set('memory_limit', '1024M');
+
 require_once "../../tools/jsonTools.php";
 require_once "../../tools/d2mode/devilTools.php";
 require_once "../../tools/dec_enc.php";
@@ -32,6 +35,14 @@ function BattleEntry($param) {
     ];
 
     $combined = array_merge($data, $response);
+
+    $combined['avatar']['armament_uniqs'] = $combined['party']['avatar']['armament_uniqs'];
+
+    $battle_bd_file = "../../data/common/skl_data.json";
+
+    $battle_bd = json_decode(file_get_contents($battle_bd_file), true);
+
+    $combined['btl_bd']['dvl_skl'] = $battle_bd['dvl_skl'];
 
 
 

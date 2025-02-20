@@ -96,14 +96,6 @@
       "is_use": false
     }
   ],
-  "beginner_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
-  "main_mission": {
-    "currents": [],
-    "is_display": false
-  },
   "tm": "268",
   "enemies": [
     {
@@ -392,10 +384,6 @@
       "rarity": 6
     }
   ],
-  "comeback_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
   "wave": 2,
   "wave_max": 3,
   "res_code": 0,

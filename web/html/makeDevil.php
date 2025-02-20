@@ -63,6 +63,7 @@ function makeDevil($data) {
         "av" => $data['av'],
         "spt" => $data['spt'],
         "rp" => $data['rp'],
+        "st" => $data['st'],
         "contents_type" => $data['ct'],
         "rarity" => $data['rarity'],
         "exp" => $data['exp'],

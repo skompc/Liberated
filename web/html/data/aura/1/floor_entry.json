@@ -1,6 +1,43 @@
 {
+    "transaction_id": "43-09E-1AD338",
+    "update_step_num": 1,
+    "beginner_mission": {
+        "is_badge": true,
+        "is_display": true
+    },
+    "smn": [
+        {
+            "skl_p": 82,
+            "level": 44,
+            "next_lv_exp": 21250,
+            "skl": [
+                100010,
+                14010
+            ],
+            "exists_chara_quest": true,
+            "uniq": 30205478304,
+            "is_awaken": true,
+            "id": 1,
+            "exp": 368963,
+            "now_lv_exp": 365417
+        },
+        {
+            "skl_p": 21,
+            "level": 16,
+            "next_lv_exp": 2240,
+            "skl": [
+                120310
+            ],
+            "exists_chara_quest": true,
+            "uniq": 30205478722,
+            "is_awaken": true,
+            "id": 4,
+            "exp": 16042,
+            "now_lv_exp": 15360
+        }
+    ],
     "ctx": {
-        "makka": 6065965,
+        "makka": 7078308,
         "heal_makka": 0,
         "ap_max": 100,
         "dp_max": 100,
@@ -94,28 +131,28 @@
                 "contents_type": 0
             },
             {
-                "hptotal": 340,
-                "agi": 43,
+                "hptotal": 368,
+                "agi": 51,
                 "exceed_info": {
                     "opened_num": 0
                 },
-                "hpmx": 340,
-                "luk": 33,
-                "devicon_power": 845,
-                "hp": 340,
+                "hpmx": 368,
+                "luk": 39,
+                "devicon_power": 897,
+                "hp": 368,
                 "recommend_type": 0,
                 "lv": 25,
                 "additional_skl": [],
-                "mdef": 242,
+                "mdef": 252,
                 "limitbreak": {
                     "effect": [],
                     "num": 60,
                     "open": []
                 },
-                "is_awk": false,
+                "is_awk": true,
                 "dr": 0,
                 "ai_auto_type": 2,
-                "mag": 33,
+                "mag": 39,
                 "limitbreak_skl": [],
                 "arc": 0,
                 "wk": 0,
@@ -150,23 +187,23 @@
                     }
                 ],
                 "id": 11710,
-                "patk": 288,
+                "patk": 307,
                 "exp": 13410,
-                "vit": 33,
+                "vit": 39,
                 "is_released_learn_only_skill": false,
                 "st": 0,
-                "pdef": 249,
+                "pdef": 260,
                 "mp": 10,
                 "mgtm_effs": [],
                 "lock_ex_skl": [
                     true
                 ],
                 "mgtms": [],
-                "str": 47,
+                "str": 56,
                 "av": 32,
                 "spt": 0,
                 "uniq": 30478063566,
-                "matk": 259,
+                "matk": 271,
                 "mpmx": 10,
                 "rp": 0,
                 "rarity": 1,
@@ -252,19 +289,19 @@
                 "contents_type": 0
             },
             {
-                "hptotal": 356,
-                "agi": 49,
+                "hptotal": 368,
+                "agi": 50,
                 "exceed_info": {
                     "opened_num": 0
                 },
-                "hpmx": 356,
-                "luk": 40,
-                "devicon_power": 875,
-                "hp": 356,
+                "hpmx": 368,
+                "luk": 42,
+                "devicon_power": 897,
+                "hp": 368,
                 "recommend_type": 1,
-                "lv": 24,
+                "lv": 25,
                 "additional_skl": [],
-                "mdef": 240,
+                "mdef": 246,
                 "limitbreak": {
                     "effect": [],
                     "num": 60,
@@ -308,42 +345,42 @@
                     }
                 ],
                 "id": 11730,
-                "patk": 253,
-                "exp": 12200,
-                "vit": 38,
+                "patk": 261,
+                "exp": 13410,
+                "vit": 39,
                 "is_released_learn_only_skill": false,
                 "st": 18,
-                "pdef": 242,
+                "pdef": 249,
                 "mp": 10,
                 "mgtm_effs": [],
                 "lock_ex_skl": [
                     true
                 ],
                 "mgtms": [],
-                "str": 33,
+                "str": 34,
                 "av": 0,
                 "spt": 0,
                 "uniq": 30478079671,
-                "matk": 243,
+                "matk": 248,
                 "mpmx": 10,
                 "rp": 0,
                 "rarity": 1,
                 "contents_type": 0
             },
             {
-                "hptotal": 315,
-                "agi": 44,
+                "hptotal": 340,
+                "agi": 46,
                 "exceed_info": {
                     "opened_num": 0
                 },
-                "hpmx": 315,
-                "luk": 39,
-                "devicon_power": 736,
-                "hp": 315,
+                "hpmx": 340,
+                "luk": 41,
+                "devicon_power": 784,
+                "hp": 340,
                 "recommend_type": 0,
-                "lv": 23,
+                "lv": 25,
                 "additional_skl": [],
-                "mdef": 228,
+                "mdef": 242,
                 "limitbreak": {
                     "effect": [],
                     "num": 60,
@@ -352,7 +389,7 @@
                 "is_awk": false,
                 "dr": 0,
                 "ai_auto_type": 0,
-                "mag": 31,
+                "mag": 33,
                 "limitbreak_skl": [],
                 "arc": 0,
                 "wk": 16,
@@ -387,64 +424,71 @@
                     }
                 ],
                 "id": 11910,
-                "patk": 243,
-                "exp": 12174,
-                "vit": 31,
+                "patk": 259,
+                "exp": 13410,
+                "vit": 33,
                 "is_released_learn_only_skill": false,
                 "st": 8,
-                "pdef": 228,
+                "pdef": 242,
                 "mp": 10,
                 "mgtm_effs": [],
                 "lock_ex_skl": [
                     true
                 ],
                 "mgtms": [],
-                "str": 31,
+                "str": 33,
                 "av": 0,
                 "spt": 0,
                 "uniq": 30478079672,
-                "matk": 243,
+                "matk": 259,
                 "mpmx": 10,
                 "rp": 0,
                 "rarity": 1,
                 "contents_type": 0
             }
         ],
-        "map_pos": 23,
+        "map_pos": 0,
         "social_box_max": 10,
         "walk_dec_num": 1,
         "front_smn": 1,
         "floor": {
             "unit": [
-                34360262836,
+                8590459088,
+                25770328144,
+                25770328144,
+                8590458900,
                 8590458928,
-                8591507474,
-                8591507504,
-                8590459584,
-                2207613716000,
-                8591509088,
-                25771377696,
-                1099512152484,
-                2207613717248,
-                8590462272,
-                8591509536,
-                8590459520,
-                8590460256,
-                4406636972098,
-                8591507488,
-                8590459296,
-                25771378724,
-                8591507968,
-                8591508576,
-                8590459104,
-                8591507520,
-                8591507776,
-                25771378784
+                8590459088,
+                25770328144,
+                8590458896,
+                25770328097,
+                8590459040,
+                25770328208,
+                8590458960,
+                8590458976,
+                8590459044,
+                8590459040,
+                25770328192,
+                8590458960,
+                8590458900,
+                8590458945,
+                25770328100,
+                8590459072,
+                8590458960,
+                8590458945,
+                8590458960,
+                42950197473
             ],
-            "size_y": 6,
-            "size_x": 4,
+            "size_y": 5,
+            "size_x": 5,
             "floor": 1
         },
+        "ap_tut": [
+            {
+                "is_read": false,
+                "drama_path": "tutorial/gd_p1_13/"
+            }
+        ],
         "battle_avoid": 6,
         "skill_reduce_damage2": [
             104002
@@ -463,7 +507,7 @@
             "open_floor": 50,
             "gk_lose_heal": 50,
             "trap_good_lv3": 50,
-            "end_ts": 1738378500000,
+            "end_ts": 1770692152000,
             "trap_good_lv2": 100,
             "name": "Aura Gate1",
             "stages": [
@@ -471,8 +515,8 @@
                     "re_id": 0,
                     "floors": [
                         {
-                            "is_next": true,
-                            "is_raid": false,
+                            "is_next": false,
+                            "is_raid": true,
                             "num": 1,
                             "prize_once": {
                                 "num": 1000,
@@ -480,7 +524,7 @@
                                 "id": 200,
                                 "type": 2
                             },
-                            "is_cleared": false,
+                            "is_cleared": true,
                             "is_talk": true
                         },
                         {
@@ -493,7 +537,7 @@
                                 "id": 200,
                                 "type": 2
                             },
-                            "is_cleared": false,
+                            "is_cleared": true,
                             "is_talk": true
                         },
                         {
@@ -506,11 +550,11 @@
                                 "id": 200,
                                 "type": 2
                             },
-                            "is_cleared": false,
+                            "is_cleared": true,
                             "is_talk": true
                         },
                         {
-                            "is_next": false,
+                            "is_next": true,
                             "is_raid": false,
                             "num": 4,
                             "prize_once": {
@@ -580,7 +624,7 @@
                             "desc": "Chance to obtain Magnetite \nand the following in Lv.1."
                         },
                         "lv": "Average: over Lv.5",
-                        "gk_id": 0
+                        "gk_id": 2111
                     }
                 },
                 {
@@ -627,7 +671,7 @@
                         },
                         {
                             "is_next": false,
-                            "is_raid": false,
+                            "is_raid": true,
                             "num": 9,
                             "prize_once": {
                                 "num": 1000,
@@ -696,7 +740,7 @@
                             "desc": "Chance to obtain Magnetite \nand the following in Lv.2."
                         },
                         "lv": "Average: over Lv.10",
-                        "gk_id": 0
+                        "gk_id": 2112
                     }
                 },
                 {
@@ -717,7 +761,7 @@
                         },
                         {
                             "is_next": false,
-                            "is_raid": true,
+                            "is_raid": false,
                             "num": 12,
                             "prize_once": {
                                 "num": 2000,
@@ -756,7 +800,7 @@
                         },
                         {
                             "is_next": false,
-                            "is_raid": false,
+                            "is_raid": true,
                             "num": 15,
                             "prize_once": {
                                 "num": 30,
@@ -833,7 +877,7 @@
                         },
                         {
                             "is_next": false,
-                            "is_raid": false,
+                            "is_raid": true,
                             "num": 17,
                             "prize_once": {
                                 "num": 2000,
@@ -846,7 +890,7 @@
                         },
                         {
                             "is_next": false,
-                            "is_raid": true,
+                            "is_raid": false,
                             "num": 18,
                             "prize_once": {
                                 "num": 2000,
@@ -949,7 +993,7 @@
                         },
                         {
                             "is_next": false,
-                            "is_raid": true,
+                            "is_raid": false,
                             "num": 22,
                             "prize_once": {
                                 "num": 3000,
@@ -962,7 +1006,7 @@
                         },
                         {
                             "is_next": false,
-                            "is_raid": false,
+                            "is_raid": true,
                             "num": 23,
                             "prize_once": {
                                 "num": 3000,
@@ -1052,7 +1096,7 @@
                     "floors": [
                         {
                             "is_next": false,
-                            "is_raid": false,
+                            "is_raid": true,
                             "num": 26,
                             "prize_once": {
                                 "num": 3000,
@@ -1078,7 +1122,7 @@
                         },
                         {
                             "is_next": false,
-                            "is_raid": true,
+                            "is_raid": false,
                             "num": 28,
                             "prize_once": {
                                 "num": 3000,
@@ -1168,7 +1212,7 @@
                     "floors": [
                         {
                             "is_next": false,
-                            "is_raid": false,
+                            "is_raid": true,
                             "num": 31,
                             "prize_once": {
                                 "num": 4000,
@@ -1207,7 +1251,7 @@
                         },
                         {
                             "is_next": false,
-                            "is_raid": true,
+                            "is_raid": false,
                             "num": 34,
                             "prize_once": {
                                 "num": 4000,
@@ -1284,7 +1328,7 @@
                     "floors": [
                         {
                             "is_next": false,
-                            "is_raid": true,
+                            "is_raid": false,
                             "num": 36,
                             "prize_once": {
                                 "num": 4000,
@@ -1310,7 +1354,7 @@
                         },
                         {
                             "is_next": false,
-                            "is_raid": false,
+                            "is_raid": true,
                             "num": 38,
                             "prize_once": {
                                 "num": 4000,
@@ -1533,7 +1577,7 @@
                     "floors": [
                         {
                             "is_next": false,
-                            "is_raid": false,
+                            "is_raid": true,
                             "num": 46,
                             "prize_once": {
                                 "num": 5000,
@@ -1585,7 +1629,7 @@
                         },
                         {
                             "is_next": false,
-                            "is_raid": true,
+                            "is_raid": false,
                             "num": 50,
                             "prize_once": {
                                 "num": 1,
@@ -1667,7 +1711,7 @@
             "id": 4,
             "trap_bad_lv3": 20,
             "trap_bad_lv2": 10,
-            "cur_floor": 1
+            "cur_floor": 4
         },
         "ap": 100,
         "skill_reduce_damage1": [
@@ -1690,9 +1734,9 @@
         },
         "scene_file": "dungeon_00",
         "moon": {
-            "next": 7,
-            "cur": 8,
-            "next_change_ts": 1738376699698,
+            "next": 6,
+            "cur": 5,
+            "next_change_ts": 1739132819759,
             "max": 8,
             "ages": [
                 {
@@ -1787,38 +1831,27 @@
             }
         ]
     },
+    "main_mission": {
+        "currents": [
+            "Clear Mission: Fusion Training",
+            "Clear a Strange Signal",
+            "Participate in Dx2 Duel",
+            "Perform a Transfer at Pandemonium",
+            "Clear an Eclipse once",
+            "Battle in Hell's Park",
+            "Learn about Brands at Pandemonium",
+            "Clear 30F of Aura Gate 1"
+        ],
+        "is_display": true
+    },
+    "open_gimmick_info": {
+        "open_rooms": []
+    },
+    "tm": "28",
+    "comeback_mission": {
+        "is_badge": false,
+        "is_display": false
+    },
     "res_code": 0,
-    "client_wait": 0,
-    "update_step_num": 1,
-    "smn": [
-        {
-            "skl_p": 80,
-            "level": 43,
-            "next_lv_exp": 20778,
-            "skl": [
-                100010,
-                14010
-            ],
-            "exists_chara_quest": true,
-            "uniq": 30205478304,
-            "is_awaken": true,
-            "id": 1,
-            "exp": 364882,
-            "now_lv_exp": 344639
-        },
-        {
-            "skl_p": 17,
-            "level": 14,
-            "next_lv_exp": 1920,
-            "skl": [
-                120310
-            ],
-            "exists_chara_quest": true,
-            "uniq": 30205478722,
-            "is_awaken": true,
-            "id": 4,
-            "exp": 11961,
-            "now_lv_exp": 11360
-        }
-    ]
+    "client_wait": 0
 }

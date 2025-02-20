@@ -40,10 +40,6 @@
   },
   "bonus_exp": 35,
   "bonus_player_exp": 100,
-  "comeback_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
   "is_card_max": false,
   "reward": {
     "get_mag": 0,
@@ -855,22 +851,6 @@
     ]
   },
   "is_again": false,
-  "beginner_mission": {
-    "is_badge": false,
-    "is_display": true
-  },
-  "main_mission": {
-    "currents": [
-      "Clear Mission: Fusion Training",
-      "Level up a demon to its max level",
-      "Reach the boss room entrance in the Aura Gate",
-      "Perform an upgrade to the Hideout",
-      "Clear a Strange Signal",
-      "Perform an Awakening at Pandemonium",
-      "Clear Story Ch. 2"
-    ],
-    "is_display": true
-  },
   "is_advice_usable": false,
   "is_first": true,
   "first_prize": {

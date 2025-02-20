@@ -44,10 +44,6 @@
     "fame": 10
   },
   "bonus_exp": 25,
-  "comeback_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
   "is_card_max": false,
   "reward": {
     "get_mag": 0,
@@ -848,15 +844,7 @@
     ]
   },
   "is_again": false,
-  "beginner_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
   "consume_point": 4,
-  "main_mission": {
-    "currents": [],
-    "is_display": false
-  },
   "is_advice_usable": false,
   "is_first": true,
   "first_prize": {

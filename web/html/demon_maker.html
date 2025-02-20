@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dropdown Autofill with Persistent Selection</title>
+  <title>Demon Maker</title>
   <style>
     /* Dark mode styling */
     body {
@@ -12,10 +13,12 @@
       font-family: Arial, sans-serif;
       padding: 20px;
     }
+
     label {
       display: block;
       margin-bottom: 10px;
     }
+
     select,
     input,
     textarea {
@@ -26,43 +29,53 @@
       margin-bottom: 15px;
       width: 200px;
     }
+
     select:focus,
     input:focus,
     textarea:focus {
       border-color: #1e90ff;
       outline: none;
     }
+
     /* Vertical alignment */
     .form-container {
       display: flex;
       flex-direction: column;
     }
-    .form-container > * {
+
+    .form-container>* {
       margin-bottom: 20px;
     }
+
     .input-group {
       display: flex;
       align-items: center;
     }
+
     .input-group input[type="number"] {
       width: 80px;
       margin-left: 10px;
     }
+
     .input-group input[type="number"].large {
       width: 120px;
     }
+
     /* New styling for additional dropdowns */
     .additional-dropdowns {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
+
     .additional-dropdowns label {
       margin-right: 10px;
     }
+
     .additional-dropdowns select {
       width: 120px;
     }
+
     /* Styling for the skills array output */
     #skillsOutput {
       background-color: #333;
@@ -77,6 +90,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="form-container">
     <!-- Demon Search Bar -->
@@ -109,6 +123,7 @@
         <select id="phys">
           <option value="none">None</option>
           <option value="weak">Weak</option>
+          <option value="resist">Resist</option>
           <option value="repel">Repel</option>
           <option value="avoid">Avoid</option>
           <option value="drain">Drain</option>
@@ -119,6 +134,7 @@
         <select id="agi">
           <option value="none">None</option>
           <option value="weak">Weak</option>
+          <option value="resist">Resist</option>
           <option value="repel">Repel</option>
           <option value="avoid">Avoid</option>
           <option value="drain">Drain</option>
@@ -129,6 +145,7 @@
         <select id="bufu">
           <option value="none">None</option>
           <option value="weak">Weak</option>
+          <option value="resist">Resist</option>
           <option value="repel">Repel</option>
           <option value="avoid">Avoid</option>
           <option value="drain">Drain</option>
@@ -139,6 +156,7 @@
         <select id="zio">
           <option value="none">None</option>
           <option value="weak">Weak</option>
+          <option value="resist">Resist</option>
           <option value="repel">Repel</option>
           <option value="avoid">Avoid</option>
           <option value="drain">Drain</option>
@@ -149,6 +167,7 @@
         <select id="zan">
           <option value="none">None</option>
           <option value="weak">Weak</option>
+          <option value="resist">Resist</option>
           <option value="repel">Repel</option>
           <option value="avoid">Avoid</option>
           <option value="drain">Drain</option>
@@ -159,6 +178,7 @@
         <select id="hama">
           <option value="none">None</option>
           <option value="weak">Weak</option>
+          <option value="resist">Resist</option>
           <option value="repel">Repel</option>
           <option value="avoid">Avoid</option>
           <option value="drain">Drain</option>
@@ -169,6 +189,7 @@
         <select id="mudo">
           <option value="none">None</option>
           <option value="weak">Weak</option>
+          <option value="resist">Resist</option>
           <option value="repel">Repel</option>
           <option value="avoid">Avoid</option>
           <option value="drain">Drain</option>
@@ -247,10 +268,10 @@
           const select = document.getElementById(selectId);
           const options = lines.map(line => {
             const parts = line.split(' ');
-            return { 
-              number: parts[0], 
-              firstWord: parts[1], 
-              secondWord: parts.slice(2).join(' ') 
+            return {
+              number: parts[0],
+              firstWord: parts[1],
+              secondWord: parts.slice(2).join(' ')
             };
           });
           // Save the full list for later filtering.
@@ -327,14 +348,14 @@
     loadOptions('selection1', 'demon_list.txt');
 
     // Event listener for the demon search bar.
-    document.getElementById('demonSearch').addEventListener('input', function() {
+    document.getElementById('demonSearch').addEventListener('input', function () {
       const searchTerm = this.value;
       const demonSelect = document.getElementById('selection1');
       updateSelectOptions(demonSelect, searchTerm);
     });
 
     // Event listener for the skill search bar (updates all six skill dropdowns).
-    document.getElementById('skillSearch').addEventListener('input', function() {
+    document.getElementById('skillSearch').addEventListener('input', function () {
       const searchTerm = this.value;
       for (let i = 1; i <= 6; i++) {
         const skillSelect = document.getElementById(`skill${i}`);
@@ -352,6 +373,7 @@
 
     // Variables for elemental statuses.
     let weak = 0;
+    let resist = 0;
     let avoid = 0;
     let repel = 0;
     let drain = 0;
@@ -369,6 +391,7 @@
       };
 
       weak = 0;
+      resist = 0;
       avoid = 0;
       repel = 0;
       drain = 0;
@@ -377,6 +400,8 @@
         const value = statuses[key];
         if (value === "weak") {
           weak += getElementalValue(key);
+        }else if (value === "resist") {
+          resist += getElementalValue(key);
         } else if (value === "avoid") {
           avoid += getElementalValue(key);
         } else if (value === "repel") {
@@ -386,7 +411,7 @@
         }
       }
 
-      console.log(`Weak: ${weak}, Avoid: ${avoid}, Repel: ${repel}, Drain: ${drain}`);
+      console.log(`Weak: ${weak}, Avoid: ${avoid}, Repel: ${repel}, Drain: ${drain}, Resist: ${resist}`);
     }
 
     // Returns the elemental value based on the key.
@@ -430,6 +455,7 @@
         wk: weak,
         av: avoid,
         rp: repel,
+        st: resist,
         spt: 0,
         ct: 0,
         uniq: Math.floor((Math.random() * 9999999) + 1000000),
@@ -445,18 +471,19 @@
         },
         body: JSON.stringify(data)
       })
-      .then(response => response.text())
-      .then(result => {
-        console.log('Raw Response:', result);
-        try {
-          let json = JSON.parse(result);
-          console.log('Parsed JSON:', json);
-        } catch (e) {
-          console.error('Invalid JSON:', e);
-        }
-      })
-      .catch(error => console.error('Fetch error:', error));
+        .then(response => response.text())
+        .then(result => {
+          console.log('Raw Response:', result);
+          try {
+            let json = JSON.parse(result);
+            console.log('Parsed JSON:', json);
+          } catch (e) {
+            console.error('Invalid JSON:', e);
+          }
+        })
+        .catch(error => console.error('Fetch error:', error));
     }
   </script>
 </body>
+
 </html>

@@ -43,7 +43,7 @@ If this is your first time connecting to the server, then go to <code>liberated.
 
 . Story Battles On Normal Difficulty
 
-. Story Battles On Hard Difficulty (Season 2 not available for now...)
+. Story Battles On Hard Difficulty
 
 . Story Review
 
@@ -54,9 +54,11 @@ If this is your first time connecting to the server, then go to <code>liberated.
 . Demon Maker
 
 # What Doesn't
-. (Some) Story Battles On Harder Difficulties
+. Story Battles On Hell Difficulties
 
 . Aura Gate
+
+. Pandemonium
 
 . Fusion
 

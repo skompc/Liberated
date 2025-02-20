@@ -96,14 +96,6 @@
       "is_use": false
     }
   ],
-  "beginner_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
-  "main_mission": {
-    "currents": [],
-    "is_display": false
-  },
   "enemies": [
     {
       "skl_exp_pr": [
@@ -303,10 +295,6 @@
   "talk": {
     "talk_start_type": 1,
     "talk_tgt": 1789
-  },
-  "comeback_mission": {
-    "is_badge": false,
-    "is_display": false
   },
   "wave_max": 3
 }

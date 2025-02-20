@@ -1,7 +1,7 @@
 <?php
 
 function GateDungeonResult() {
-    $filePath = '../data/battles/aura/result.json';
+    $filePath = '../data/aura/result.json';
 
     // Check if the file exists
     if (file_exists($filePath)) {

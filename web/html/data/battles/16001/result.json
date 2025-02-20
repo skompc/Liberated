@@ -325,15 +325,7 @@
     ]
   },
   "is_again": false,
-  "beginner_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
   "consume_ap": 0,
-  "main_mission": {
-    "currents": [],
-    "is_display": false
-  },
   "is_magatama_max": false,
   "is_advice_usable": false,
   "is_first": true,
@@ -383,9 +375,5 @@
   "is_best_record": true,
   "is_magatama_sell": false,
   "tm": "8",
-  "comeback_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
   "is_card_max": false
 }

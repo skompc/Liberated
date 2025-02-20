@@ -3296,10 +3296,6 @@
   "is_change": true,
   "quest_id": 2101,
   "assist_queue": [],
-  "comeback_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
   "wave_max": 3,
   "is_item": true,
   "item": [
@@ -3394,14 +3390,6 @@
       "is_use": false
     }
   ],
-  "beginner_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
-  "main_mission": {
-    "currents": [],
-    "is_display": false
-  },
   "enemies": [
     {
       "skl_exp_pr": [

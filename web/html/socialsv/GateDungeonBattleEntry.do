@@ -19,7 +19,7 @@ function BattleEntry($param) {
 
     // Define files and read data
     $files = [
-        "../data/battles/aura/$floor/battles/0/entry.json"
+        "../data/aura/$floor/battles/0/entry.json"
     ];
     $data = combineFiles($files);
 

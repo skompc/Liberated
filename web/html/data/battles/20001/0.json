@@ -2826,10 +2826,6 @@
   "is_change": false,
   "quest_id": 20001,
   "assist_queue": [],
-  "comeback_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
   "wave_max": 0,
   "is_item": true,
   "item": [
@@ -2924,14 +2920,6 @@
       "is_use": false
     }
   ],
-  "beginner_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
-  "main_mission": {
-    "currents": [],
-    "is_display": false
-  },
   "enemies": [],
   "res_code": 0,
   "quest_type": 1,

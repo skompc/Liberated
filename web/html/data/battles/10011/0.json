@@ -68,57 +68,6 @@
   "btl_bd": {
     "dvl_skl": [
       {
-        "img": "heal",
-        "max_level": 1,
-        "learnable_race": 0,
-        "name": "Amrita",
-        "active": {
-          "world_effect": "",
-          "hit_min": 1,
-          "cost": 4,
-          "invoke_effect": "eff_skill_diarahan_activate.prefab",
-          "use_limit_count": 0,
-          "cost_type": 1,
-          "guild_battle_disabled": false,
-          "anim_type": 2,
-          "is_invoke_effect_skip": false,
-          "type": 2,
-          "target": 3,
-          "se_invoke": "diarahan_invoke",
-          "hit_interval": 0,
-          "hit_effect_type": 0,
-          "d2mode_disabled": false,
-          "heal": {
-            "mp": 0,
-            "poison": true,
-            "fixed_val": 0,
-            "ressurect": 0,
-            "rate_val": 0,
-            "bind": true,
-            "charm": true,
-            "curse": true,
-            "status_val": 0,
-            "power": 0,
-            "close": true,
-            "status": 0,
-            "infirmity": true
-          },
-          "hit_effect": "eff_skill_prayer_hit.prefab",
-          "category": 2,
-          "attr": 0,
-          "hit_max": 1,
-          "pvp_disabled": false,
-          "se_hit": "samarecarm_hit",
-          "se_world": ""
-        },
-        "name_kana": "",
-        "cap_pt": 3,
-        "id": 2018,
-        "learnable_devil_id": 0,
-        "desc": "Cures all status ailments of a single party member.　",
-        "rarity": 2
-      },
-      {
         "img": "fire",
         "max_level": 6,
         "learnable_race": 0,
@@ -3022,10 +2971,6 @@
   "is_change": false,
   "quest_id": 10011,
   "assist_queue": [],
-  "comeback_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
   "wave_max": 3,
   "is_item": true,
   "item": [
@@ -3035,14 +2980,6 @@
       "is_use": true
     }
   ],
-  "beginner_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
-  "main_mission": {
-    "currents": [],
-    "is_display": false
-  },
   "enemies": [
     {
       "skl_exp_pr": [

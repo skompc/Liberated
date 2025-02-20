@@ -61,22 +61,6 @@
       "is_use": false
     }
   ],
-  "beginner_mission": {
-    "is_badge": false,
-    "is_display": true
-  },
-  "main_mission": {
-    "currents": [
-      "Clear Mission: Fusion Training",
-      "Level up a demon to its max level",
-      "Reach the boss room entrance in the Aura Gate",
-      "Perform an upgrade to the Hideout",
-      "Clear a Strange Signal",
-      "Perform an Awakening at Pandemonium",
-      "Clear Story Ch. 2"
-    ],
-    "is_display": true
-  },
   "enemies": [
     {
       "skl_exp_pr": [
@@ -368,9 +352,5 @@
   "res_code": 0,
   "client_wait": 0,
   "tm": "69",
-  "comeback_mission": {
-    "is_badge": false,
-    "is_display": false
-  },
   "wave_max": 3
 }
