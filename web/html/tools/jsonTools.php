@@ -16,13 +16,20 @@ function combineFiles($files) {
 }
 
 function addToJson($filepath, $param, $value) {
+    // Read the file contents
     $file = file_get_contents($filepath);
-    $data = json_decode($file, true);
+    $data = json_decode($file, true) ?? []; // Ensure $data is an array
 
-    $data[$param] = $value;
+    // If the parameter already exists and is an array, append to it
+    if (isset($data[$param]) && is_array($data[$param])) {
+        $data[$param] = array_merge($data[$param], $value);
+    } else {
+        // Otherwise, create a new array with the value
+        $data[$param] = $value;
+    }
 
-    $stringToWrite = json_encode($data, JSON_PRETTY_PRINT);
-    file_put_contents($filepath, $stringToWrite);
+    // Encode and save back to the file
+    file_put_contents($filepath, json_encode($data, JSON_PRETTY_PRINT));
 }
 
 function addToArray($filepath, $param, $value) {

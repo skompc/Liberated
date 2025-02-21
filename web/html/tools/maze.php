@@ -1,6 +1,6 @@
 <?php
 
-function makeMaze($rows, $cols){
+function makeMaze($rows, $cols, $darkEnable, $dmgEnable){
     // --- Constants ---
     define('DOOR_N', 1);
     define('DOOR_E', 2);
@@ -17,17 +17,24 @@ function makeMaze($rows, $cols){
     define('BATTLE', 17179869184);
     define('BOSS_ROOM', 34359738368);
 
+    define('DARK_ZONE', 32768);
+    define('DMG_ZONE', 4096);
+
     // Probability settings
-    $biasProbability = 0.7;          // DFS bias for hallways (continue in same direction)
-    $extraDoorChance   = 0.2;          // Chance to add an extra door connection (if no hallway exists)
-    $removeDoorChance  = 0.2;          // Chance to remove a door connection later
-    $battleChance      = 30;           // Percentage chance (0-100) for battle encounters
+    $biasProbability   = 0.7;   // DFS bias for hallways (continue in same direction)
+    $extraDoorChance   = 0.2;   // Chance to add an extra door connection (if no hallway exists)
+    $removeDoorChance  = 0.2;   // Chance to remove a door connection later
+    $battleChance      = 30;    // Percentage chance (0-100) for battle encounters
+    $darkChance        = 5;     // Percentage chance for a dark zone
+    $dmgChance         = 5;     // Percentage chance for a dmg zone
+
+    // --- Randomize the starting cell ---
+    $startR = mt_rand(0, $rows - 1);
+    $startC = mt_rand(0, $cols - 1);
 
     // --- Data Structure ---
-    // Each cell tracks two sets of flags for each side:
-    //   hall_<dir>: true if a hallway (spanning tree passage) exists.
-    //   door_<dir>: true if an extra door connection exists.
-    // Also, a 'battle' flag is stored.
+    // Each cell tracks flags for each side (for hallways and door connections),
+    // as well as flags for battle, dark, and dmg zones.
     $mazeCells = [];
     for ($r = 0; $r < $rows; $r++) {
         for ($c = 0; $c < $cols; $c++) {
@@ -40,13 +47,15 @@ function makeMaze($rows, $cols){
                 'door_E' => false,
                 'door_S' => false,
                 'door_W' => false,
-                'battle'   => false
+                'battle' => false,
+                'dark'   => false,
+                'dmg'    => false
             ];
         }
     }
 
     // --- Connectivity Check ---
-    // Returns true if all cells are reachable from (0,0) via any connection.
+    // Returns true if all cells are reachable from the starting cell via any connection.
     function isConnected($mazeCells, $rows, $cols) {
         $visited = array_fill(0, $rows, array_fill(0, $cols, false));
         $stack = [];
@@ -86,8 +95,8 @@ function makeMaze($rows, $cols){
         }
     }
     $stack = [];
-    $visitedDFS[0][0] = true;
-    $stack[] = ['r' => 0, 'c' => 0, 'dir' => null];
+    $visitedDFS[$startR][$startC] = true;
+    $stack[] = ['r' => $startR, 'c' => $startC, 'dir' => null];
 
     while (!empty($stack)) {
         $current = end($stack);
@@ -214,12 +223,38 @@ function makeMaze($rows, $cols){
     }
 
     // --- Step 4: Assign Battle Encounters ---
-    // For each cell (except the start at [0,0]) add a battle flag.
+    // For each cell (except the starting cell) add a battle flag.
     for ($r = 0; $r < $rows; $r++) {
         for ($c = 0; $c < $cols; $c++) {
-            if (!($r == 0 && $c == 0)) {
+            if (!($r == $startR && $c == $startC)) {
                 if (mt_rand(0, 99) < $battleChance) {
                     $mazeCells[$r][$c]['battle'] = true;
+                }
+            }
+        }
+    }
+    
+    // --- New Step: Assign Dark and DMG Zones ---
+    // For each cell (except the starting cell) mark it as a dark zone and/or dmg zone
+    // based on the provided chances and only if the corresponding enable flag is true.
+    if ($darkEnable) {
+        for ($r = 0; $r < $rows; $r++) {
+            for ($c = 0; $c < $cols; $c++) {
+                if (!($r == $startR && $c == $startC)) {
+                    if (mt_rand(0, 99) < $darkChance) {
+                        $mazeCells[$r][$c]['dark'] = true;
+                    }
+                }
+            }
+        }
+    }
+    if ($dmgEnable) {
+        for ($r = 0; $r < $rows; $r++) {
+            for ($c = 0; $c < $cols; $c++) {
+                if (!($r == $startR && $c == $startC)) {
+                    if (mt_rand(0, 99) < $dmgChance) {
+                        $mazeCells[$r][$c]['dmg'] = true;
+                    }
                 }
             }
         }
@@ -229,7 +264,7 @@ function makeMaze($rows, $cols){
     do {
         $bossR = mt_rand(0, $rows - 1);
         $bossC = mt_rand(0, $cols - 1);
-    } while ($bossR == 0 && $bossC == 0);
+    } while ($bossR == $startR && $bossC == $startC);
 
     // --- Step 6: Override the Boss Room Cell ---
     // The boss room cell will have exactly one entrance (a door) and the other three sides will be walls.
@@ -278,9 +313,10 @@ function makeMaze($rows, $cols){
     //   - If a hallway exists, add 0 (hallways add no value).
     //   - Else if a door exists, add the door constant.
     //   - Otherwise, add the wall constant.
-    // Finally, add BATTLE if set and BOSS_ROOM if this cell is the boss.
+    // Finally, add BATTLE if set, add DARK_ZONE if dark, add DMG_ZONE if dmg,
+    // and add BOSS_ROOM if this cell is the boss.
     $base = NORMAL_FLOOR + WALK;
-    $maze = [];
+    $mazeRaw = [];
     for ($r = 0; $r < $rows; $r++) {
         for ($c = 0; $c < $cols; $c++) {
             $unit = $base;
@@ -319,27 +355,40 @@ function makeMaze($rows, $cols){
             if ($mazeCells[$r][$c]['battle']) {
                 $unit += BATTLE;
             }
+            if ($mazeCells[$r][$c]['dark']) {
+                $unit += DARK_ZONE;
+            }
+            if ($mazeCells[$r][$c]['dmg']) {
+                $unit += DMG_ZONE;
+            }
             // Add boss room flag if this cell is the chosen boss.
             if ($r == $bossR && $c == $bossC) {
                 $unit += BOSS_ROOM;
             }
-            $maze[] = $unit;
+            $mazeRaw[] = $unit;
         }
     }
 
+    // --- Create Modified Maze for maze.json and maze.txt ---
+    // For the starting cell, add 17592186044416.
+    $startExtra = 17592186044416;
+    $mazeModified = $mazeRaw; // copy the raw values
+    $startPos = $startR * $cols + $startC;
+    $mazeModified[$startPos] = $mazeRaw[$startPos] + $startExtra;
+
     // --- Prepare the Output Objects ---
-    // Create an object (associative array) for maze.json contents.
+    // Create an object for maze.json contents using the modified maze.
     $mazeData = ["update" => []];
-    foreach ($maze as $pos => $unit) {
+    foreach ($mazeModified as $pos => $unit) {
         $mazeData["update"][] = ["unit" => $unit, "pos" => $pos];
     }
 
-    // Create a string for maze.txt contents.
-    $txtData = json_encode($maze, JSON_UNESCAPED_SLASHES);
+    // Create a string for maze.txt contents using the modified maze.
+    $txtData = json_encode($mazeModified, JSON_UNESCAPED_SLASHES);
 
-    // Create an object for full.json contents.
+    // Create an object for full.json contents using the raw maze.
     $fullUpdate = [];
-    foreach ($maze as $pos => $unit) {
+    foreach ($mazeRaw as $pos => $unit) {
         // Check if this cell is the boss room (BOSS_ROOM flag is set).
         if (($unit & BOSS_ROOM) === BOSS_ROOM) {
             $newUnit = $unit - 34359738368 + 68719476736;
@@ -350,11 +399,13 @@ function makeMaze($rows, $cols){
     }
     $fullData = ["update" => $fullUpdate];
 
-    // Instead of writing to files, return an associative array containing the three outputs.
+    // Return an associative array containing the three outputs plus the starting cell position.
+    // "start" is now the pos value (i.e. row * cols + col).
     return [
-        "maze" => $mazeData,
-        "txt"  => $txtData,
-        "full" => $fullData
+        "maze"  => $mazeData,
+        "txt"   => $txtData,
+        "full"  => $fullData,
+        "start" => $startR * $cols + $startC
     ];
 }
 ?>

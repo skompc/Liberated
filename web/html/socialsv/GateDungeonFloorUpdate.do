@@ -8,7 +8,6 @@ function GateDungeon($param) {
     $params = StringToJsonObject(Decrypt($param));
 
     $map_pos = $params['map_pos'];
-    $steps = $params['steps'];
 
     // Save map position to temp file
     $temp_file_name = "../saves/players/0/temp/aura/pos.txt";
@@ -16,7 +15,7 @@ function GateDungeon($param) {
 
     // Define file paths
     $mapFile = "../saves/players/0/temp/aura/map.txt";
-    $jsonFile = "../data/aura/1/full.json";
+    $jsonFile = "../saves/players/0/temp/aura/full.json";
 
     // Read map file
     $rawData = trim(file_get_contents($mapFile));
@@ -33,9 +32,7 @@ function GateDungeon($param) {
     $jsonData = json_decode(file_get_contents($jsonFile), true);
 
     // Validate and update unit number based on steps
-    if ($steps !== null && isset($jsonData[$steps])) {
-        $inputArray[$steps] = $jsonData[$steps]['unit'];
-    }
+        $inputArray[$map_pos] = $jsonData[$map_pos]['unit'];
 
     // Write the updated array back to the file
     file_put_contents($mapFile, json_encode($inputArray));

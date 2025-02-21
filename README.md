@@ -53,14 +53,14 @@ If this is your first time connecting to the server, then go to <code>liberated.
 
 . Demon Maker
 
+. Fusion
+
 # What Doesn't
 . Story Battles On Hell Difficulties
 
 . Aura Gate
 
 . Pandemonium
-
-. Fusion
 
 . Gacha/Summoning
 
@@ -71,6 +71,7 @@ If this is your first time connecting to the server, then go to <code>liberated.
 1. Any unimplemented endpoints will softlock the game. Simply restart the app.
 2. Story choices don't matter... just choose the path you want... I won't fix this!
 3. Results screen is inaccurate sometimes. Just ignore until I implement everything...
+4. Fusion doesn't consume the demons you put in... LIKELY WON'T FIX!
 
 # FAQ
 

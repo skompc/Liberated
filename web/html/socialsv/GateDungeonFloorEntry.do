@@ -19,24 +19,32 @@ function GateDungeonBattleEntry($param) {
     $main_idx = $params['main_idx'];
     $sub_idx = $params['sub_idx'];
 
-    $maze = makeMaze(11,7);
-
-
-    // Define files and read data
     $jsonContent = file_get_contents("../data/aura/$floor/floor_entry.json");
     $data = json_decode($jsonContent, true);
 
-    $map = json_decode($maze['txt'], true);
-    $data['ctx']['floor']['unit'] = $map;
+    $darkEnable = false;
+    $dmgEnable = false;
 
-    $data['ctx']['floor']['size_y'] = 11;
-    $data['ctx']['floor']['size_x'] = 7;
+    if ($floor > 10){
+        $darkEnable = true;
+    }
+
+    if ($floor > 20){
+        $dmgEnable = true
+    }
+
+    $maze = makeMaze($data['ctx']['floor']['size_y'] , $data['ctx']['floor']['size_x'], $darkEnable, $dmgEnable);
+
+    $map = json_decode($maze['txt'], true);
+
+    $data['ctx']['floor']['unit'] = $map;
+    $data['ctx']['map_pos'] = $maze['start'];
 
     $file2mod = json_decode(file_get_contents("../data/aura/$floor/refresh.json"), true);
     $file2mod['update'] = $maze['maze']['update'];
     file_put_contents("../data/aura/$floor/refresh.json", json_encode($file2mod));
 
-    $file2make = "../data/aura/$floor/full.json";
+    $file2make = "../saves/players/0/temp/aura/full.json";
     file_put_contents($file2make, json_encode($maze['full']['update']));
 
 

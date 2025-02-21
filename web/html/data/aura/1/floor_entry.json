@@ -1,10 +1,6 @@
 {
-    "transaction_id": "43-09E-1AD338",
+    "transaction_id": "AB-CDE-123456",
     "update_step_num": 1,
-    "beginner_mission": {
-        "is_badge": true,
-        "is_display": true
-    },
     "smn": [
         {
             "skl_p": 82,
@@ -39,9 +35,9 @@
     "ctx": {
         "makka": 7078308,
         "heal_makka": 0,
-        "ap_max": 100,
-        "dp_max": 100,
-        "dp": 100,
+        "ap_max": 1000,
+        "dp_max": 1000,
+        "dp": 1000,
         "map_dir": 0,
         "darkzone_dmg": 3,
         "heal_dead": {
@@ -483,12 +479,6 @@
             "size_x": 5,
             "floor": 1
         },
-        "ap_tut": [
-            {
-                "is_read": false,
-                "drama_path": "tutorial/gd_p1_13/"
-            }
-        ],
         "battle_avoid": 6,
         "skill_reduce_damage2": [
             104002
@@ -1831,27 +1821,10 @@
             }
         ]
     },
-    "main_mission": {
-        "currents": [
-            "Clear Mission: Fusion Training",
-            "Clear a Strange Signal",
-            "Participate in Dx2 Duel",
-            "Perform a Transfer at Pandemonium",
-            "Clear an Eclipse once",
-            "Battle in Hell's Park",
-            "Learn about Brands at Pandemonium",
-            "Clear 30F of Aura Gate 1"
-        ],
-        "is_display": true
-    },
     "open_gimmick_info": {
         "open_rooms": []
     },
     "tm": "28",
-    "comeback_mission": {
-        "is_badge": false,
-        "is_display": false
-    },
     "res_code": 0,
     "client_wait": 0
 }

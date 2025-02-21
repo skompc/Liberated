@@ -65,6 +65,70 @@ function makeDevil($id, $rarity, $lvl, $str, $vit, $mag, $agi, $luk, $arc, $skil
     return $devil;
 }
 
+function makeDevilAccurate($id, $uniq) {
+    $origDevil = devilSearchById($id);
+
+    if (!$origDevil) {
+        return null; // Return null if no devil is found
+    }
+
+    $devil = [
+        "skl" => $origDevil['skl'] ?? [],
+        "id" => $id,
+        "lv" => 1,
+        "str" => $origDevil['str'] ?? 0,
+        "vit" => $origDevil['vit'] ?? 0,
+        "mag" => $origDevil['mag'] ?? 0,
+        "mp" => $origDevil['mp_max'] ?? 0,
+        "mpmx" => $origDevil['mp_max'] ?? 0,
+        "ai_auto_type" => $origDevil['ai_type'] ?? 0,
+        "agi" => $origDevil['agi'] ?? 0,
+        "luk" => $origDevil['luk'] ?? 0,
+        "arc" => 0,
+        "uniq" => intval($uniq),
+        "patk" => floor(($origDevil['str'] ?? 0) * 2.1 + 1 * 5.6 + 50),
+        "pdef" => floor(($origDevil['str'] ?? 0) * 0.5 + ($origDevil['vit'] ?? 0) * 1.1 + 1 * 5.6 + 50),
+        "matk" => floor(($origDevil['mag'] ?? 0) * 2.1 + 1 * 5.6 + 50),
+        "mdef" => floor(($origDevil['mag'] ?? 0) * 0.5 + ($origDevil['vit'] ?? 0) * 1.1 + 1 * 5.6 + 50),
+        "hp" => floor(($origDevil['vit'] ?? 0) * 2.1 + 1 * 5.6 + 50),
+        "hpmx" => floor(($origDevil['vit'] ?? 0) * 2.1 + 1 * 5.6 + 50),
+        "exceed_info" => ["opened_num" => 0],
+        "recommend_type" => 0,
+        "additional_skl" => [],
+        "limitbreak" => [
+            "effect" => [],
+            "num" => 60,
+            "open" => []
+        ],
+        "is_awk" => true,
+        "dr" => $origDevil['drain'] ?? [],
+        "wk" => $origDevil['weak'] ?? [],
+        "av" => $origDevil['avoid'] ?? [],
+        "rp" => $origDevil['repel'] ?? [],
+        "contents_type" => $origDevil['contents_type'] ?? null,
+        "rarity" => $origDevil['rarity'] ?? 1,
+        "exp" => 0,
+        "is_new" => true,
+        "mgtms" => []
+    ];
+
+    return $devil;
+}
+
+
+function devilSearchById($id) {
+    $filePath = __DIR__ . "/dvls.json"; // Gets the full path
+    $data = json_decode(file_get_contents($filePath), true);
+
+    foreach ($data['dvl'] as $devil) {
+        if ($devil['id'] == $id) {
+            return $devil;
+        }
+    }
+
+    return null;
+}
+
 function add2Party($summoner, $idx, $pos, $uniq) {
     $data = json_decode(file_get_contents("../saves/players/0/party.json"), true);
 
