@@ -30,7 +30,7 @@ function GateDungeonBattleEntry($param) {
     }
 
     if ($floor > 20){
-        $dmgEnable = true
+        $dmgEnable = true;
     }
 
     $maze = makeMaze($data['ctx']['floor']['size_y'] , $data['ctx']['floor']['size_x'], $darkEnable, $dmgEnable);

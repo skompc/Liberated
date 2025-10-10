@@ -1,12 +1,7 @@
 <?php
-// DevilList function to handle the request and return the content of Title.json
-function GateDungeon() {
 
-    if (id == 4){
-        $filePath = '../saves/players/0/gate_map.json';
-    } else {
-        $filePath = '../saves/players/0/gate_map_2.json';
-    }
+function Gacha() {
+    $filePath = '../saves/players/0/gacha.json';
 
     // Check if the file exists
     if (file_exists($filePath)) {
@@ -23,8 +18,7 @@ function GateDungeon() {
     }
 }
 
-// Call the DevilList function when a GET request is received
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    GateDungeon();
+    Gacha();
 }
 ?>

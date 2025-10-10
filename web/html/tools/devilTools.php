@@ -65,7 +65,76 @@ function makeDevil($id, $rarity, $lvl, $str, $vit, $mag, $agi, $luk, $arc, $skil
     return $devil;
 }
 
-function makeDevilAccurate($id, $uniq) {
+function fileToArray($filename) {
+    if (!file_exists($filename)) {
+        return [];
+    }
+
+    $lines = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    return $lines;
+}
+
+function getRandomValue($filename) {
+    $array = fileToArray($filename);
+
+    if (empty($array)) {
+        return null; // Return null if the file is empty or doesn't exist
+    }
+
+    return $array[array_rand($array)];
+}
+
+function grabArcSkill($id, $arc) {
+    $filename = __DIR__ . "/dvls.json"; // Change to your actual JSON file path
+
+    if (!file_exists($filename)) {
+        return null; // Return null if the file doesn't exist
+    }
+
+    // Read and decode JSON
+    $jsonData = json_decode(file_get_contents($filename), true);
+    
+    if (!isset($jsonData['dvl'])) {
+        return null; // Return null if "dvl" is missing
+    }
+
+    // Search for the object with the given id
+    foreach ($jsonData['dvl'] as &$obj) {
+        if (isset($obj['id']) && $obj['id'] == $id) {
+            // Ensure "arches" exists and is an array
+            if (isset($obj['arches']) && is_array($obj['arches'])) {
+                // Find the matching arc id
+                foreach ($obj['arches'] as $arch) {
+                    if (isset($arch['type']) && $arch['type'] == $arc) {
+                        $arcId = $arch['id'];
+
+                        // Modify skl array
+                        if (isset($obj['skl']) && is_array($obj['skl'])) {
+                            foreach ($obj['skl'] as &$skill) {
+                                if (isset($skill['is_awake']) && $skill['is_awake'] === true) {
+                                    $skill['id'] = $arcId; // Replace the id with the arc's id
+                                    break; // Stop after modifying the first found match
+                                }
+                            }
+                        }
+
+                        return $obj['skl']; // Return the modified skl array
+                    }
+                }
+            }
+        }
+    }
+
+    return null; // Return null if no match was found
+}
+
+function makeDevilAccurate($id, $uniq, $isGacha) {
+    $architype = 0;
+    if ($isGacha){
+        $architype = rand(1, 4);
+    }
+
+    $newSkill = grabArcSkill($id, $architype);
     $origDevil = devilSearchById($id);
 
     if (!$origDevil) {
@@ -73,7 +142,7 @@ function makeDevilAccurate($id, $uniq) {
     }
 
     $devil = [
-        "skl" => $origDevil['skl'] ?? [],
+        "skl" => $newSkill,
         "id" => $id,
         "lv" => 1,
         "str" => $origDevil['str'] ?? 0,
@@ -84,7 +153,7 @@ function makeDevilAccurate($id, $uniq) {
         "ai_auto_type" => $origDevil['ai_type'] ?? 0,
         "agi" => $origDevil['agi'] ?? 0,
         "luk" => $origDevil['luk'] ?? 0,
-        "arc" => 0,
+        "arc" => $architype,
         "uniq" => intval($uniq),
         "patk" => floor(($origDevil['str'] ?? 0) * 2.1 + 1 * 5.6 + 50),
         "pdef" => floor(($origDevil['str'] ?? 0) * 0.5 + ($origDevil['vit'] ?? 0) * 1.1 + 1 * 5.6 + 50),
@@ -109,7 +178,8 @@ function makeDevilAccurate($id, $uniq) {
         "rarity" => $origDevil['rarity'] ?? 1,
         "exp" => 0,
         "is_new" => true,
-        "mgtms" => []
+        "mgtms" => [],
+        "greeting" => "hello there"
     ];
 
     return $devil;

@@ -5,7 +5,7 @@ setlocal
 set "PROGRAM_NAME=php-cgi.exe"
 
 :: Set the full path of the program
-set "PROGRAM_PATH=php-cgi -b 9000"
+set "PROGRAM_PATH=php-cgi -b 9000 -c ./php.ini"
 
 :LOOP
 :: Check if the program is running

@@ -1,0 +1,2813 @@
+{
+    "moon": {
+        "next": 6,
+        "cur": 5,
+        "next_change_ts": 1742063939155,
+        "max": 8,
+        "ages": [
+            {
+                "sec": 600,
+                "eff": [
+                    {
+                        "eff_desc": "Increases obtained Exp by 100%.",
+                        "eff_id": 1,
+                        "eff_param": 100
+                    }
+                ],
+                "num": 0,
+                "desc": "Effect's details 1"
+            },
+            {
+                "sec": 420,
+                "eff": [],
+                "num": 1,
+                "desc": "Effect's details 2"
+            },
+            {
+                "sec": 420,
+                "eff": [],
+                "num": 2,
+                "desc": "Effect's details 3"
+            },
+            {
+                "sec": 420,
+                "eff": [],
+                "num": 3,
+                "desc": "Effect's details 4"
+            },
+            {
+                "sec": 420,
+                "eff": [],
+                "num": 4,
+                "desc": "Effect's details 5"
+            },
+            {
+                "sec": 420,
+                "eff": [],
+                "num": 5,
+                "desc": "Effect's details 6"
+            },
+            {
+                "sec": 420,
+                "eff": [],
+                "num": 6,
+                "desc": "Effect's details 7"
+            },
+            {
+                "sec": 420,
+                "eff": [],
+                "num": 7,
+                "desc": "Effect's details 8"
+            },
+            {
+                "sec": 600,
+                "eff": [
+                    {
+                        "eff_desc": "Increases obtained MAGNETITE by 100%.",
+                        "eff_id": 3,
+                        "eff_param": 100
+                    }
+                ],
+                "num": 8,
+                "desc": "Effect's details 9"
+            }
+        ]
+    },
+    "usr": {
+        "pp": 329,
+        "dp_spn": 60,
+        "pp_spn": 1800,
+        "pp_rec_ts": 0,
+        "lv": 75,
+        "dp": 300,
+        "ap_itm": 27,
+        "pvppt": 66,
+        "rnknm": "LEARNER",
+        "dp_rec_ts": 0,
+        "dp_itm": 0,
+        "usr_id": 225973463,
+        "smn_id": 1,
+        "mc": 8066877,
+        "pp_itm": 1,
+        "fndmx": 42,
+        "pp_boost": 0,
+        "dpmx": 300,
+        "mg": 16876820,
+        "gnd": 0,
+        "exp": 1557811,
+        "ppmx": 5,
+        "gb_exchange_ticket": 0,
+        "gpmx": 2,
+        "gp": 0,
+        "cp": 9187,
+        "rnk": "E3",
+        "ap": 336,
+        "nlv_exp": 1594898,
+        "qst_skp_ticket": 40,
+        "clv_exp": 1522881,
+        "apmx": 62,
+        "name": "Iku",
+        "guild_id": 0,
+        "ap_rec_ts": 0,
+        "ap_spn": 180,
+        "fame": 962
+    },
+    "lock_flag": "0000000000000000000000000000000000000000000000000000000000000000000000000",
+    "dungeon": {
+        "party_heal_cost": 10,
+        "auto_heal": 0,
+        "open_floor": 50,
+        "gk_lose_heal": 50,
+        "trap_good_lv3": 50,
+        "end_ts": 1896101999000,
+        "trap_good_lv2": 100,
+        "name": "Aura Gate2",
+        "stages": [
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": true,
+                        "is_raid": false,
+                        "num": 1,
+                        "prize_once": {
+                            "num": 6000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 43,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 2,
+                        "prize_once": {
+                            "num": 6000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 110,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 3,
+                        "prize_once": {
+                            "num": 6000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 10960,
+                                    "pos": 190
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 125,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 4,
+                        "prize_once": {
+                            "num": 6000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 130,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 5,
+                        "prize_once": {
+                            "num": 50,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 10,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 140,
+                                "prize": {
+                                    "param": "3",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24300,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    }
+                ],
+                "is_open": true,
+                "name": "Level 1",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 11050,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 11970,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": [
+                                    {
+                                        "id": 23310,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23320,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23330,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23340,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9,
+                                    10,
+                                    11,
+                                    12
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.1."
+                    },
+                    "lv": "Average: over Lv.40",
+                    "gk_id": 0
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 6,
+                        "prize_once": {
+                            "num": 6000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 145,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 7,
+                        "prize_once": {
+                            "num": 6000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 21410,
+                                    "pos": 104
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 180,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 8,
+                        "prize_once": {
+                            "num": 6000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 990001,
+                                    "pos": 312
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 160,
+                                "prize": {
+                                    "param": "0",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 25100,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 9,
+                        "prize_once": {
+                            "num": 6000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 185,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 10,
+                        "prize_once": {
+                            "num": 300,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 10,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 200,
+                                "prize": {
+                                    "param": "5",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24500,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 2",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 11050,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 11970,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": [
+                                    {
+                                        "id": 23310,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23320,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23330,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23340,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9,
+                                    10,
+                                    11,
+                                    12
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.2."
+                    },
+                    "lv": "Average: over Lv.40",
+                    "gk_id": 0
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 11,
+                        "prize_once": {
+                            "num": 7000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 220,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 12,
+                        "prize_once": {
+                            "num": 7000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 250,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 13,
+                        "prize_once": {
+                            "num": 7000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 260,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 14,
+                        "prize_once": {
+                            "num": 7000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 10530,
+                                    "pos": 118
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 10510,
+                                    "pos": 333
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 10520,
+                                    "pos": 497
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 270,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 15,
+                        "prize_once": {
+                            "num": 50,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 10,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 280,
+                                "prize": {
+                                    "param": "3",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24300,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 3",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 12460,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 11240,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": [
+                                    {
+                                        "id": 23310,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23320,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23330,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23340,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9,
+                                    10,
+                                    11,
+                                    12
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.3."
+                    },
+                    "lv": "Average: over Lv.45",
+                    "gk_id": 0
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 16,
+                        "prize_once": {
+                            "num": 7000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 10530,
+                                    "pos": 271
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 990002,
+                                    "pos": 448
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 290,
+                                "prize": {
+                                    "param": "0",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 25100,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 17,
+                        "prize_once": {
+                            "num": 7000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 12210,
+                                    "pos": 364
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 300,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 18,
+                        "prize_once": {
+                            "num": 7000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 310,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 19,
+                        "prize_once": {
+                            "num": 7000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 21510,
+                                    "pos": 466
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 320,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 20,
+                        "prize_once": {
+                            "num": 300,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 10,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 21230,
+                                    "pos": 155
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 12170,
+                                    "pos": 508
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 350,
+                                "prize": {
+                                    "param": "5",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24500,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 4",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 12460,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 11240,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": [
+                                    {
+                                        "id": 23310,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23320,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23330,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23340,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9,
+                                    10,
+                                    11,
+                                    12
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.4."
+                    },
+                    "lv": "Average: over Lv.45",
+                    "gk_id": 0
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 21,
+                        "prize_once": {
+                            "num": 8000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 11740,
+                                    "pos": 247
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 10110,
+                                    "pos": 700
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 300,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 22,
+                        "prize_once": {
+                            "num": 8000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 12240,
+                                    "pos": 41
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 310,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 23,
+                        "prize_once": {
+                            "num": 8000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 23640,
+                                    "pos": 4
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 320,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 24,
+                        "prize_once": {
+                            "num": 8000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 11750,
+                                    "pos": 262
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 12210,
+                                    "pos": 512
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 330,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 25,
+                        "prize_once": {
+                            "num": 50,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 10,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 350,
+                                "prize": {
+                                    "param": "3",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24300,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 5",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 11330,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 12270,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": [
+                                    {
+                                        "id": 23310,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23320,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23330,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23340,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9,
+                                    10,
+                                    11,
+                                    12
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.5."
+                    },
+                    "lv": "Average: over Lv.50",
+                    "gk_id": 0
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 26,
+                        "prize_once": {
+                            "num": 8000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 23760,
+                                    "pos": 149
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 350,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 27,
+                        "prize_once": {
+                            "num": 8000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 990003,
+                                    "pos": 299
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 350,
+                                "prize": {
+                                    "param": "0",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 25100,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 28,
+                        "prize_once": {
+                            "num": 8000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 350,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 29,
+                        "prize_once": {
+                            "num": 8000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 11620,
+                                    "pos": 788
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 350,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 30,
+                        "prize_once": {
+                            "num": 300,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 10,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 11350,
+                                    "pos": 157
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 20810,
+                                    "pos": 1060
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 400,
+                                "prize": {
+                                    "param": "5",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24500,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 6",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 11330,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 12270,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": [
+                                    {
+                                        "id": 23310,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23320,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23330,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23340,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9,
+                                    10,
+                                    11,
+                                    12
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.6."
+                    },
+                    "lv": "Average: over Lv.50",
+                    "gk_id": 0
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 31,
+                        "prize_once": {
+                            "num": 9000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 21260,
+                                    "pos": 425
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 350,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 32,
+                        "prize_once": {
+                            "num": 9000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 10520,
+                                    "pos": 361
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 12230,
+                                    "pos": 630
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 410,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 33,
+                        "prize_once": {
+                            "num": 9000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 12210,
+                                    "pos": 343
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 420,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 34,
+                        "prize_once": {
+                            "num": 9000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 12350,
+                                    "pos": 298
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 430,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 35,
+                        "prize_once": {
+                            "num": 50,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 10,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 12260,
+                                    "pos": 39
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 450,
+                                "prize": {
+                                    "param": "3",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24300,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 7",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 12070,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 12170,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": [
+                                    {
+                                        "id": 23310,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23320,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23330,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23340,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9,
+                                    10,
+                                    11,
+                                    12
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.7."
+                    },
+                    "lv": "Average: over Lv.50",
+                    "gk_id": 0
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 36,
+                        "prize_once": {
+                            "num": 9000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 23910,
+                                    "pos": 992
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 460,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 37,
+                        "prize_once": {
+                            "num": 9000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 11740,
+                                    "pos": 186
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 470,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 38,
+                        "prize_once": {
+                            "num": 9000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 990004,
+                                    "pos": 352
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 480,
+                                "prize": {
+                                    "param": "0",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 25100,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 39,
+                        "prize_once": {
+                            "num": 9000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 11760,
+                                    "pos": 366
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 490,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 40,
+                        "prize_once": {
+                            "num": 300,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 10,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 21740,
+                                    "pos": 93
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 21760,
+                                    "pos": 853
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 500,
+                                "prize": {
+                                    "param": "5",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24500,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 8",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 12070,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 12170,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": [
+                                    {
+                                        "id": 23310,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23320,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23330,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23340,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9,
+                                    10,
+                                    11,
+                                    12
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.8."
+                    },
+                    "lv": "Average: over Lv.50",
+                    "gk_id": 0
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 41,
+                        "prize_once": {
+                            "num": 10000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 12160,
+                                    "pos": 1369
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 450,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 42,
+                        "prize_once": {
+                            "num": 10000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 23620,
+                                    "pos": 948
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 510,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 43,
+                        "prize_once": {
+                            "num": 10000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 10260,
+                                    "pos": 75
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 520,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 44,
+                        "prize_once": {
+                            "num": 10000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 19330,
+                                    "pos": 908
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 530,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 45,
+                        "prize_once": {
+                            "num": 50,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 10,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": true,
+                                    "devil_id": 12470,
+                                    "pos": 400
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 12390,
+                                    "pos": 418
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 550,
+                                "prize": {
+                                    "param": "3",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24300,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 9",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 23840,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 11560,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": [
+                                    {
+                                        "id": 23310,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23320,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23330,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23340,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9,
+                                    10,
+                                    11,
+                                    12
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.9."
+                    },
+                    "lv": "Average: over Lv.50",
+                    "gk_id": 0
+                }
+            },
+            {
+                "re_id": 0,
+                "floors": [
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 46,
+                        "prize_once": {
+                            "num": 10000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 11970,
+                                    "pos": 849
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 560,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 47,
+                        "prize_once": {
+                            "num": 10000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": true,
+                                    "devil_id": 10140,
+                                    "pos": 629
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 570,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 48,
+                        "prize_once": {
+                            "num": 10000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 990005,
+                                    "pos": 164
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 21220,
+                                    "pos": 195
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 21220,
+                                    "pos": 459
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 580,
+                                "prize": {
+                                    "param": "0",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 25100,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 49,
+                        "prize_once": {
+                            "num": 10000,
+                            "is_bonus": false,
+                            "id": 200,
+                            "type": 2
+                        },
+                        "is_cleared": false,
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 10740,
+                                    "pos": 603
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 21250,
+                                    "pos": 963
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 24060,
+                                    "pos": 1152
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 590,
+                                "prize": {
+                                    "param": "2",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24200,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    },
+                    {
+                        "is_next": false,
+                        "is_raid": false,
+                        "num": 50,
+                        "prize_once": {
+                            "num": 500,
+                            "is_bonus": false,
+                            "id": 2,
+                            "type": 3
+                        },
+                        "is_cleared": false,
+                        "add_dp_prize": {
+                            "num": 10,
+                            "is_bonus": false,
+                            "id": 0,
+                            "type": 16
+                        },
+                        "is_talk": true,
+                        "gd2_info": {
+                            "bat_symb": [
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 18110,
+                                    "pos": 157
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 11640,
+                                    "pos": 429
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 11670,
+                                    "pos": 650
+                                },
+                                {
+                                    "camouflage_npc": false,
+                                    "devil_id": 21750,
+                                    "pos": 907
+                                }
+                            ],
+                            "boss_key_info": {
+                                "cur": 0,
+                                "max": 1
+                            },
+                            "traverse_info": {
+                                "cur": 0,
+                                "max": 666,
+                                "prize": {
+                                    "param": "5",
+                                    "num": 1,
+                                    "is_bonus": false,
+                                    "id": 24500,
+                                    "type": 2
+                                }
+                            },
+                            "warp_link_info": []
+                        }
+                    }
+                ],
+                "is_open": false,
+                "name": "Level 10",
+                "info": {
+                    "drop": {
+                        "ctgr": [
+                            {
+                                "name": "Rare Demon",
+                                "przs": [
+                                    {
+                                        "id": 23840,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 11560,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mitama",
+                                "przs": [
+                                    {
+                                        "id": 23310,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23320,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23330,
+                                        "type": 1
+                                    },
+                                    {
+                                        "id": 23340,
+                                        "type": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "mgtm_series": [
+                                    1,
+                                    2,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    9,
+                                    10,
+                                    11,
+                                    12
+                                ],
+                                "name": "Brands"
+                            }
+                        ],
+                        "desc": "Chance to obtain Magnetite \nand the following in Lv.10."
+                    },
+                    "lv": "Average: over Lv.50",
+                    "gk_id": 0
+                }
+            }
+        ],
+        "trap_bad_lv1": 1,
+        "trap_good_lv1": 100,
+        "id": 10,
+        "trap_bad_lv3": 20,
+        "trap_bad_lv2": 10,
+        "cur_floor": 1,
+        "gd2_info": {
+            "traverse_all_info": {
+                "cur": 0,
+                "max": 17664
+            },
+            "enhancement_info": {
+                "result": {},
+                "material": {
+                    "cur": 0,
+                    "max": 10,
+                    "max_nxt": 0
+                },
+                "max": 70,
+                "enhancement": [
+                    {
+                        "cur": 0,
+                        "max": 10,
+                        "attr": 1
+                    },
+                    {
+                        "cur": 0,
+                        "max": 10,
+                        "attr": 2
+                    },
+                    {
+                        "cur": 0,
+                        "max": 10,
+                        "attr": 3
+                    },
+                    {
+                        "cur": 0,
+                        "max": 10,
+                        "attr": 4
+                    },
+                    {
+                        "cur": 0,
+                        "max": 10,
+                        "attr": 5
+                    },
+                    {
+                        "cur": 0,
+                        "max": 10,
+                        "attr": 6
+                    },
+                    {
+                        "cur": 0,
+                        "max": 10,
+                        "attr": 7
+                    }
+                ],
+                "max_stage": 70,
+                "success_rate": 100000,
+                "max_stages": [
+                    70,
+                    140,
+                    210,
+                    280,
+                    350,
+                    420,
+                    490,
+                    560,
+                    630,
+                    700
+                ]
+            }
+        }
+    },
+    "res_code": 0,
+    "client_wait": 0
+}

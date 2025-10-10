@@ -36,7 +36,7 @@ function FusionExec() {
         return $devilUniq !== (string) $uniq_a && $devilUniq !== (string) $uniq_b;
     });
 
-    $dvl2add = makeDevilAccurate($id, makeUniq(11));
+    $dvl2add = makeDevilAccurate($id, makeUniq(11), false);
 
     // Save the updated JSON back to file
     file_put_contents($filePath, json_encode($filteredDevils, JSON_PRETTY_PRINT));
