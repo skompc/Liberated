@@ -3,7 +3,7 @@ import sys
 from dnslib import DNSRecord, RR, QTYPE, A, AAAA
 
 # Configuration
-DOMAIN_NAMES = ["domain1.com", "domain2.com", "domain3.com"]
+DOMAIN_NAMES = ["d2-megaten-l.sega.com", "d2r-dl.d2megaten.com", "d2r-sim.d2megaten.com","d2r-chat.d2megaten.com"]
 HOST_IPv4 = "0.0.0.0"  # Bind to all IPv4 interfaces
 HOST_IPv6 = "::"       # Bind to all IPv6 interfaces
 PORT = 53              # Default DNS port
