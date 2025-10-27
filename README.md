@@ -34,7 +34,7 @@ Run <code>start.bat</code>
 Note the IP address that is listed in the DNS Server window
 
 # Connect To The Server
-Use the included DNS changer app to change your phones DNS to the IP address that you visited earlier
+Use the included DNS changer app to change your phones DNS to the IP address that you found earlier
 
 If this is your first time connecting to the server, then go to <code>liberated.local</code> in your web browser and follow the directions for android devices. If it warns you about privacy or something like that click "advanced" then continue.
 
@@ -81,9 +81,9 @@ A: Make sure to do all the steps in [Scrape The Assets](#scrape-the-assets)
 
 ----------------------------------------------
 
-Q: I don't have a computer that I can do this with! Can I still patch the app myself?
+Q: I don't have a computer that I can do this with! Can I still run the server?
 
-A: No... you need a computer for both patching and running the server.
+A: No... you need a computer for running the server... I will make an android version at some point...
 
 ----------------------------------------------
 
