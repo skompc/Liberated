@@ -1,30 +1,46 @@
+25790 ?? Chaos Hero
 25430 ?? Femto
+25940 ?? Flynn
+25730 ?? Heroine
 25480 ?? Homura Akemi
+2908 ?? Human Malice
+990009 ?? Ixaya
+25780 ?? Law Hero
 25470 ?? Madoka Kaname
 24520 ?? Sonic
+25720 ?? The Hero
+25850 ?? Tora
+25840 ?? Ushio Aotsuki
 23530 ?? V
 23535 ?? V☆
+2922 ?? Vanitas
 25540 ?? Vanitas
 10140 Avatar Anubis
 10150 Avatar Barong
 10130 Avatar Chimera
 10120 Avatar Makami
 10110 Avatar Shiisaa
+990001 Avian Celestial Feng Huang
 10840 Avian Feng Huang
 10860 Avian Garuda
 23930 Avian Garuda
 10810 Avian Hamsa
+2939 Avian Jatayu
 10830 Avian Jatayu
+2117 Avian Rigel the Breaker
 10820 Avian Suparna
 10850 Avian Yatagarasu
 11750 Beast Ammut
+990122 Beast Ammut Horde
 25140 Beast Cait Sith
+2927 Beast Cerberus
 11760 Beast Cerberus
 24690 Beast Cerberus
 11710 Beast Cu Sith
 11720 Beast Inugami
 20210 Beast Kabuso
 25230 Beast Lost Name
+2921 Beast Loup-Garou
 25250 Beast Loup-Garou
 11730 Beast Nekomata
 23420 Beast Nekomata
@@ -41,10 +57,14 @@
 11850 Deity Amaterasu
 25200 Deity Apsu
 24330 Deity Ardha
+2910 Deity Atavaka
 23990 Deity Atavaka
 21610 Deity Baal
+2105 Deity Geburah the Calamity 
+2912 Deity Gozu-Tennoh
 24990 Deity Gozu-Tennoh
 24940 Deity Hachiman
+2115 Deity Hadar the Cursed
 11810 Deity Horus
 25080 Deity Indra
 25030 Deity Kalki
@@ -59,6 +79,7 @@
 11830 Deity Prometheus
 25500 Deity Thoth
 25100 Deity Unit 01: Dx2 Type
+2909 Deity Vairocana
 23980 Deity Vairocana
 11860 Deity Vishnu
 24780 Deity Vishnu
@@ -68,61 +89,123 @@
 10560 Divine Dominion
 10540 Divine Power
 10530 Divine Principality
+2916 Divine The 10th Angel
 25120 Divine The 10th Angel
+2915 Divine The 6th Angel
 25110 Divine The 6th Angel
+991000 Divine The 6th Angel
 10570 Divine Throne
 10550 Divine Virtue
+990116 Dragon Calamity: Rebirth
+990005 Dragon Celestial Huang Long
+990004 Dragon Celestial Long
 10740 Dragon Gucumatz
 10760 Dragon Huang Long
 10720 Dragon Illuyanka
 24580 Dragon Koga Saburo
 10730 Dragon Long
 10710 Dragon Makara
+990121 Dragon Makara Horde
 20110 Dragon Patrimpas
+2928 Dragon Quetzalcoatl
 10750 Dragon Quetzalcoatl
 23970 Dragon Quetzalcoatl
 25020 Dragon Rahab
+2114 Dragon Shaula the Malevolent
 23810 Drake Fafnir
 25610 Drake Hydra
 24650 Drake Ladon
+2933 Drake Nidhoggr
 23830 Drake Nidhoggr
+2913 Drake Tiamat
 23840 Drake Tiamat
 25050 Drake Tiamat
 23820 Drake Vasuki
 23850 Drake Ym
+2112 Enigma Alhena the Evil
 25390 Enigma Ame no Futotama
 19330 Enigma Kama
 19310 Enigma Kanbari
 25060 Enigma Kangiten
 19320 Enigma Kinmamon
 23910 Enigma Neko Shogun
+25740 Entity Albion
 20710 Entity Alilat
+990006 Entity Ixaya
+3411 Fairy 1★ Skill Card
+3412 Fairy 2★ Skill Card
+3413 Fairy 3★ Skill Card
+3414 Fairy 4★ Skill Card
+3415 Fairy 5★ Skill Card
+3416 Fairy 6★ Skill Card
+3118 Fairy Ame-no-Murakumo 6★
 24205 Fairy Demonee-Ho
+3517 Fairy DUMMY
+3601 Fairy DUMMY
+3602 Fairy DUMMY
+3603 Fairy DUMMY
+3604 Fairy DUMMY
+3605 Fairy DUMMY
+3516 Fairy Essence of Sin
 12331 Fairy Halloween Jack
 12332 Fairy Helper Frost
 12340 Fairy High Pixie
 12320 Fairy Jack Frost
+3311 Fairy Kasane Magatama
 12350 Fairy Kelpie
+3504 Fairy Mitama Extract Ag
+3505 Fairy Mitama Extract Lu
+3502 Fairy Mitama Extract Ma
+3501 Fairy Mitama Extract St
+3503 Fairy Mitama Extract Vi
 20410 Fairy Nadja
 12390 Fairy Oberon
 12321 Fairy Party Frost
 12311 Fairy Party Pixie
 12310 Fairy Pixie
 25530 Fairy Pixie
+990000 Fairy Pixie
+3514 Fairy Purge Extract Ag
+3515 Fairy Purge Extract Lu
+3512 Fairy Purge Extract Ma
+3511 Fairy Purge Extract St
+3513 Fairy Purge Extract Vi
 12330 Fairy Pyro Jack
 12370 Fairy Setanta
 12360 Fairy Silky
+3101 Fairy Sword of Kusanagi
+3111 Fairy Sword of Kusanagi 1★
+3112 Fairy Sword of Kusanagi 2★
+3113 Fairy Sword of Kusanagi 3★
+3114 Fairy Sword of Kusanagi 4★
+3115 Fairy Sword of Kusanagi 5★
+3116 Fairy Sword of Kusanagi 6★
 12380 Fairy Titania
 25160 Fairy Vivian
+3001 Fairy Yasaka Magatama
+3011 Fairy Yasaka Magatama 1★
+3012 Fairy Yasaka Magatama 2★
+3013 Fairy Yasaka Magatama 3★
+3014 Fairy Yasaka Magatama 4★
+3015 Fairy Yasaka Magatama 5★
+3016 Fairy Yasaka Magatama 6★
+3201 Fairy Yata Mirror
+3211 Fairy Yata Mirror 1★
+3212 Fairy Yata Mirror 2★
+3213 Fairy Yata Mirror 3★
+3214 Fairy Yata Mirror 4★
+3215 Fairy Yata Mirror 5★
 24680 Fallen Adramelech
 25350 Fallen Barbatos
 25000 Fallen Botis
+2119 Fallen Capella of Ice
 11560 Fallen Dantalian
 11530 Fallen Decarabia
 11520 Fallen Eligor
 24320 Fallen Flauros
 11540 Fallen Forneus
 24560 Fallen Gemori
+2110 Fallen Malkuth the Brilliant 
 11510 Fallen Melchom
 24570 Fallen Murmur
 24170 Fallen Nebiros
@@ -132,6 +215,7 @@
 24250 Femme Clotho
 11050 Femme Dakini
 24260 Femme Lachesis
+25880 Femme Lamia
 11010 Femme Leanan Sidhe
 25690 Femme Medusa
 11040 Femme Mermaid
@@ -143,6 +227,7 @@
 24630 Fiend Ban
 24360 Fiend Berserker
 23890 Fiend Black Rider
+990114 Fiend Calamity: Fallen
 21120 Fiend Daisoujou
 23510 Fiend Dante
 23515 Fiend Dante☆
@@ -162,7 +247,9 @@
 24370 Fiend Zodd
 25580 Flight Harpy
 25570 Flight Macha
+2918 Flight Morrighan
 25210 Flight Morrighan
+25910 Flight Nemhain
 10940 Foul Black Ooze
 10930 Foul Blob
 20310 Foul Jack the Ripper
@@ -171,28 +258,38 @@
 10920 Foul Phantom
 10950 Foul Shadow
 10910 Foul Slime
+2926 Fury Anthrasax
 25630 Fury Anthrasax
 10610 Fury Ares
+990126 Fury Ares Horde
 10630 Fury Beiji-Weng
+990113 Fury Calamity: Steel
 23760 Fury Kartikeya
 25340 Fury Masakado
 25560 Fury Mitra-Buddha
+2925 Fury Shiva
 10650 Fury Shiva
 23410 Fury Shiva
+25700 Fury Shiva
 10640 Fury Susano-o
 23860 Fury Susano-o
 10620 Fury Wu Kong
 21310 Fury Zaou-Gongen
 25040 General Longinus
 21810 General Masakado
+2907 General Masakado?
 24600 Genma Baldur
+990117 Genma Calamity: Dominion
+2104 Genma Chesed of Ying 
 11260 Genma Cu Chulainn
 23960 Genma Cu Chulainn
 25660 Genma Fionn mac Cumhaill
 23920 Genma Frost Ace
 11240 Genma Hanuman
+2934 Genma Heimdall
 24820 Genma Heimdall
 11230 Genma Kresnik
+990124 Genma Kresnik Horde
 11210 Genma Kurama Tengu
 11220 Genma Tam Lin
 11250 Genma Tsukuyomi
@@ -200,7 +297,9 @@
 25360 Godly Kuzuryu
 24880 Godly Sabaoth
 24860 Godly Shaddai
+2932 Haunt Chatterskull
 12060 Haunt Chatterskull
+2102 Haunt Chochma the Corpse 
 25440 Haunt Kumbhanda
 12050 Haunt Legion
 12030 Haunt Mou-Ryo
@@ -209,21 +308,33 @@
 25180 Haunt Poltergeist
 12010 Haunt Preta
 12070 Haunt Vetala
+2116 Herald Altair the Destroyer
 24240 Herald Aniel
+25750 Herald Armaiti
 10330 Herald Azrael
+990111 Herald Calamity: Hatred
+990112 Herald Calamity: Seraph
 25130 Herald Camael
+2904 Herald Gabriel
 23770 Herald Gabriel
+990008 Herald Ixaya
 10310 Herald Lailah
+25810 Herald Lucifer Frost
 10340 Herald Mastema
 24930 Herald Melchizedek
+2919 Herald Metatron
+2920 Herald Metatron
 10360 Herald Metatron
 25370 Herald Metatron
 10350 Herald Michael
+2924 Herald Michael 
 25620 Herald Michael 
+2905 Herald Raphael
 23780 Herald Raphael
 10320 Herald Sandalphon
 10590 Herald Seraph
 24420 Herald Sraosha
+2906 Herald Uriel
 23790 Herald Uriel
 24830 Hero Fariedone
 24380 Hero Griffith
@@ -231,6 +342,7 @@
 24080 Hero Guts
 25070 Hero Hagen
 18210 Hero Huang Di
+990007 Hero Ixaya
 18240 Hero Jeanne d'Arc
 24800 Hero Lanling Wang
 23940 Hero Masakado
@@ -240,11 +352,15 @@
 18220 Hero Yoshitsune
 10230 Holy Apis
 10240 Holy Baihu
+990002 Holy Celestial Baihu
+25870 Holy Hayataro
 10210 Holy Heqet
 10250 Holy Sleipnir
 10260 Holy Sphinx
 10220 Holy Unicorn
+990123 Holy Unicorn Horde
 21210 Jaki Black Frost
+990115 Jaki Calamity: Evil
 21270 Jaki Gremlin
 21240 Jaki Grendel
 21220 Jaki Hecatoncheires
@@ -257,18 +373,22 @@
 23660 Jirae Kodama
 23670 Jirae Koropokkur
 23640 Jirae Kwancha
+25770 Jirae Oumitsunu
 23630 Jirae Titan
 23620 Jirae Tlaltecuhtli
 11150 Kishin Bishamonten
 24670 Kishin Futsunushi
 24950 Kishin Hinokagutsuchi
 11140 Kishin Jikokuten
+2101 Kishin Keter of Rage 
 11130 Kishin Koumokuten
 24230 Kishin Marici
 24960 Kishin Okuninushi
+2118 Kishin Procyon of Lightning
 24890 Kishin Sukuna-Hikona
 25240 Kishin Sukuna-Hikona
 11110 Kishin Take-Minakata
+2929 Kishin Thor
 11170 Kishin Thor
 24430 Kishin Thor
 11160 Kishin Zhong Kui
@@ -284,6 +404,7 @@
 25220 Lady Kali
 10440 Lady Kikuri-Hime
 10420 Lady Kushinada
+2107 Lady Netzach the Benevolent 
 25680 Lady Nuwa
 10410 Lady Pele
 10450 Lady Skadi
@@ -293,11 +414,15 @@
 24850 Megami Anahita
 24120 Megami Anat
 11420 Megami Arianrhod
+2923 Megami Artemis
 25590 Megami Artemis
 25410 Megami Cleopatra
 24980 Megami Demeter
 24620 Megami Elizabeth
+25930 Megami Fortuna
 11410 Megami Hathor
+25760 Megami Hathor
+990127 Megami Hathor Horde
 25320 Megami Idun
 11460 Megami Ishtar
 11480 Megami Izanami
@@ -330,32 +455,41 @@
 24020 Raptor Gurr
 24010 Raptor Hresvelgr
 24040 Raptor Moh Shuvuu
+24041 Raptor Party Moh Shuvuu
 24460 Reaper Cernunnos
 21760 Reaper Chernobog
 25010 Reaper Guedhe
 21770 Reaper Hel
+2931 Reaper Ixtab
 21720 Reaper Ixtab
 21710 Reaper Mot
 21730 Reaper Nergal
 21750 Reaper Orcus
+2938 Reaper Persephone
 21740 Reaper Persephone
 19120 Rumor Kamiotoko
 21010 Rumor Reiko Kashima
 24400 Seraph Flauros Hallel
 24390 Seraph Ose Hallel
 12560 Snake Ananta
+2103 Snake Binah of Floods 
+990003 Snake Celestial Gui Xian
 12530 Snake Gui Xian
 12520 Snake Naga
 12510 Snake Nozuchi
 12540 Snake Orochi
+25920 Snake Otohime
 25450 Snake Ouroboros
 25190 Snake Pendragon
 24530 Snake Vouivre
 24770 Snake Vritra
 12550 Snake Yurlungur
+25820 Summoner Raidou Kuzunoha & Gouto
+991003 Summoner Raidou Kuzunoha & Gouto
 23740 Tenma Agni
 23730 Tenma Asura
 23950 Tenma Asura Lord
+25890 Tenma Asura Lord
 23710 Tenma Indrajit
 23750 Tenma Mahakala
 23720 Tenma Yama
@@ -375,51 +509,72 @@
 24160 Tyrant Belial
 24870 Tyrant Chi You
 25150 Tyrant Dagon
+2911 Tyrant Hecate
 24000 Tyrant Hecate
 11610 Tyrant Horkos
+2935 Tyrant King Frost
 11630 Tyrant King Frost
 11650 Tyrant Loki
+2917 Tyrant Lucifer
 11580 Tyrant Lucifer
 24060 Tyrant Lucifuge
 11670 Tyrant Mara
 25330 Tyrant Mephisto
 24900 Tyrant Mithras
+2914 Tyrant Moloch
 25090 Tyrant Moloch
 25600 Tyrant Moloch
 24810 Tyrant Samyaza
+2120 Tyrant Sirius of Fire
 11660 Tyrant Surt
 24440 Tyrant Surt
+2106 Tyrant Tif'ereth of the Precept 
 24140 Tyrant Tzitzimitl
+2111 Tyrant Wezen the Violent
+2109 Tyrant Yesode of the Sky 
 19210 UMA Chupacabra
 19230 UMA Hare of Inaba
 24150 Undead Alice
 21840 Undead Bodyconian
+2122 Undead Empress Juliana
 21830 Undead Man Eater
+2121 Undead Queen Maharaja
 11310 Vile Abraxas
 11330 Vile Arahabaki
 11320 Vile Baphomet
 25520 Vile Baphomet
+990125 Vile Baphomet Horde
 24760 Vile Cthulhu
 24350 Vile Demiurge
 24660 Vile Echidna
 11350 Vile Girimekhala
+2108 Vile Hod the Gentile 
+2937 Vile Mada
 24740 Vile Mada
 20810 Vile Mishaguji
 24730 Vile Nyarlathotep
 24470 Vile Pales
 11340 Vile Pazuzu
+25830 Vile Saturnus
 11360 Vile Seth
 24750 Vile Tezcatlipoca
 12220 Wilder Bicorn
 12210 Wilder Chagrin
+25900 Wilder Chefei
+2113 Wilder Dubhe the Vile
 12270 Wilder Fenrir
 12250 Wilder Mothman
 12240 Wilder Nue
+12251 Wilder Party Mothman
 12260 Wilder Peallaidh
 12230 Wilder Raiju
+2900 Witch Bayonetta
 21910 Witch Bayonetta
+2901 Witch Bayonetta☆
 21915 Witch Bayonetta☆
+2902 Witch Jeanne
 21920 Witch Jeanne
+2903 Witch Jeanne☆
 21925 Witch Jeanne☆
 24310 Witch Lilith
 24090 Witch Schierke
@@ -427,16 +582,20 @@
 24490 Wood Alraune
 24510 Wood Erlkonig
 24500 Wood Es
+2936 Wood Mandrake
 24480 Wood Mandrake
 12410 Yoma Agathion
 12430 Yoma Apsaras
 12440 Yoma Dis
 12460 Yoma Efreet
 12470 Yoma Ganesha
+2930 Yoma Hakumen no Mono
+25860 Yoma Hakumen no Mono
 12420 Yoma Koppa Tengu
 24410 Yoma Master Therion
 25710 Yoma Peri
 25420 Yoma Queen Frost
+25800 Yoma Tengu
 12450 Yoma Valkyrie
 19340 Zealot Attis
 20910 Zealot Dionysus
