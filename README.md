@@ -41,9 +41,9 @@ If this is your first time connecting to the server, then go to <code>liberated.
 # What works
 . Tutorial
 
-. Story Battles On Normal Difficulty
+. Story Battles On Normal Difficulty (not chapter 2.5)
 
-. Story Battles On Hard Difficulty
+. Story Battles On Hard Difficulty (not chapter 2.5)
 
 . Story Review
 
@@ -75,15 +75,9 @@ If this is your first time connecting to the server, then go to <code>liberated.
 
 # FAQ
 
-Q: The modded version of the app isn't fetching the assets I downloaded
+Q: The app isn't fetching the assets I downloaded
 
 A: Make sure to do all the steps in [Scrape The Assets](#scrape-the-assets)
-
-----------------------------------------------
-
-Q: How do I patch the game!
-
-A: There is a video on my YouTube channel on how to do this [here](https://youtu.be/U4BZSEMW9XM)
 
 ----------------------------------------------
 

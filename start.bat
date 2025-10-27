@@ -10,10 +10,12 @@ echo It should look like 192.168.xxx.xxx.)
 echo.
 echo.
 
+echo Starting DNS
 start dnsserver.exe
 
+echo Starting Requirements for Server
 start monitor.bat
 
-echo calling nginx
+echo Starting Server
 cd web
 call "nginx.exe"
