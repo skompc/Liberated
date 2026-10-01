@@ -18,16 +18,16 @@ Download a build for your OS from the [Actions](https://github.com/skompc/Libera
 
 | OS | Build command | Output |
 | --- | --- | --- |
-| Windows | <code>powershell -ExecutionPolicy Bypass -File .\build-windows.ps1</code> | <code>dist\Liberated-windows\Liberated.exe</code> |
-| macOS | <code>./build-mac.sh</code> (needs Xcode Command Line Tools) | <code>dist/Liberated.app</code> |
-| Linux | <code>./build-linux.sh</code> (needs build-essential + curl) | <code>dist/Liberated-linux/Liberated</code> |
+| Windows | <code>powershell -ExecutionPolicy Bypass -File .\scripts\build-windows.ps1</code> | <code>dist\Liberated-windows\Liberated.exe</code> |
+| macOS | <code>./scripts/build-mac.sh</code> (needs Xcode Command Line Tools) | <code>dist/Liberated.app</code> |
+| Linux | <code>./scripts/build-linux.sh</code> (needs build-essential + curl) | <code>dist/Liberated-linux/Liberated</code> |
 
 Everything (nginx, PHP, Python, configs and the site) lives inside that app/folder. Delete it and it's gone.
 
 # Run The Server
 Launch Liberated. Web starts automatically; DNS is initially stopped so you can work on the web server without binding port 53. Each launcher has separate Web and DNS start/stop controls, plus Update Assets, Edit Scraper Config, Show Logs, Stop All, and Quit actions. On macOS these are in the Liberated window and application menu; on Windows in its control window; on Linux in the launcher action menu.
 
-Asset download settings (check code, language, platform) come from <code>scraper/scraper-config.json</code> at build time (see <code>scraper/scraper-config-values.txt</code> for possible values). Use Edit Scraper Config in the launcher to change the bundled copy after building.
+Asset download settings (check code, language, platform) come from <code>src/python/scraper/scraper-config.json</code> at build time (see <code>src/python/scraper/scraper-config-values.txt</code> for possible values). Use Edit Scraper Config in the launcher to change the bundled copy after building.
 
 Note the IP address that Liberated shows you.
 
@@ -35,10 +35,10 @@ On Linux, Liberated will ask for your password because ports 53/80/443 need root
 
 On macOS, if you downloaded the app, move <code>Liberated.app</code> to another folder (e.g. Applications) with Finder before opening it, or run <code>xattr -dr com.apple.quarantine Liberated.app</code>. Otherwise macOS runs it from a read-only location and it can't save anything.
 
-The files that get served are in ./web/html/
+The files that get served are in ./src/web/html/
 
 # Connect To The Server
-Use the included DNS changer app to change your phones DNS to the IP address that you found earlier
+Use the included DNS changer app to change your phone's DNS to the IP address that Liberated showed you.
 
 If this is your first time connecting to the server, then go to <code>liberated.dx2</code> in your web browser and follow the directions for android devices. If it warns you about privacy or something like that click "advanced" then continue.
 

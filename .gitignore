@@ -1,10 +1,8 @@
-web/html/contents
-web/html/saves
+src/web/html/contents
+src/web/html/saves
 dev-only
-node_modules
-package-lock.json
-web/logs
+src/web/logs
 scratch*.*
 .DS_Store
-venv
 dist
+build

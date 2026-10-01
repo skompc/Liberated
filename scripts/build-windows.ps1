@@ -1,6 +1,6 @@
 # Builds a self-contained dist\Liberated-windows\ folder (nginx + PHP 8 + Python 3 venv w/ dnslib + site content)
 # with a Liberated.exe launcher. Everything lives inside the folder; deleting it removes everything.
-# Run from PowerShell:  powershell -ExecutionPolicy Bypass -File .\build-windows.ps1
+# Run from PowerShell:  powershell -ExecutionPolicy Bypass -File .\scripts\build-windows.ps1
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -10,10 +10,12 @@ $PhpVersion   = '8.3.35'
 $PyVersion    = '3.12.7'
 $PyRelease    = '20241016'
 
-$Root = $PSScriptRoot
+$Scripts = $PSScriptRoot
+$Root = (Resolve-Path (Join-Path $Scripts '..')).Path
 $Out  = Join-Path $Root 'dist\Liberated-windows'
 $Res  = Join-Path $Out 'resources'
-$Work = Join-Path ([IO.Path]::GetTempPath()) ('liberated-' + [Guid]::NewGuid())
+$BuildRoot = Join-Path $Root 'build'
+$Work = Join-Path $BuildRoot ('windows-' + [Guid]::NewGuid())
 
 function Fetch($url, $file) {
     Write-Host "==> Downloading $url"
@@ -70,7 +72,7 @@ $csc = Join-Path $env:WINDIR 'Microsoft.NET\Framework64\v4.0.30319\csc.exe'
 if (-not (Test-Path $csc)) { throw "C# compiler not found at $csc (.NET Framework 4.x is required)" }
 if (-not (Get-Command tar.exe -ErrorAction SilentlyContinue)) { throw 'tar.exe not found (requires Windows 10 1803 or newer)' }
 
-New-Item -ItemType Directory -Force -Path $Work | Out-Null
+    New-Item -ItemType Directory -Force -Path $Work | Out-Null
 try {
     if (Test-Path $Out) { Remove-Item -Recurse -Force $Out }
     foreach ($d in 'php', 'dns', 'run', 'web\conf', 'web\logs', 'web\temp') {
@@ -81,8 +83,8 @@ try {
     Fetch "https://nginx.org/download/nginx-$NginxVersion.zip" "$Work\nginx.zip"
     Expand-Archive "$Work\nginx.zip" -DestinationPath $Work
     Copy-Item "$Work\nginx-$NginxVersion\nginx.exe" "$Res\web\"
-    Copy-Item "$Root\web\conf\fastcgi_params" "$Res\web\conf\"
-    Copy-Item -Recurse "$Root\web\conf\ssl" "$Res\web\conf\ssl"
+    Copy-Item "$Root\src\web\conf\fastcgi_params" "$Res\web\conf\"
+    Copy-Item -Recurse "$Root\src\web\conf\ssl" "$Res\web\conf\ssl"
 
     # ------------------------------------------------------------ PHP 8 (NTS, php-cgi)
     $phpZip = "php-$PhpVersion-nts-Win32-vs16-x64.zip"
@@ -97,7 +99,7 @@ try {
     }
 
     # Reuse the project's php.ini, disabling extensions this PHP build doesn't ship
-    $ini = Get-Content "$Root\php\php.ini" | ForEach-Object {
+    $ini = Get-Content "$Root\src\php\php.ini" | ForEach-Object {
         if ($_ -match '^\s*(zend_)?extension\s*=\s*"?([^"\s;]+)') {
             $name = $Matches[2]
             if ($name -notmatch '\.dll$') { $name = "php_$name.dll" }
@@ -119,13 +121,13 @@ try {
     & "$Res\venv\Scripts\python.exe" -m pip install --no-cache-dir dnslib certifi
     if ($LASTEXITCODE -ne 0) { throw 'pip install failed' }
 
-    Copy-Item "$Root\dnsserver.py" "$Res\dns\"
+    Copy-Item "$Root\src\python\dnsserver.py" "$Res\dns\"
     New-Item -ItemType Directory -Force -Path "$Res\scraper" | Out-Null
-    Copy-Item "$Root\scraper\scraper.py", "$Root\scraper\scraper-config.json" "$Res\scraper\"
+    Copy-Item "$Root\src\python\scraper\scraper.py", "$Root\src\python\scraper\scraper-config.json" "$Res\scraper\"
 
     # ------------------------------------------------------------ Site content + nginx config
     Write-Host '==> Copying site content'
-    Copy-Item -Recurse "$Root\web\html" "$Res\web\html"
+    Copy-Item -Recurse "$Root\src\web\html" "$Res\web\html"
 
     Set-Content -Path "$Res\web\conf\nginx.conf" -Encoding ASCII -Value @'
 worker_processes 1;

@@ -43,8 +43,6 @@ def start_dns_server():
     # Create sockets for IPv4 and IPv6
     sock_ipv4 = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock_ipv6 = socket.socket(socket.AF_INET6, socket.SOCK_DGRAM)
-    # macOS/Linux default to dual-stack, which would collide with the IPv4 bind
-    sock_ipv6.setsockopt(socket.IPPROTO_IPV6, socket.IPV6_V6ONLY, 1)
     sock_ipv4.bind((HOST_IPv4, PORT))
     sock_ipv6.bind((HOST_IPv6, PORT))
 

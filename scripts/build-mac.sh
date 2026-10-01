@@ -11,10 +11,11 @@ PHP_VERSION="8.3.32"
 PY_VERSION="3.12.7"
 PY_RELEASE="20241016"
 
-ROOT="$(cd "$(dirname "$0")" && pwd)"
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 APP="${LIBERATED_APP_PATH:-$ROOT/dist/Liberated.app}"
 RES="$APP/Contents/Resources"
-WORK="$(mktemp -d)"
+mkdir -p "$ROOT/build"
+WORK="$(mktemp -d "$ROOT/build/macos.XXXXXX")"
 trap 'rm -rf "$WORK"' EXIT
 
 case "$(uname -m)" in
@@ -71,7 +72,7 @@ cp "$(find php -type f -name php-fpm | head -n1)" "$RES/php/php-fpm"
 chmod +x "$RES/php/php-fpm"
 
 # Reuse the project's php.ini; extensions are compiled into the static binary.
-sed -E 's/^(extension|zend_extension|extension_dir)[[:space:]]*=/;&/' "$ROOT/php/php.ini" > "$RES/php/php.ini"
+sed -E 's/^(extension|zend_extension|extension_dir)[[:space:]]*=/;&/' "$ROOT/src/php/php.ini" > "$RES/php/php.ini"
 
 cat > "$RES/php/php-fpm.conf" <<'EOF'
 ; Relative paths resolve against the -p prefix (Contents/Resources)
@@ -102,15 +103,15 @@ for link in "$RES"/venv/bin/python*; do
   fi
 done
 
-cp "$ROOT/dnsserver.py" "$RES/dns/dnsserver.py"
+cp "$ROOT/src/python/dnsserver.py" "$RES/dns/dnsserver.py"
 mkdir -p "$RES/scraper"
-cp "$ROOT/scraper/scraper.py" "$ROOT/scraper/scraper-config.json" "$RES/scraper/"
+cp "$ROOT/src/python/scraper/scraper.py" "$ROOT/src/python/scraper/scraper-config.json" "$RES/scraper/"
 
 # ---------------------------------------------------------------- Site content + nginx config
 echo "==> Copying site content"
-ditto "$ROOT/web/html" "$RES/web/html"
-cp "$ROOT/web/conf/fastcgi_params" "$RES/web/conf/"
-ditto "$ROOT/web/conf/ssl" "$RES/web/conf/ssl"
+ditto "$ROOT/src/web/html" "$RES/web/html"
+cp "$ROOT/src/web/conf/fastcgi_params" "$RES/web/conf/"
+ditto "$ROOT/src/web/conf/ssl" "$RES/web/conf/ssl"
 
 cat > "$RES/web/conf/nginx.conf" <<'EOF'
 worker_processes 1;
@@ -465,7 +466,6 @@ set -u
 RES="$(cd "$(dirname "$0")/.." && pwd)"
 RUN="$RES/run"
 PY="$RES/venv/bin/python3"
-SCRAPER="$RES/scraper/scraper.py"
 COMMAND_FILE="$RUN/menu.command"
 WEB_STATUS="$RUN/web.status"
 DNS_STATUS="$RUN/dns.status"
@@ -514,6 +514,7 @@ start_dns() {
   ip="$(ipconfig getifaddr "$iface" 2>/dev/null || true)"
   PYTHONDONTWRITEBYTECODE=1 "$PY" -u "$RES/dns/dnsserver.py" "$ip" >> "$RUN/dns.log" 2>&1 &
   DNS_PID=$!
+  sleep 1
   if kill -0 "$DNS_PID" 2>/dev/null; then
     write_status running > "$DNS_STATUS"
   else
@@ -542,50 +543,16 @@ while :; do
     stop-web) stop_web; printf 'idle\n' > "$COMMAND_FILE" ;;
     start-dns) start_dns; printf 'idle\n' > "$COMMAND_FILE" ;;
     stop-dns) stop_dns; printf 'idle\n' > "$COMMAND_FILE" ;;
-    update-assets)
-      printf 'idle\n' > "$COMMAND_FILE"
-      write_status 'Downloading game assets...' > "$ASSETS_STATUS"
-      progress="$RUN/scraper.progress"
-      "$PY" -u "$SCRAPER" --progress "$progress" > "$RUN/scraper.log" 2>&1 &
-      scraper_pid=$!
-      osascript -l JavaScript "$RES/bin/progress.js" "$progress" >/dev/null 2>&1 &
-      progress_pid=$!
-      cancelled=0
-      while kill -0 "$scraper_pid" 2>/dev/null; do
-        if [ "$(cat "$COMMAND_FILE" 2>/dev/null || true)" = "quit" ] || [ "$(cat "$COMMAND_FILE" 2>/dev/null || true)" = "stop-all" ] || ! kill -0 "$progress_pid" 2>/dev/null; then
-          cancelled=1
-          kill "$scraper_pid" 2>/dev/null || true
-          break
-        fi
-        sleep 0.3
-      done
-      wait "$scraper_pid"; scraper_rc=$?
-      printf 'EXIT\t%s' "$scraper_rc" > "$progress"
-      wait "$progress_pid" 2>/dev/null || true
-      rm -f "$progress" "$progress.tmp"
-      if [ "$(cat "$COMMAND_FILE" 2>/dev/null || true)" = "quit" ]; then
-        exit 0
-      elif [ "$(cat "$COMMAND_FILE" 2>/dev/null || true)" = "stop-all" ]; then
-        stop_web
-        stop_dns
-        printf 'idle\n' > "$COMMAND_FILE"
-      elif [ "$cancelled" -eq 1 ]; then
-        write_status 'Download cancelled; downloaded files were kept.' > "$ASSETS_STATUS"
-      elif [ "$scraper_rc" -eq 0 ]; then
-        write_status 'Game assets are ready.' > "$ASSETS_STATUS"
-      else
-        write_status 'Download failed; see run/scraper.log.' > "$ASSETS_STATUS"
-      fi
-      ;;
   esac
   sleep 0.25
 done
 EOF
 chmod +x "$RES/bin/server.sh"
 
-cp "$ROOT/launcher-mac.swift" "$WORK/Liberated.swift"
+cp "$ROOT/scripts/launcher-mac.swift" "$WORK/Liberated.swift"
 xcrun swiftc -parse-as-library -O "$WORK/Liberated.swift" -o "$APP/Contents/MacOS/Liberated"
 rm -f "$RES/bin/menubar.js"
+rm -f "$RES/bin/progress.js"
 
 ICONSET="$WORK/AppIcon.iconset"
 mkdir -p "$ICONSET"

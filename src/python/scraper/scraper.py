@@ -43,12 +43,20 @@ def report(done, total, message):
         os.replace(PROGRESS_FILE + ".tmp", PROGRESS_FILE)
 
 
+def default_html_dir():
+    candidates = (
+        os.path.abspath(os.path.join(HERE, "..", "web", "html")),
+        os.path.abspath(os.path.join(HERE, "..", "..", "web", "html")),
+    )
+    return next((path for path in candidates if os.path.isdir(path)), candidates[0])
+
+
 def main():
     global PROGRESS_FILE
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
     parser.add_argument("--progress")
-    parser.add_argument("html_dir", nargs="?", default=os.path.join(HERE, "..", "web", "html"))
+    parser.add_argument("html_dir", nargs="?", default=default_html_dir())
     args = parser.parse_args()
     PROGRESS_FILE = args.progress
 

@@ -12,10 +12,11 @@ PHP_VERSION="8.3.32"
 PY_VERSION="3.12.7"
 PY_RELEASE="20241016"
 
-ROOT="$(cd "$(dirname "$0")" && pwd)"
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 OUT="$ROOT/dist/Liberated-linux"
 RES="$OUT/resources"
-WORK="$(mktemp -d)"
+mkdir -p "$ROOT/build"
+WORK="$(mktemp -d "$ROOT/build/linux.XXXXXX")"
 trap 'rm -rf "$WORK"' EXIT
 
 case "$(uname -m)" in
@@ -72,7 +73,7 @@ cp "$(find php -type f -name php-fpm | head -n1)" "$RES/php/php-fpm"
 chmod +x "$RES/php/php-fpm"
 
 # Reuse the project's php.ini; extensions are compiled into the static binary.
-sed -E 's/^(extension|zend_extension|extension_dir)[[:space:]]*=/;&/' "$ROOT/php/php.ini" > "$RES/php/php.ini"
+sed -E 's/^(extension|zend_extension|extension_dir)[[:space:]]*=/;&/' "$ROOT/src/php/php.ini" > "$RES/php/php.ini"
 
 cat > "$RES/php/php-fpm.conf" <<'EOF'
 ; Relative paths resolve against the -p prefix (resources/)
@@ -103,16 +104,16 @@ for link in "$RES"/venv/bin/python*; do
   fi
 done
 
-cp "$ROOT/dnsserver.py" "$RES/dns/dnsserver.py"
+cp "$ROOT/src/python/dnsserver.py" "$RES/dns/dnsserver.py"
 cp "$ROOT/icon.png" "$RES/icon.png"
 mkdir -p "$RES/scraper"
-cp "$ROOT/scraper/scraper.py" "$ROOT/scraper/scraper-config.json" "$RES/scraper/"
+cp "$ROOT/src/python/scraper/scraper.py" "$ROOT/src/python/scraper/scraper-config.json" "$RES/scraper/"
 
 # ---------------------------------------------------------------- Site content + nginx config
 echo "==> Copying site content"
-cp -a "$ROOT/web/html" "$RES/web/html"
-cp "$ROOT/web/conf/fastcgi_params" "$RES/web/conf/"
-cp -a "$ROOT/web/conf/ssl" "$RES/web/conf/ssl"
+cp -a "$ROOT/src/web/html" "$RES/web/html"
+cp "$ROOT/src/web/conf/fastcgi_params" "$RES/web/conf/"
+cp -a "$ROOT/src/web/conf/ssl" "$RES/web/conf/ssl"
 
 cat > "$RES/web/conf/nginx.conf" <<'EOF'
 worker_processes 1;

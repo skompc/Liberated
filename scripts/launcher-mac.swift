@@ -22,6 +22,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var dnsMenuItem: NSMenuItem!
     private var helper: Process?
     private var statusTimer: Timer?
+    private var scraper: Process?
+    private var scraperProgressTimer: Timer?
+    private var scraperProgressFile: URL { runDirectory.appendingPathComponent("scraper.progress") }
+    private var scraperLogHandle: FileHandle?
+    private var progressWindow: NSWindow?
+    private var progressBar: NSProgressIndicator?
+    private var progressMessage: NSTextField?
+    private var progressCount: NSTextField?
+    private var progressCancelButton: NSButton?
+    private var pendingQuit = false
     private var isStarting = false
     private var isStopping = false
 
@@ -46,9 +56,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
 
+        fixVenvConfig()
         let ip = localIPv4Address() ?? "unknown"
         addressLabel.stringValue = "Set your device DNS to: \(ip)"
         assetsLabel.stringValue = assetsAreDownloaded() ? "Game assets are ready." : "Game assets are missing."
+        fixVenvConfig()
         showControlWindow(nil)
         startServer()
     }
@@ -59,8 +71,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
+        pendingQuit = true
+        if scraper?.isRunning == true { scraper?.interrupt() }
         sendCommand("quit")
-        return .terminateNow
+        return scraper?.isRunning == true ? .terminateCancel : .terminateNow
     }
 
     private func buildMenu() {
@@ -206,6 +220,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         try? (command + "\n").write(to: commandFile, atomically: true, encoding: .utf8)
     }
 
+    private func fixVenvConfig() {
+        let config = resources.appendingPathComponent("venv/pyvenv.cfg")
+        guard let contents = try? String(contentsOf: config, encoding: .utf8) else { return }
+        let lines = contents.split(separator: "\n")
+            .filter { !$0.hasPrefix("home =") && !$0.hasPrefix("executable =") && !$0.hasPrefix("command =") }
+            .map(String.init)
+        let fixed = (["home = \(resources.appendingPathComponent("python/bin").path)"] + lines).joined(separator: "\n") + "\n"
+        try? fixed.write(to: config, atomically: true, encoding: .utf8)
+    }
+
     private func assetsAreDownloaded() -> Bool {
         let configURL = resources.appendingPathComponent("scraper/scraper-config.json")
         guard let data = try? Data(contentsOf: configURL),
@@ -246,7 +270,133 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc private func updateAssets(_ sender: Any?) {
-        sendCommand("update-assets")
+        startAssetDownload()
+    }
+
+    private func startAssetDownload() {
+        guard scraper == nil else {
+            progressWindow?.makeKeyAndOrderFront(nil)
+            return
+        }
+
+        let progress = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 500, height: 170),
+            styleMask: [.titled],
+            backing: .buffered,
+            defer: false
+        )
+        progress.title = "Liberated"
+        progress.center()
+
+        let message = NSTextField(labelWithString: "Preparing asset download…")
+        message.frame = NSRect(x: 20, y: 122, width: 460, height: 20)
+        message.lineBreakMode = .byTruncatingMiddle
+
+        let bar = NSProgressIndicator(frame: NSRect(x: 20, y: 84, width: 460, height: 20))
+        bar.minValue = 0
+        bar.maxValue = 100
+        bar.isIndeterminate = true
+        bar.startAnimation(nil)
+
+        let count = NSTextField(labelWithString: "Connecting…")
+        count.frame = NSRect(x: 20, y: 50, width: 330, height: 20)
+
+        let cancel = NSButton(title: "Cancel", target: self, action: #selector(cancelAssetDownload(_:)))
+        cancel.frame = NSRect(x: 390, y: 16, width: 90, height: 30)
+
+        [message, bar, count, cancel].forEach { progress.contentView?.addSubview($0) }
+        progressWindow = progress
+        progressMessage = message
+        progressBar = bar
+        progressCount = count
+        progressCancelButton = cancel
+        progress.makeKeyAndOrderFront(nil)
+        NSApp.activate(ignoringOtherApps: true)
+
+        try? FileManager.default.removeItem(at: scraperProgressFile)
+        let logURL = runDirectory.appendingPathComponent("scraper.log")
+        FileManager.default.createFile(atPath: logURL.path, contents: nil)
+
+        let process = Process()
+        process.executableURL = resources.appendingPathComponent("venv/bin/python3")
+        process.arguments = ["-u", resources.appendingPathComponent("scraper/scraper.py").path,
+                             "--progress", scraperProgressFile.path]
+        process.currentDirectoryURL = resources
+        do {
+            let log = try FileHandle(forWritingTo: logURL)
+            scraperLogHandle = log
+            process.standardOutput = log
+            process.standardError = log
+            process.terminationHandler = { [weak self] process in
+                DispatchQueue.main.async { self?.finishAssetDownload(exitCode: process.terminationStatus) }
+            }
+            try process.run()
+            scraper = process
+            assetsLabel.stringValue = "Downloading game assets…"
+            scraperProgressTimer?.invalidate()
+            scraperProgressTimer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true) { [weak self] _ in
+                DispatchQueue.main.async { self?.refreshAssetProgress() }
+            }
+        } catch {
+            scraperLogHandle = nil
+            progressMessage?.stringValue = "Could not start the scraper: \(error.localizedDescription)"
+            count.stringValue = ""
+            cancel.title = "Close"
+        }
+    }
+
+    private func refreshAssetProgress() {
+        guard let value = try? String(contentsOf: scraperProgressFile, encoding: .utf8) else { return }
+        let fields = value.components(separatedBy: "\t")
+        guard fields.count >= 3, fields[0] != "EXIT" else { return }
+        progressMessage?.stringValue = fields.dropFirst(2).joined(separator: "\t")
+        if let done = Double(fields[0]), let total = Double(fields[1]), total > 0 {
+            progressBar?.isIndeterminate = false
+            progressBar?.doubleValue = min(100, done * 100 / total)
+            progressCount?.stringValue = "\(Int(done)) / \(Int(total)) files (\(Int(done * 100 / total))%)"
+        }
+    }
+
+    private func finishAssetDownload(exitCode: Int32) {
+        scraperProgressTimer?.invalidate()
+        scraperProgressTimer = nil
+        scraperLogHandle?.closeFile()
+        scraperLogHandle = nil
+        scraper = nil
+        try? FileManager.default.removeItem(at: scraperProgressFile)
+        try? FileManager.default.removeItem(at: URL(fileURLWithPath: scraperProgressFile.path + ".tmp"))
+
+        let wasCancelled = progressMessage?.stringValue == "Cancelling download…"
+        progressCancelButton?.title = "Close"
+        progressCancelButton?.isEnabled = true
+        if exitCode == 0 {
+            assetsLabel.stringValue = "Game assets are ready."
+            progressMessage?.stringValue = "Game assets downloaded."
+            progressBar?.isIndeterminate = false
+            progressBar?.doubleValue = 100
+            progressCount?.stringValue = "Done"
+        } else if wasCancelled {
+            assetsLabel.stringValue = "Download cancelled; downloaded files were kept."
+            progressMessage?.stringValue = "Download cancelled; downloaded files were kept."
+            progressCount?.stringValue = "Cancelled"
+        } else {
+            assetsLabel.stringValue = "Download failed; see run/scraper.log."
+            progressMessage?.stringValue = "Download failed; see run/scraper.log."
+            progressCount?.stringValue = "Failed"
+        }
+        if pendingQuit { NSApp.terminate(nil) }
+    }
+
+    @objc private func cancelAssetDownload(_ sender: NSButton) {
+        guard scraper?.isRunning == true else {
+            progressWindow?.close()
+            progressWindow = nil
+            progressCancelButton = nil
+            return
+        }
+        progressMessage?.stringValue = "Cancelling download…"
+        sender.isEnabled = false
+        scraper?.interrupt()
     }
 
     @objc private func editScraperConfig(_ sender: Any?) {
