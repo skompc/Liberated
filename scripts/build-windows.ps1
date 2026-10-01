@@ -398,13 +398,19 @@ static class Launcher
             Font = new Font(FontFamily.GenericMonospace, 8.25f)
         };
         var button = new Button { Text = "Cancel", Location = new Point(488, 298), Size = new Size(100, 30) };
+        var retryButton = new Button { Text = "Retry Now", Location = new Point(380, 298), Size = new Size(100, 30), Visible = false };
+        var retryTimer = new System.Windows.Forms.Timer { Interval = 1000 };
         form.Controls.Add(bar);
         form.Controls.Add(count);
         form.Controls.Add(box);
+        form.Controls.Add(retryButton);
         form.Controls.Add(button);
 
         Process proc = null;
-        bool finished = false;
+        bool running = false;
+        bool cancelled = false;
+        int retryIn = 0;
+        string lastLine = null;
         var progressLine = new Regex(@"^\[(\d+)/(\d+)\]");
         Action<string> append = line =>
         {
@@ -412,6 +418,7 @@ static class Launcher
             {
                 form.BeginInvoke((Action)(() =>
                 {
+                    lastLine = line;
                     box.AppendText(line + Environment.NewLine);
                     var m = progressLine.Match(line);
                     int done, total;
@@ -426,8 +433,16 @@ static class Launcher
             catch { }
         };
 
-        form.Shown += (s, e) =>
+        Action start = null;
+        start = () =>
         {
+            retryTimer.Stop();
+            retryButton.Visible = false;
+            button.Text = "Cancel";
+            bar.Style = ProgressBarStyle.Marquee;
+            count.Text = "Starting...";
+            cancelled = false;
+            lastLine = null;
             var psi = new ProcessStartInfo(PyExe, "-u \"" + Scraper + "\"")
             {
                 UseShellExecute = false,
@@ -435,40 +450,93 @@ static class Launcher
                 RedirectStandardOutput = true,
                 RedirectStandardError = true
             };
-            proc = new Process { StartInfo = psi, EnableRaisingEvents = true };
+            var p = new Process { StartInfo = psi, EnableRaisingEvents = true };
             DataReceivedEventHandler handler = (s2, e2) =>
             {
                 if (e2.Data == null) return;
                 append(e2.Data);
                 lock (LogLock) File.AppendAllText(Path.Combine(Run, "scraper.log"), e2.Data + Environment.NewLine);
             };
-            proc.OutputDataReceived += handler;
-            proc.ErrorDataReceived += handler;
-            proc.Exited += (s2, e2) =>
+            p.OutputDataReceived += handler;
+            p.ErrorDataReceived += handler;
+            p.Exited += (s2, e2) =>
             {
-                proc.WaitForExit();   // flush remaining output
-                int code = proc.ExitCode;
+                p.WaitForExit();   // flush remaining output
+                int code = p.ExitCode;
                 try
                 {
                     form.BeginInvoke((Action)(() =>
                     {
-                        finished = true;
-                        button.Text = "Close";
+                        running = false;
                         bar.Style = ProgressBarStyle.Continuous;
-                        if (code == 0) bar.Value = 100;
-                        count.Text = code == 0 ? "Done." : "Failed.";
-                        box.AppendText(Environment.NewLine + (code == 0 ? "Game assets downloaded." : "Download failed (see resources\\run\\scraper.log).") + Environment.NewLine);
+                        if (code == 0)
+                        {
+                            bar.Value = 100;
+                            count.Text = "Done.";
+                            button.Text = "Close";
+                            box.AppendText(Environment.NewLine + "Game assets downloaded." + Environment.NewLine);
+                        }
+                        else if (cancelled)
+                        {
+                            count.Text = "Cancelled; downloaded files were kept.";
+                            button.Text = "Close";
+                            retryButton.Visible = true;
+                        }
+                        else
+                        {
+                            box.AppendText(Environment.NewLine + "Download failed: " + (lastLine ?? "see resources\\run\\scraper.log") + Environment.NewLine);
+                            retryIn = 10;
+                            count.Text = "Download failed. Retrying in " + retryIn + " seconds...";
+                            button.Text = "Cancel";
+                            retryButton.Visible = true;
+                            retryTimer.Start();
+                        }
                     }));
                 }
                 catch { }
             };
-            proc.Start();
-            proc.BeginOutputReadLine();
-            proc.BeginErrorReadLine();
+            try
+            {
+                p.Start();
+                proc = p;
+                running = true;
+                p.BeginOutputReadLine();
+                p.BeginErrorReadLine();
+            }
+            catch (Exception ex)
+            {
+                count.Text = "Could not start the scraper: " + ex.Message;
+                button.Text = "Close";
+            }
         };
-        button.Click += (s, e) => form.Close();
-        form.FormClosing += (s, e) => { if (!finished) Kill(proc); };
+
+        retryTimer.Tick += (s, e) =>
+        {
+            retryIn--;
+            if (retryIn > 0) count.Text = "Download failed. Retrying in " + retryIn + " seconds...";
+            else start();
+        };
+        retryButton.Click += (s, e) => { if (!running) start(); };
+        form.Shown += (s, e) => start();
+        button.Click += (s, e) =>
+        {
+            if (running)
+            {
+                cancelled = true;
+                count.Text = "Cancelling download...";
+                Kill(proc);
+            }
+            else if (retryTimer.Enabled)
+            {
+                retryTimer.Stop();
+                count.Text = "Download failed; automatic retry cancelled.";
+                button.Text = "Close";
+            }
+            else form.Close();
+        };
+        form.FormClosing += (s, e) => { retryTimer.Stop(); if (running) { cancelled = true; Kill(proc); } };
         form.ShowDialog(owner);
+        retryTimer.Dispose();
         form.Dispose();
     }
 }

@@ -31,6 +31,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var progressMessage: NSTextField?
     private var progressCount: NSTextField?
     private var progressCancelButton: NSButton?
+    private var progressRetryButton: NSButton?
+    private var retryTimer: Timer?
+    private var retrySecondsLeft = 0
+    private var downloadCancelled = false
     private var pendingQuit = false
     private var isStarting = false
     private var isStopping = false
@@ -72,6 +76,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
         pendingQuit = true
+        stopRetryTimer()
         if scraper?.isRunning == true { scraper?.interrupt() }
         sendCommand("quit")
         return scraper?.isRunning == true ? .terminateCancel : .terminateNow
@@ -108,6 +113,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             defer: false
         )
         window.title = "Liberated"
+        // We hold our own strong reference; letting AppKit also release on close crashes the app
+        window.isReleasedWhenClosed = false
         window.center()
 
         let heading = NSTextField(labelWithString: "Liberated is starting")
@@ -274,11 +281,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func startAssetDownload() {
-        guard scraper == nil else {
-            progressWindow?.makeKeyAndOrderFront(nil)
-            return
+        if progressWindow == nil {
+            buildProgressWindow()
         }
+        progressWindow?.makeKeyAndOrderFront(nil)
+        NSApp.activate(ignoringOtherApps: true)
+        guard scraper == nil, retryTimer == nil else { return }
+        launchScraper()
+    }
 
+    private func buildProgressWindow() {
         let progress = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 500, height: 170),
             styleMask: [.titled],
@@ -286,32 +298,44 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             defer: false
         )
         progress.title = "Liberated"
+        progress.isReleasedWhenClosed = false
         progress.center()
 
-        let message = NSTextField(labelWithString: "Preparing asset download…")
+        let message = NSTextField(labelWithString: "")
         message.frame = NSRect(x: 20, y: 122, width: 460, height: 20)
         message.lineBreakMode = .byTruncatingMiddle
 
         let bar = NSProgressIndicator(frame: NSRect(x: 20, y: 84, width: 460, height: 20))
         bar.minValue = 0
         bar.maxValue = 100
-        bar.isIndeterminate = true
-        bar.startAnimation(nil)
 
-        let count = NSTextField(labelWithString: "Connecting…")
+        let count = NSTextField(labelWithString: "")
         count.frame = NSRect(x: 20, y: 50, width: 330, height: 20)
+
+        let retry = NSButton(title: "Retry Now", target: self, action: #selector(retryAssetDownload(_:)))
+        retry.frame = NSRect(x: 280, y: 16, width: 100, height: 30)
 
         let cancel = NSButton(title: "Cancel", target: self, action: #selector(cancelAssetDownload(_:)))
         cancel.frame = NSRect(x: 390, y: 16, width: 90, height: 30)
 
-        [message, bar, count, cancel].forEach { progress.contentView?.addSubview($0) }
+        [message, bar, count, retry, cancel].forEach { progress.contentView?.addSubview($0) }
         progressWindow = progress
         progressMessage = message
         progressBar = bar
         progressCount = count
+        progressRetryButton = retry
         progressCancelButton = cancel
-        progress.makeKeyAndOrderFront(nil)
-        NSApp.activate(ignoringOtherApps: true)
+    }
+
+    private func launchScraper() {
+        downloadCancelled = false
+        progressMessage?.stringValue = "Preparing asset download…"
+        progressCount?.stringValue = "Connecting…"
+        progressBar?.isIndeterminate = true
+        progressBar?.startAnimation(nil)
+        progressRetryButton?.isHidden = true
+        progressCancelButton?.title = "Cancel"
+        progressCancelButton?.isEnabled = true
 
         try? FileManager.default.removeItem(at: scraperProgressFile)
         let logURL = runDirectory.appendingPathComponent("scraper.log")
@@ -340,8 +364,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         } catch {
             scraperLogHandle = nil
             progressMessage?.stringValue = "Could not start the scraper: \(error.localizedDescription)"
-            count.stringValue = ""
-            cancel.title = "Close"
+            progressCount?.stringValue = ""
+            progressCancelButton?.title = "Close"
         }
     }
 
@@ -366,37 +390,87 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         try? FileManager.default.removeItem(at: scraperProgressFile)
         try? FileManager.default.removeItem(at: URL(fileURLWithPath: scraperProgressFile.path + ".tmp"))
 
-        let wasCancelled = progressMessage?.stringValue == "Cancelling download…"
-        progressCancelButton?.title = "Close"
         progressCancelButton?.isEnabled = true
+        progressBar?.stopAnimation(nil)
+        if pendingQuit {
+            NSApp.terminate(nil)
+            return
+        }
         if exitCode == 0 {
             assetsLabel.stringValue = "Game assets are ready."
             progressMessage?.stringValue = "Game assets downloaded."
             progressBar?.isIndeterminate = false
             progressBar?.doubleValue = 100
             progressCount?.stringValue = "Done"
-        } else if wasCancelled {
-            assetsLabel.stringValue = "Download cancelled; downloaded files were kept."
-            progressMessage?.stringValue = "Download cancelled; downloaded files were kept."
-            progressCount?.stringValue = "Cancelled"
+            progressCancelButton?.title = "Close"
+        } else if downloadCancelled {
+            showDownloadStopped("Download cancelled; downloaded files were kept.")
         } else {
-            assetsLabel.stringValue = "Download failed; see run/scraper.log."
-            progressMessage?.stringValue = "Download failed; see run/scraper.log."
-            progressCount?.stringValue = "Failed"
+            assetsLabel.stringValue = "Download failed; retrying…"
+            progressMessage?.stringValue = "Download failed: \(lastScraperLogLine() ?? "see run/scraper.log")"
+            progressRetryButton?.isHidden = false
+            progressCancelButton?.title = "Cancel"
+            retrySecondsLeft = 10
+            progressCount?.stringValue = "Retrying in \(retrySecondsLeft) seconds…"
+            retryTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+                DispatchQueue.main.async { self?.tickRetryCountdown() }
+            }
         }
-        if pendingQuit { NSApp.terminate(nil) }
+    }
+
+    private func tickRetryCountdown() {
+        retrySecondsLeft -= 1
+        if retrySecondsLeft > 0 {
+            progressCount?.stringValue = "Retrying in \(retrySecondsLeft) seconds…"
+        } else {
+            stopRetryTimer()
+            launchScraper()
+        }
+    }
+
+    private func stopRetryTimer() {
+        retryTimer?.invalidate()
+        retryTimer = nil
+    }
+
+    private func showDownloadStopped(_ text: String) {
+        assetsLabel.stringValue = text
+        progressMessage?.stringValue = text
+        progressCount?.stringValue = "Cancelled"
+        progressRetryButton?.isHidden = false
+        progressCancelButton?.title = "Close"
+    }
+
+    private func lastScraperLogLine() -> String? {
+        let log = runDirectory.appendingPathComponent("scraper.log")
+        guard let text = try? String(contentsOf: log, encoding: .utf8) else { return nil }
+        return text.split(separator: "\n").last.map(String.init)
+    }
+
+    @objc private func retryAssetDownload(_ sender: NSButton) {
+        stopRetryTimer()
+        guard scraper == nil else { return }
+        launchScraper()
     }
 
     @objc private func cancelAssetDownload(_ sender: NSButton) {
-        guard scraper?.isRunning == true else {
-            progressWindow?.close()
+        if scraper?.isRunning == true {
+            downloadCancelled = true
+            progressMessage?.stringValue = "Cancelling download…"
+            sender.isEnabled = false
+            scraper?.interrupt()
+        } else if retryTimer != nil {
+            stopRetryTimer()
+            showDownloadStopped("Download failed; automatic retry cancelled.")
+        } else {
+            progressWindow?.orderOut(nil)
             progressWindow = nil
+            progressMessage = nil
+            progressBar = nil
+            progressCount = nil
+            progressRetryButton = nil
             progressCancelButton = nil
-            return
         }
-        progressMessage?.stringValue = "Cancelling download…"
-        sender.isEnabled = false
-        scraper?.interrupt()
     }
 
     @objc private func editScraperConfig(_ sender: Any?) {

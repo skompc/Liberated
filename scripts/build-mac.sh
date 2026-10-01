@@ -83,6 +83,7 @@ daemonize = yes
 
 [www]
 listen = 127.0.0.1:9123
+security.limit_extensions = .php .do
 pm = static
 pm.max_children = 4
 catch_workers_output = yes
