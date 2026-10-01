@@ -9,6 +9,7 @@ import json
 import os
 import ssl
 import sys
+import urllib.parse
 import urllib.request
 
 HEADERS = {
@@ -95,7 +96,7 @@ def main():
             report(i, total, f"{name} (already downloaded)")
             continue
         os.makedirs(os.path.dirname(path), exist_ok=True)
-        data = get(base_url + "assets/" + name)
+        data = get(base_url + "assets/" + urllib.parse.quote(name, safe="/"))
         # Write to a temp name first so an interrupted run never leaves a truncated file behind
         with open(path + ".part", "wb") as f:
             f.write(data)
