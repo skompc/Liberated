@@ -61,4 +61,4 @@ function decrypt($enc) {
     return $dec;
 }
 
-echo decrypt("a2cdfe1c0abd5e3a99a9e686f5ce460d78c2bd0d7da7d6ce0ebfeeb08b3f904c34");
+//echo decrypt("a2cdfe1c0abd5e3a99a9e686f5ce460d78c2bd0d7da7d6ce0ebfeeb08b3f904c34");

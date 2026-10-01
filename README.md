@@ -10,9 +10,6 @@ It should be noted that this is a rewrite of my second attempt into php
 
 The uploaded code will NOT have game assets from Sega's servers. There is an asset scraper however.
 
-# First Steps
-Install the DNS Changer apk that is in the root directory on your phone.
-
 # Get The Server
 Download a build for your OS from the [Actions](https://github.com/skompc/Liberated/actions) tab (open the latest "Build Liberated" run and grab the artifact), or build it yourself:
 
@@ -73,7 +70,7 @@ If this is your first time connecting to the server, then go to <code>liberated.
 # Known bugs
 
 1. Any unimplemented endpoints will softlock the game. Simply restart the app.
-2. Story choices don't matter... just choose the path you want... I won't fix this!
+2. Story choices don't matter... just choose the path you want... I likely won't fix this!
 3. Results screen is inaccurate sometimes. Just ignore until I implement everything...
 4. Fusion doesn't consume the demons you put in... LIKELY WON'T FIX!
 
@@ -87,13 +84,19 @@ A: Click "Update Assets" in Liberated (see [Run The Server](#run-the-server)) an
 
 Q: I don't have a computer that I can do this with! Can I still run the server?
 
-A: No... you need a computer for running the server... I will make an android version at some point...
+A: No... you need a computer for running the server... I will likely make an android version at some point...
 
 ----------------------------------------------
 
 Q: Will iOS devices be supported?
 
 A: ~~Unfortunately no.~~ Actually I just got a Mac and an iPhone to test with so now it's a maybe!
+
+----------------------------------------------
+
+Q: The scraper is giving me 403: Forbidden when run
+
+A: The check code is different between regions, so use a check code from a region specific version (eg: English versions of the app can only access English assets)
 
 # Relevent links:
 
