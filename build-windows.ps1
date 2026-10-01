@@ -180,6 +180,7 @@ using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -343,24 +344,50 @@ static class Launcher
             MinimizeBox = false,
             StartPosition = owner == null ? FormStartPosition.CenterScreen : FormStartPosition.CenterParent
         };
+        var bar = new ProgressBar
+        {
+            Location = new Point(12, 12),
+            Size = new Size(576, 22),
+            Style = ProgressBarStyle.Marquee,
+            Maximum = 100
+        };
+        var count = new Label { Location = new Point(12, 40), Size = new Size(576, 18), Text = "Starting..." };
         var box = new TextBox
         {
             Multiline = true,
             ReadOnly = true,
             ScrollBars = ScrollBars.Vertical,
-            Location = new Point(12, 12),
-            Size = new Size(576, 274),
+            Location = new Point(12, 62),
+            Size = new Size(576, 224),
             Font = new Font(FontFamily.GenericMonospace, 8.25f)
         };
         var button = new Button { Text = "Cancel", Location = new Point(488, 298), Size = new Size(100, 30) };
+        form.Controls.Add(bar);
+        form.Controls.Add(count);
         form.Controls.Add(box);
         form.Controls.Add(button);
 
         Process proc = null;
         bool finished = false;
+        var progressLine = new Regex(@"^\[(\d+)/(\d+)\]");
         Action<string> append = line =>
         {
-            try { form.BeginInvoke((Action)(() => box.AppendText(line + Environment.NewLine))); } catch { }
+            try
+            {
+                form.BeginInvoke((Action)(() =>
+                {
+                    box.AppendText(line + Environment.NewLine);
+                    var m = progressLine.Match(line);
+                    int done, total;
+                    if (m.Success && int.TryParse(m.Groups[1].Value, out done) && int.TryParse(m.Groups[2].Value, out total) && total > 0)
+                    {
+                        bar.Style = ProgressBarStyle.Continuous;
+                        bar.Value = Math.Min(100, done * 100 / total);
+                        count.Text = done + " / " + total + " files (" + bar.Value + "%)";
+                    }
+                }));
+            }
+            catch { }
         };
 
         form.Shown += (s, e) =>
@@ -391,6 +418,9 @@ static class Launcher
                     {
                         finished = true;
                         button.Text = "Close";
+                        bar.Style = ProgressBarStyle.Continuous;
+                        if (code == 0) bar.Value = 100;
+                        count.Text = code == 0 ? "Done." : "Failed.";
                         box.AppendText(Environment.NewLine + (code == 0 ? "Game assets downloaded." : "Download failed (see resources\\run\\scraper.log).") + Environment.NewLine);
                     }));
                 }

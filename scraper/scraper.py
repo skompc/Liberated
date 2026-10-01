@@ -1,8 +1,10 @@
 """Downloads the game's asset bundles into web/html/contents/<platform>/custom/<lang>/.
 
-Usage: scraper.py [--check] [html_dir]
-  --check   exit 0 if assets are already downloaded, 1 otherwise
+Usage: scraper.py [--check] [--progress FILE] [html_dir]
+  --check          exit 0 if assets are already downloaded, 1 otherwise
+  --progress FILE  keep FILE updated with "done<TAB>total<TAB>message" for progress UIs
 """
+import argparse
 import json
 import os
 import ssl
@@ -29,17 +31,33 @@ def get(url):
         return resp.read()
 
 
+PROGRESS_FILE = None
+
+
+def report(done, total, message):
+    print(f"[{done}/{total}] {message}" if total else message, flush=True)
+    if PROGRESS_FILE:
+        # Atomic replace so readers never see a half-written file
+        with open(PROGRESS_FILE + ".tmp", "w", encoding="utf-8") as f:
+            f.write(f"{done}\t{total}\t{message}")
+        os.replace(PROGRESS_FILE + ".tmp", PROGRESS_FILE)
+
+
 def main():
-    args = [a for a in sys.argv[1:] if a != "--check"]
-    check_only = "--check" in sys.argv[1:]
-    html_dir = args[0] if args else os.path.join(HERE, "..", "web", "html")
+    global PROGRESS_FILE
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--check", action="store_true")
+    parser.add_argument("--progress")
+    parser.add_argument("html_dir", nargs="?", default=os.path.join(HERE, "..", "web", "html"))
+    args = parser.parse_args()
+    PROGRESS_FILE = args.progress
 
     with open(os.path.join(HERE, "scraper-config.json")) as f:
         cfg = json.load(f)
 
-    dest = os.path.join(html_dir, "contents", cfg["platform"], "custom", cfg["lang_code"])
+    dest = os.path.join(args.html_dir, "contents", cfg["platform"], "custom", cfg["lang_code"])
     ab_list_path = os.path.join(dest, "ab_list.txt")
-    if check_only:
+    if args.check:
         return 0 if os.path.exists(ab_list_path) else 1
 
     init_url = (
@@ -47,11 +65,11 @@ def main():
         f"?check_code={cfg['check_code']}&platform={cfg['platform_num']}"
         f"&lang={cfg['lang_num']}&bundle_id=com.sega.d2megaten.en&_tm_=1"
     )
-    print("Fetching asset bundle info...", flush=True)
+    report(0, 0, "Fetching asset bundle info...")
     info = json.loads(get(init_url))
     version = info["asset_bundle_version"]
     base_url = f"{info['asset_bundle_url']}{cfg['platform']}/{version}/{cfg['lang_code']}/"
-    print(f"Asset bundle version: {version}", flush=True)
+    report(0, 0, f"Asset bundle version: {version}")
 
     os.makedirs(os.path.join(dest, "assets"), exist_ok=True)
     ab_list = get(base_url + "ab_list.txt").decode("utf-8")
@@ -66,7 +84,7 @@ def main():
     for i, name in enumerate(names, 1):
         path = os.path.join(dest, "assets", name)
         if os.path.exists(path):
-            print(f"[{i}/{total}] {name} (already downloaded)", flush=True)
+            report(i, total, f"{name} (already downloaded)")
             continue
         os.makedirs(os.path.dirname(path), exist_ok=True)
         data = get(base_url + "assets/" + name)
@@ -74,7 +92,9 @@ def main():
         with open(path + ".part", "wb") as f:
             f.write(data)
         os.replace(path + ".part", path)
-        print(f"[{i}/{total}] {name}", flush=True)
+        report(i, total, name)
+
+    report(total, total, "Finishing up...")
 
     with open(os.path.join(dest, "assets", "ab.txt"), "wb") as f:
         f.write(get(base_url + "assets/ab.txt"))

@@ -1,3 +1,5 @@
+# LIBERATED
+
 This is my WIP private server for Shin Megami Tensei:Dx2
 
 Follow along on my dev journey at https://www.youtube.com/watch?v=yyznmOjwHMI&list=PLV4ay6xrx8nRm06QnXDBUYqTn3Xk_-wdr
@@ -30,6 +32,8 @@ Asset download settings (check code, language, platform) come from <code>scraper
 Note the IP address that Liberated shows you.
 
 On Linux, Liberated will ask for your password because ports 53/80/443 need root there.
+
+On macOS, if you downloaded the app, move <code>Liberated.app</code> to another folder (e.g. Applications) with Finder before opening it, or run <code>xattr -dr com.apple.quarantine Liberated.app</code>. Otherwise macOS runs it from a read-only location and it can't save anything.
 
 The files that get served are in ./web/html/
 

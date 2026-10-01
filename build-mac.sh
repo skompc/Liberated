@@ -151,6 +151,77 @@ http {
 }
 EOF
 
+# ---------------------------------------------------------------- Asset download progress window (JXA + AppKit)
+cat > "$RES/bin/progress.js" <<'EOF'
+// Usage: osascript -l JavaScript progress.js <progress-file>
+// Shows a progress window fed by "done<TAB>total<TAB>message"; exits on Cancel or when the file says "EXIT".
+ObjC.import('Cocoa');
+
+var cancelled = false;
+
+ObjC.registerSubclass({
+    name: 'LiberatedCancelTarget',
+    methods: {
+        'cancel:': {
+            types: ['void', ['id']],
+            implementation: function (sender) { cancelled = true; }
+        }
+    }
+});
+
+function run(argv) {
+    var path = argv[0];
+    var app = $.NSApplication.sharedApplication;
+    app.setActivationPolicy($.NSApplicationActivationPolicyAccessory);
+
+    var win = $.NSWindow.alloc.initWithContentRectStyleMaskBackingDefer(
+        $.NSMakeRect(0, 0, 480, 130), $.NSWindowStyleMaskTitled, $.NSBackingStoreBuffered, false);
+    win.title = 'Liberated - Downloading game assets';
+    win.center;
+
+    var message = $.NSTextField.labelWithString('Starting...');
+    message.frame = $.NSMakeRect(20, 92, 440, 18);
+    message.lineBreakMode = $.NSLineBreakByTruncatingMiddle;
+
+    var bar = $.NSProgressIndicator.alloc.initWithFrame($.NSMakeRect(20, 62, 440, 20));
+    bar.indeterminate = true;
+    bar.minValue = 0;
+    bar.maxValue = 100;
+    bar.startAnimation(null);
+
+    var count = $.NSTextField.labelWithString('');
+    count.frame = $.NSMakeRect(20, 20, 300, 18);
+
+    var target = $.LiberatedCancelTarget.alloc.init;
+    var cancel = $.NSButton.buttonWithTitleTargetAction('Cancel', target, 'cancel:');
+    cancel.frame = $.NSMakeRect(370, 12, 90, 32);
+
+    [message, bar, count, cancel].forEach(function (v) { win.contentView.addSubview(v); });
+    win.makeKeyAndOrderFront(null);
+    app.activateIgnoringOtherApps(true);
+
+    while (!cancelled) {
+        var ev = app.nextEventMatchingMaskUntilDateInModeDequeue(
+            $.NSEventMaskAny, $.NSDate.dateWithTimeIntervalSinceNow(0.2), $.NSDefaultRunLoopMode, true);
+        if (!ev.isNil()) app.sendEvent(ev);
+
+        var s = $.NSString.stringWithContentsOfFileEncodingError(path, $.NSUTF8StringEncoding, null);
+        if (s.isNil()) continue;
+        var parts = s.js.split('\t');
+        if (parts[0] === 'EXIT') break;
+
+        var done = Number(parts[0]), total = Number(parts[1]);
+        if (total > 0) {
+            if (bar.indeterminate) { bar.stopAnimation(null); bar.indeterminate = false; }
+            bar.doubleValue = done * 100 / total;
+            count.stringValue = done + ' / ' + total + ' files (' + Math.floor(done * 100 / total) + '%)';
+        }
+        message.stringValue = parts.slice(2).join('\t');
+    }
+    win.close;
+}
+EOF
+
 # ---------------------------------------------------------------- App launcher
 # macOS 10.14+ lets unprivileged processes bind ports <1024 on all interfaces, so no root is needed.
 cat > "$APP/Contents/MacOS/Liberated" <<'EOF'
@@ -158,6 +229,18 @@ cat > "$APP/Contents/MacOS/Liberated" <<'EOF'
 set -u
 RES="$(cd "$(dirname "$0")/../Resources" && pwd)"
 RUN="$RES/run"
+
+# Gatekeeper runs quarantined (downloaded) apps from a read-only random path; nothing can be written there
+if [[ "$RES" == */AppTranslocation/* ]] || ! [ -w "$RES" ]; then
+  osascript -e 'display dialog "Liberated can'"'"'t run from its current location because macOS opened it read-only (this happens to downloaded apps).
+
+Fix: in Finder, move Liberated.app to another folder (e.g. Applications), then open it again.
+
+Or run this in Terminal:
+xattr -dr com.apple.quarantine /path/to/Liberated.app" buttons {"OK"} default button 1 with title "Liberated" with icon stop' >/dev/null 2>&1
+  exit 1
+fi
+
 mkdir -p "$RUN" "$RES/web/logs" "$RES/web/temp"
 
 alert() {
@@ -179,20 +262,24 @@ PY="$RES/venv/bin/python3"
 SCRAPER="$RES/scraper/scraper.py"
 
 download_assets() {
-  "$PY" -u "$SCRAPER" > "$RUN/scraper.log" 2>&1 &
-  local pid=$! btn
-  # Re-show a short-lived dialog so progress stays visible and the download can be cancelled
+  local prog="$RUN/scraper.progress" pid ui rc cancelled=0
+  rm -f "$prog"
+  "$PY" -u "$SCRAPER" --progress "$prog" > "$RUN/scraper.log" 2>&1 &
+  pid=$!
+  osascript -l JavaScript "$RES/bin/progress.js" "$prog" >/dev/null 2>&1 &
+  ui=$!
+  # The progress window exits early only when the user clicks Cancel
   while kill -0 "$pid" 2>/dev/null; do
-    btn="$(osascript -e 'on run argv' \
-      -e 'button returned of (display dialog "Downloading game assets..." & return & return & (item 1 of argv) buttons {"Cancel Download"} giving up after 3 with title "Liberated")' \
-      -e 'end run' "$(tail -n 1 "$RUN/scraper.log" 2>/dev/null)" 2>/dev/null)"
-    if [ "$btn" = "Cancel Download" ]; then
-      kill "$pid" 2>/dev/null; wait "$pid" 2>/dev/null
-      info "Asset download cancelled. Files downloaded so far are kept."
-      return
-    fi
+    if ! kill -0 "$ui" 2>/dev/null; then cancelled=1; kill "$pid" 2>/dev/null; break; fi
+    sleep 0.3
   done
-  if wait "$pid"; then
+  wait "$pid"; rc=$?
+  printf 'EXIT\t%s' "$rc" > "$prog"
+  wait "$ui" 2>/dev/null
+  rm -f "$prog" "$prog.tmp"
+  if [ "$cancelled" -eq 1 ]; then
+    info "Asset download cancelled. Files downloaded so far are kept."
+  elif [ "$rc" -eq 0 ]; then
     info "Game assets downloaded."
   else
     alert "Asset download failed: $(tail -n 1 "$RUN/scraper.log") (see $RUN/scraper.log)"

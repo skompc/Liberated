@@ -248,11 +248,24 @@ PY="$RES/venv/bin/python3"
 SCRAPER="$RES/scraper/scraper.py"
 LOG="$RUN/scraper.log"
 
+# Turns "[done/total] name" scraper lines into zenity --progress percentages and status text
+to_zenity_progress() {
+  local line pct re='^\[([0-9]+)/([0-9]+)\]'
+  while IFS= read -r line; do
+    if [[ $line =~ $re ]] && (( BASH_REMATCH[2] > 0 )); then
+      pct=$(( BASH_REMATCH[1] * 100 / BASH_REMATCH[2] ))
+      (( pct > 99 )) && pct=99   # 100 auto-closes the dialog; save it for the end
+      echo "$pct"
+    fi
+    if [[ $line == __EXIT__* ]]; then echo 100; else echo "# $line"; fi
+  done
+}
+
 download_assets() {
   # __EXIT__ marker records the scraper's exit code; it's missing if the download was cancelled
   if command -v zenity >/dev/null; then
-    { "$PY" -u "$SCRAPER" 2>&1; echo "__EXIT__$?"; } | tee "$LOG" | sed -u 's/^/# /' \
-      | zenity --progress --pulsate --auto-close --title=Liberated --window-icon="$ICON" \
+    { "$PY" -u "$SCRAPER" 2>&1; echo "__EXIT__$?"; } | tee "$LOG" | to_zenity_progress \
+      | zenity --progress --auto-close --percentage=0 --title=Liberated --window-icon="$ICON" \
           --text="Downloading game assets..." 2>/dev/null
   elif [ -t 1 ]; then
     { "$PY" -u "$SCRAPER" 2>&1; echo "__EXIT__$?"; } | tee "$LOG"
