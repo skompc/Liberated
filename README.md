@@ -25,9 +25,9 @@ Download a build for your OS from the [Actions](https://github.com/skompc/Libera
 Everything (nginx, PHP, Python, configs and the site) lives inside that app/folder. Delete it and it's gone.
 
 # Run The Server
-Launch Liberated. The first time, it will offer to download the game assets (this takes a while). You can re-run the download later with the "Update Assets" button.
+Launch Liberated. Web starts automatically; DNS is initially stopped so you can work on the web server without binding port 53. Each launcher has separate Web and DNS start/stop controls, plus Update Assets, Edit Scraper Config, Show Logs, Stop All, and Quit actions. On macOS these are in the Liberated window and application menu; on Windows in its control window; on Linux in the launcher action menu.
 
-Asset download settings (check code, language, platform) come from <code>scraper/scraper-config.json</code> at build time (see <code>scraper/scraper-config-values.txt</code> for possible values). To change them after building, edit the copy inside the build at <code>resources/scraper/scraper-config.json</code> (on macOS: <code>Liberated.app/Contents/Resources/scraper/</code>).
+Asset download settings (check code, language, platform) come from <code>scraper/scraper-config.json</code> at build time (see <code>scraper/scraper-config-values.txt</code> for possible values). Use Edit Scraper Config in the launcher to change the bundled copy after building.
 
 Note the IP address that Liberated shows you.
 

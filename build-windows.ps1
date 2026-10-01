@@ -189,6 +189,8 @@ static class Launcher
     static string Res, Run, Web;
     static Process Php, Nginx, Dns;
     static volatile bool Stopping;
+    static volatile bool WebEnabled;
+    static volatile bool DnsEnabled;
     static readonly object LogLock = new object();
     static Icon AppIcon;
 
@@ -211,25 +213,6 @@ static class Launcher
         {
             FixVenv();
             string ip = LocalIp();
-
-            if (!AssetsPresent() &&
-                MessageBox.Show("Game assets haven't been downloaded yet. Download them now?\nThis can take a while.",
-                                "Liberated", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                DownloadAssets(null);
-
-            StartPhp();
-            // nginx/Windows uses its working directory as the prefix
-            Nginx = Start(Path.Combine(Web, "nginx.exe"), "", Web, null);
-            Dns = Start(Path.Combine(Res, @"venv\Scripts\python.exe"),
-                        "-u \"" + Path.Combine(Res, @"dns\dnsserver.py") + "\" " + ip,
-                        Path.Combine(Res, "dns"), Path.Combine(Run, "dns.log"));
-
-            Thread.Sleep(1500);
-            if (Nginx.HasExited)
-                throw new Exception("nginx failed to start (are ports 80/443 in use?).\nSee resources\\web\\logs\\error.log");
-            if (Dns.HasExited)
-                throw new Exception("DNS server failed to start (is port 53 in use?).\nSee resources\\run\\dns.log");
-
             Application.Run(new MainForm(ip.Length > 0 ? ip : "unknown"));
         }
         catch (Exception e)
@@ -275,8 +258,66 @@ static class Launcher
         var p = Start(Path.Combine(Res, @"php\php-cgi.exe"), "-b 127.0.0.1:9123 -c php.ini",
                       Path.Combine(Res, "php"), Path.Combine(Run, "php.log"));
         p.EnableRaisingEvents = true;
-        p.Exited += (s, e) => { if (!Stopping) { Thread.Sleep(1000); if (!Stopping) StartPhp(); } };
+        p.Exited += (s, e) => { if (!Stopping && WebEnabled) { Thread.Sleep(1000); if (!Stopping && WebEnabled) StartPhp(); } };
         Php = p;
+    }
+
+    public static bool WebRunning { get { return WebEnabled && Nginx != null && !Nginx.HasExited; } }
+    public static bool DnsRunning { get { return DnsEnabled && Dns != null && !Dns.HasExited; } }
+
+    public static void StartWeb()
+    {
+        if (WebRunning) return;
+        WebEnabled = true;
+        try
+        {
+            StartPhp();
+            Nginx = Start(Path.Combine(Web, "nginx.exe"), "", Web, null);
+        }
+        catch (Exception e)
+        {
+            WebEnabled = false;
+            MessageBox.Show("Web server failed to start: " + e.Message + "\nSee resources\\web\\logs\\error.log", "Liberated", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+
+    public static void StopWeb()
+    {
+        WebEnabled = false;
+        try
+        {
+            if (Nginx != null && !Nginx.HasExited)
+                Start(Path.Combine(Web, "nginx.exe"), "-s quit", Web, null).WaitForExit(3000);
+        }
+        catch { }
+        Kill(Nginx);
+        Kill(Php);
+        Nginx = null;
+        Php = null;
+    }
+
+    public static void StartDns(string ip)
+    {
+        if (DnsRunning) return;
+        DnsEnabled = true;
+        try
+        {
+            Dns = Start(Path.Combine(Res, @"venv\Scripts\python.exe"),
+                        "-u \"" + Path.Combine(Res, @"dns\dnsserver.py") + "\" " + ip,
+                        Path.Combine(Res, "dns"), Path.Combine(Run, "dns.log"));
+        }
+        catch (Exception e)
+        {
+            DnsEnabled = false;
+            MessageBox.Show("DNS server failed to start: " + e.Message + "\nSee resources\\run\\dns.log", "Liberated", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+
+    public static void StopDns()
+    {
+        DnsEnabled = false;
+        Kill(Dns);
+        Dns = null;
     }
 
     static Process Start(string file, string args, string cwd, string log)
@@ -302,18 +343,11 @@ static class Launcher
         return p;
     }
 
-    static void StopAll()
+    public static void StopAll()
     {
         Stopping = true;
-        try
-        {
-            if (Nginx != null && !Nginx.HasExited)
-                Start(Path.Combine(Web, "nginx.exe"), "-s quit", Web, null).WaitForExit(5000);
-        }
-        catch { }
-        Kill(Nginx);
-        Kill(Php);
-        Kill(Dns);
+        StopWeb();
+        StopDns();
     }
 
     static void Kill(Process p)
@@ -321,7 +355,7 @@ static class Launcher
         try { if (p != null && !p.HasExited) { p.Kill(); p.WaitForExit(3000); } } catch { }
     }
 
-    static bool AssetsPresent()
+    public static bool AssetsPresent()
     {
         var psi = new ProcessStartInfo(PyExe, "\"" + Scraper + "\" --check") { UseShellExecute = false, CreateNoWindow = true };
         using (var p = Process.Start(psi))
@@ -439,31 +473,73 @@ static class Launcher
 
 class MainForm : Form
 {
-    public MainForm(string ip)
+    readonly string ip;
+    readonly Label webStatus;
+    readonly Label dnsStatus;
+    readonly Label assetStatus;
+    readonly Button webButton;
+    readonly Button dnsButton;
+    readonly System.Windows.Forms.Timer refreshTimer;
+
+    public MainForm(string ipAddress)
     {
+        ip = ipAddress;
         Text = "Liberated";
         Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
-        ClientSize = new Size(380, 170);
+        ClientSize = new Size(540, 300);
         FormBorderStyle = FormBorderStyle.FixedDialog;
         MaximizeBox = false;
         StartPosition = FormStartPosition.CenterScreen;
 
-        var label = new Label
-        {
-            Text = "Liberated is running.\n\nSet your device DNS to: " + ip +
-                   "\n\nLogs: resources\\run and resources\\web\\logs",
-            Location = new Point(12, 12),
-            Size = new Size(356, 100)
-        };
-        var update = new Button { Text = "Update Assets", Location = new Point(12, 125), Size = new Size(120, 30) };
-        update.Click += (s, e) => Launcher.DownloadAssets(this);
-        var stop = new Button { Text = "Stop", Location = new Point(248, 125), Size = new Size(120, 30) };
-        stop.Click += (s, e) => Close();
+        var heading = new Label { Text = "Liberated", Font = new Font(Font, FontStyle.Bold), Location = new Point(16, 14), Size = new Size(500, 24) };
+        var address = new Label { Text = "Set your device DNS to: " + ip, Location = new Point(16, 44), Size = new Size(500, 22) };
+        webStatus = new Label { Location = new Point(16, 84), Size = new Size(330, 24) };
+        webButton = new Button { Location = new Point(380, 78), Size = new Size(140, 32) };
+        webButton.Click += (s, e) => { if (Launcher.WebRunning) Launcher.StopWeb(); else Launcher.StartWeb(); RefreshStatus(); };
+        dnsStatus = new Label { Location = new Point(16, 124), Size = new Size(330, 24) };
+        dnsButton = new Button { Location = new Point(380, 118), Size = new Size(140, 32) };
+        dnsButton.Click += (s, e) => { if (Launcher.DnsRunning) Launcher.StopDns(); else Launcher.StartDns(ip); RefreshStatus(); };
+        assetStatus = new Label { Text = Launcher.AssetsPresent() ? "Game assets are ready." : "Game assets are missing.", Location = new Point(16, 162), Size = new Size(500, 24) };
 
-        Controls.Add(label);
-        Controls.Add(update);
-        Controls.Add(stop);
-        AcceptButton = stop;
+        var update = new Button { Text = "Update Assets", Location = new Point(16, 220), Size = new Size(112, 32) };
+        update.Click += (s, e) =>
+        {
+            Launcher.DownloadAssets(this);
+            assetStatus.Text = Launcher.AssetsPresent() ? "Game assets are ready." : "Game assets are missing.";
+        };
+        var editConfig = new Button { Text = "Edit Scraper Config", Location = new Point(138, 220), Size = new Size(142, 32) };
+        editConfig.Click += (s, e) => OpenPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "resources", "scraper", "scraper-config.json"));
+        var logs = new Button { Text = "Show Logs", Location = new Point(290, 220), Size = new Size(100, 32) };
+        logs.Click += (s, e) => { OpenPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "resources", "run")); OpenPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "resources", "web", "logs")); };
+        var stopAll = new Button { Text = "Stop All", Location = new Point(400, 220), Size = new Size(120, 32) };
+        stopAll.Click += (s, e) => { Launcher.StopWeb(); Launcher.StopDns(); RefreshStatus(); };
+        var quit = new Button { Text = "Quit", Location = new Point(420, 260), Size = new Size(100, 28) };
+        quit.Click += (s, e) => Close();
+
+        Controls.AddRange(new Control[] { heading, address, webStatus, webButton, dnsStatus, dnsButton, assetStatus, update, editConfig, logs, stopAll, quit });
+        refreshTimer = new System.Windows.Forms.Timer { Interval = 700 };
+        refreshTimer.Tick += (s, e) => RefreshStatus();
+        refreshTimer.Start();
+        Shown += (s, e) => { Launcher.StartWeb(); RefreshStatus(); };
+        FormClosed += (s, e) => { refreshTimer.Stop(); Launcher.StopAll(); };
+        AcceptButton = quit;
+        RefreshStatus();
+    }
+
+    static void OpenPath(string path)
+    {
+        try { Process.Start(new ProcessStartInfo(path) { UseShellExecute = true }); }
+        catch (Exception e) { MessageBox.Show(e.Message, "Liberated", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+    }
+
+    void RefreshStatus()
+    {
+        bool web = Launcher.WebRunning;
+        bool dns = Launcher.DnsRunning;
+        webStatus.Text = "Web server: " + (web ? "Running" : "Stopped");
+        dnsStatus.Text = "DNS server: " + (dns ? "Running" : "Stopped");
+        webButton.Text = web ? "Stop Web" : "Start Web";
+        dnsButton.Text = dns ? "Stop DNS" : "Start DNS";
     }
 }
 '@

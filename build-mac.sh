@@ -12,7 +12,7 @@ PY_VERSION="3.12.7"
 PY_RELEASE="20241016"
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
-APP="$ROOT/dist/Liberated.app"
+APP="${LIBERATED_APP_PATH:-$ROOT/dist/Liberated.app}"
 RES="$APP/Contents/Resources"
 WORK="$(mktemp -d)"
 trap 'rm -rf "$WORK"' EXIT
@@ -23,7 +23,7 @@ case "$(uname -m)" in
   *) echo "Unsupported architecture: $(uname -m)" >&2; exit 1 ;;
 esac
 
-for tool in cc make curl tar sips iconutil; do
+for tool in cc make curl tar sips iconutil xcrun; do
   command -v "$tool" >/dev/null || { echo "Missing '$tool'. Run: xcode-select --install" >&2; exit 1; }
 done
 
@@ -222,6 +222,114 @@ function run(argv) {
 }
 EOF
 
+# ---------------------------------------------------------------- Menu bar controller
+cat > "$RES/bin/menubar.js" <<'EOF'
+ObjC.import('Cocoa');
+
+var commandPath;
+var logPath;
+var appWindow;
+
+function sendCommand(command) {
+  var value = $.NSString.stringWithString(command + '\n');
+  value.writeToFileAtomicallyEncodingError(commandPath, true, $.NSUTF8StringEncoding, null);
+}
+
+ObjC.registerSubclass({
+  name: 'LiberatedMenuTarget',
+  methods: {
+    'updateAssets:': {
+      types: ['void', ['id']],
+      implementation: function (sender) { sendCommand('update-assets'); }
+    },
+    'stopServer:': {
+      types: ['void', ['id']],
+      implementation: function (sender) { sendCommand('stop'); }
+    },
+    'openLogs:': {
+      types: ['void', ['id']],
+      implementation: function (sender) {
+        $.NSWorkspace.sharedWorkspace.openURL($.NSURL.fileURLWithPath(logPath));
+      }
+    },
+    'showWindow:': {
+      types: ['void', ['id']],
+      implementation: function (sender) {
+        appWindow.makeKeyAndOrderFront(null);
+        $.NSApplication.sharedApplication.activateIgnoringOtherApps(true);
+      }
+    }
+  }
+});
+
+function run(argv) {
+  commandPath = argv[0];
+  logPath = argv[1];
+  var readyPath = argv[2];
+  var ip = argv[3] ? ObjC.unwrap(argv[3]) : 'unknown';
+  var assetStatus = argv[4] ? ObjC.unwrap(argv[4]) : 'Asset status unavailable.';
+  var app = $.NSApplication.sharedApplication;
+  app.setActivationPolicy($.NSApplicationActivationPolicyRegular);
+
+  var status = $.NSStatusBar.systemStatusBar.statusItemWithLength($.NSStatusItem.variableLength);
+  status.button.title = 'Liberated';
+  status.button.toolTip = 'Liberated server is running';
+
+  var target = $.LiberatedMenuTarget.alloc.init;
+  var menu = $.NSMenu.alloc.init;
+  var state = $.NSMenuItem.alloc.initWithTitleActionKeyEquivalent('Server running', null, '');
+  state.enabled = false;
+  menu.addItem(state);
+  var show = $.NSMenuItem.alloc.initWithTitleActionKeyEquivalent('Show Control Window', 'showWindow:', '');
+  show.target = target;
+  menu.addItem(show);
+  var update = $.NSMenuItem.alloc.initWithTitleActionKeyEquivalent('Update Assets', 'updateAssets:', '');
+  update.target = target;
+  menu.addItem(update);
+  var logs = $.NSMenuItem.alloc.initWithTitleActionKeyEquivalent('Open Logs', 'openLogs:', '');
+  logs.target = target;
+  menu.addItem(logs);
+  menu.addItem($.NSMenuItem.separatorItem);
+  var stop = $.NSMenuItem.alloc.initWithTitleActionKeyEquivalent('Stop Server', 'stopServer:', '');
+  stop.target = target;
+  menu.addItem(stop);
+  status.menu = menu;
+
+  appWindow = $.NSWindow.alloc.initWithContentRectStyleMaskBackingDefer(
+    $.NSMakeRect(0, 0, 440, 210),
+    $.NSWindowStyleMaskTitled | $.NSWindowStyleMaskClosable | $.NSWindowStyleMaskMiniaturizable,
+    $.NSBackingStoreBuffered, false);
+  appWindow.title = 'Liberated Server';
+  appWindow.center;
+
+  var heading = $.NSTextField.labelWithString('Liberated is running');
+  heading.frame = $.NSMakeRect(24, 164, 392, 22);
+  heading.font = $.NSFont.boldSystemFontOfSize(16);
+
+  var dnsLabel = $.NSTextField.labelWithString('Set your device DNS to: ' + ip);
+  dnsLabel.frame = $.NSMakeRect(24, 128, 392, 20);
+
+  var assetsLabel = $.NSTextField.labelWithString(assetStatus);
+  assetsLabel.frame = $.NSMakeRect(24, 96, 392, 20);
+  assetsLabel.lineBreakMode = $.NSLineBreakByTruncatingTail;
+
+  var updateButton = $.NSButton.buttonWithTitleTargetAction('Update Assets', target, 'updateAssets:');
+  updateButton.frame = $.NSMakeRect(24, 38, 130, 32);
+  var logsButton = $.NSButton.buttonWithTitleTargetAction('Open Logs', target, 'openLogs:');
+  logsButton.frame = $.NSMakeRect(164, 38, 110, 32);
+  var stopButton = $.NSButton.buttonWithTitleTargetAction('Stop Server', target, 'stopServer:');
+  stopButton.frame = $.NSMakeRect(292, 38, 124, 32);
+
+  [heading, dnsLabel, assetsLabel, updateButton, logsButton, stopButton].forEach(function (v) {
+    appWindow.contentView.addSubview(v);
+  });
+  appWindow.makeKeyAndOrderFront(null);
+  app.activateIgnoringOtherApps(true);
+  $.NSString.stringWithString('ready').writeToFileAtomicallyEncodingError(readyPath, true, $.NSUTF8StringEncoding, null);
+  app.run;
+}
+EOF
+
 # ---------------------------------------------------------------- App launcher
 # macOS 10.14+ lets unprivileged processes bind ports <1024 on all interfaces, so no root is needed.
 cat > "$APP/Contents/MacOS/Liberated" <<'EOF'
@@ -248,29 +356,25 @@ alert() {
 }
 
 info() {
-  osascript -e 'on run argv' -e 'display dialog (item 1 of argv) buttons {"OK"} default button 1 with title "Liberated" with icon note' -e 'end run' "$1" >/dev/null 2>&1
-}
-
-# ask <message> <button1> <button2>: prints the button clicked
-ask() {
-  osascript -e 'on run argv' -e 'activate' \
-    -e 'button returned of (display dialog (item 1 of argv) buttons {(item 2 of argv), (item 3 of argv)} default button 2 with title "Liberated")' \
-    -e 'end run' "$@" 2>/dev/null
+  osascript -e 'on run argv' -e 'display notification (item 1 of argv) with title "Liberated"' -e 'end run' "$1" >/dev/null 2>&1
 }
 
 PY="$RES/venv/bin/python3"
 SCRAPER="$RES/scraper/scraper.py"
 
 download_assets() {
-  local prog="$RUN/scraper.progress" pid ui rc cancelled=0
+  local prog="$RUN/scraper.progress" pid ui rc cancelled=0 command
   rm -f "$prog"
   "$PY" -u "$SCRAPER" --progress "$prog" > "$RUN/scraper.log" 2>&1 &
   pid=$!
   osascript -l JavaScript "$RES/bin/progress.js" "$prog" >/dev/null 2>&1 &
   ui=$!
-  # The progress window exits early only when the user clicks Cancel
+  # Stop remains available from the menu bar while the progress window is open
   while kill -0 "$pid" 2>/dev/null; do
-    if ! kill -0 "$ui" 2>/dev/null; then cancelled=1; kill "$pid" 2>/dev/null; break; fi
+    command="$(cat "$RUN/menu.command" 2>/dev/null || true)"
+    if [ "$command" = "stop" ] || ! kill -0 "$ui" 2>/dev/null; then
+      cancelled=1; kill "$pid" 2>/dev/null; break
+    fi
     sleep 0.3
   done
   wait "$pid"; rc=$?
@@ -294,11 +398,6 @@ IFACE="$(route -n get default 2>/dev/null | awk '/interface:/{print $2}')"
 IP=""
 [ -n "$IFACE" ] && IP="$(ipconfig getifaddr "$IFACE" 2>/dev/null || true)"
 
-if ! "$PY" "$SCRAPER" --check >/dev/null 2>&1; then
-  [ "$(ask "Game assets haven't been downloaded yet. Download them now? This can take a while." "Skip" "Download")" = "Download" ] \
-    && download_assets
-fi
-
 nginx_ctl() { "$RES/bin/nginx" -p "$RES/web/" -e logs/error.log -c conf/nginx.conf "$@"; }
 
 cleanup() {
@@ -321,20 +420,173 @@ sleep 1
 kill -0 "$DNS_PID" 2>/dev/null \
   || { alert "DNS server failed to start (is port 53 in use?). See $RUN/dns.log"; exit 1; }
 
-# Block until the user clicks Stop; exiting runs cleanup
+COMMAND_FILE="$RUN/menu.command"
+READY_FILE="$RUN/menu.ready"
+rm -f "$READY_FILE"
+ : > "$RUN/menu.log"
+printf 'idle\n' > "$COMMAND_FILE"
+if "$PY" "$SCRAPER" --check >/dev/null 2>&1; then
+  ASSET_STATUS="Game assets are ready."
+else
+  ASSET_STATUS="Game assets are missing. Choose Update Assets to download."
+fi
+osascript -l JavaScript "$RES/bin/menubar.js" "$COMMAND_FILE" "$RES/run" "$READY_FILE" "${IP:-unknown}" "$ASSET_STATUS" >> "$RUN/menu.log" 2>&1 &
+MENU_PID=$!
+for _ in $(seq 1 40); do
+  [ -f "$READY_FILE" ] && break
+  kill -0 "$MENU_PID" 2>/dev/null || break
+  sleep 0.25
+done
+if [ ! -f "$READY_FILE" ]; then
+  alert "The Liberated menu bar item could not start. See $RUN/menu.log."
+  exit 1
+fi
 while :; do
-  choice="$(osascript -e 'on run argv' -e 'activate' \
-    -e 'button returned of (display dialog "Liberated is running." & return & return & "Set your device DNS to: " & (item 1 of argv) & return & return & "Logs: Liberated.app/Contents/Resources/run and web/logs" buttons {"Update Assets", "Stop"} default button "Stop" with title "Liberated")' \
-    -e 'end run' "${IP:-unknown}" 2>/dev/null)"
+  choice="$(cat "$COMMAND_FILE" 2>/dev/null || true)"
   case "$choice" in
-    Stop) break ;;
-    "Update Assets") download_assets ;;
-    *) sleep 1 ;;
+    stop) break ;;
+    update-assets)
+      printf 'busy\n' > "$COMMAND_FILE"
+      download_assets
+      [ "$(cat "$COMMAND_FILE" 2>/dev/null || true)" = "stop" ] && break
+      printf 'idle\n' > "$COMMAND_FILE"
+      ;;
+    *) sleep 0.25 ;;
   esac
 done
+kill "$MENU_PID" 2>/dev/null || true
+rm -f "$READY_FILE" "$COMMAND_FILE"
 EOF
 
 # ---------------------------------------------------------------- App icon
+cat > "$RES/bin/server.sh" <<'EOF'
+#!/bin/bash
+set -u
+RES="$(cd "$(dirname "$0")/.." && pwd)"
+RUN="$RES/run"
+PY="$RES/venv/bin/python3"
+SCRAPER="$RES/scraper/scraper.py"
+COMMAND_FILE="$RUN/menu.command"
+WEB_STATUS="$RUN/web.status"
+DNS_STATUS="$RUN/dns.status"
+ASSETS_STATUS="$RUN/assets.status"
+DNS_PID=""
+WEB_ACTIVE=0
+
+nginx_ctl() { "$RES/bin/nginx" -p "$RES/web/" -e logs/error.log -c conf/nginx.conf "$@"; }
+write_status() { printf '%s\n' "$1"; }
+
+stop_web() {
+  if [ "$WEB_ACTIVE" -eq 1 ]; then
+    nginx_ctl -s quit 2>/dev/null || true
+    [ -f "$RUN/php-fpm.pid" ] && kill "$(cat "$RUN/php-fpm.pid")" 2>/dev/null || true
+  fi
+  WEB_ACTIVE=0
+  write_status stopped > "$WEB_STATUS"
+}
+
+stop_dns() {
+  [ -n "$DNS_PID" ] && kill "$DNS_PID" 2>/dev/null || true
+  DNS_PID=""
+  write_status stopped > "$DNS_STATUS"
+}
+
+start_web() {
+  [ "$WEB_ACTIVE" -eq 1 ] && return
+  write_status starting > "$WEB_STATUS"
+  if ! "$RES/php/php-fpm" -p "$RES" -y "$RES/php/php-fpm.conf" -c "$RES/php/php.ini"; then
+    write_status 'failed:PHP-FPM failed to start (check run/php-fpm.log)' > "$WEB_STATUS"
+    return
+  fi
+  if ! nginx_ctl >> "$RUN/nginx-start.log" 2>&1; then
+    [ -f "$RUN/php-fpm.pid" ] && kill "$(cat "$RUN/php-fpm.pid")" 2>/dev/null || true
+    write_status 'failed:nginx failed to start (check web/logs/error.log)' > "$WEB_STATUS"
+    return
+  fi
+  WEB_ACTIVE=1
+  write_status running > "$WEB_STATUS"
+}
+
+start_dns() {
+  [ -n "$DNS_PID" ] && kill -0 "$DNS_PID" 2>/dev/null && return
+  write_status starting > "$DNS_STATUS"
+  iface="$(route -n get default 2>/dev/null | awk '/interface:/{print $2}')"
+  ip="$(ipconfig getifaddr "$iface" 2>/dev/null || true)"
+  PYTHONDONTWRITEBYTECODE=1 "$PY" -u "$RES/dns/dnsserver.py" "$ip" >> "$RUN/dns.log" 2>&1 &
+  DNS_PID=$!
+  if kill -0 "$DNS_PID" 2>/dev/null; then
+    write_status running > "$DNS_STATUS"
+  else
+    DNS_PID=""
+    write_status 'failed:DNS server failed to start (check run/dns.log)' > "$DNS_STATUS"
+  fi
+}
+
+cleanup() {
+  stop_web
+  stop_dns
+}
+trap cleanup EXIT
+trap 'exit 0' TERM INT HUP
+
+: > "$ASSETS_STATUS"
+write_status stopped > "$WEB_STATUS"
+write_status stopped > "$DNS_STATUS"
+start_web
+
+while :; do
+  case "$(cat "$COMMAND_FILE" 2>/dev/null || true)" in
+    quit) exit 0 ;;
+    stop-all) stop_web; stop_dns; printf 'idle\n' > "$COMMAND_FILE" ;;
+    start-web) start_web; printf 'idle\n' > "$COMMAND_FILE" ;;
+    stop-web) stop_web; printf 'idle\n' > "$COMMAND_FILE" ;;
+    start-dns) start_dns; printf 'idle\n' > "$COMMAND_FILE" ;;
+    stop-dns) stop_dns; printf 'idle\n' > "$COMMAND_FILE" ;;
+    update-assets)
+      printf 'idle\n' > "$COMMAND_FILE"
+      write_status 'Downloading game assets...' > "$ASSETS_STATUS"
+      progress="$RUN/scraper.progress"
+      "$PY" -u "$SCRAPER" --progress "$progress" > "$RUN/scraper.log" 2>&1 &
+      scraper_pid=$!
+      osascript -l JavaScript "$RES/bin/progress.js" "$progress" >/dev/null 2>&1 &
+      progress_pid=$!
+      cancelled=0
+      while kill -0 "$scraper_pid" 2>/dev/null; do
+        if [ "$(cat "$COMMAND_FILE" 2>/dev/null || true)" = "quit" ] || [ "$(cat "$COMMAND_FILE" 2>/dev/null || true)" = "stop-all" ] || ! kill -0 "$progress_pid" 2>/dev/null; then
+          cancelled=1
+          kill "$scraper_pid" 2>/dev/null || true
+          break
+        fi
+        sleep 0.3
+      done
+      wait "$scraper_pid"; scraper_rc=$?
+      printf 'EXIT\t%s' "$scraper_rc" > "$progress"
+      wait "$progress_pid" 2>/dev/null || true
+      rm -f "$progress" "$progress.tmp"
+      if [ "$(cat "$COMMAND_FILE" 2>/dev/null || true)" = "quit" ]; then
+        exit 0
+      elif [ "$(cat "$COMMAND_FILE" 2>/dev/null || true)" = "stop-all" ]; then
+        stop_web
+        stop_dns
+        printf 'idle\n' > "$COMMAND_FILE"
+      elif [ "$cancelled" -eq 1 ]; then
+        write_status 'Download cancelled; downloaded files were kept.' > "$ASSETS_STATUS"
+      elif [ "$scraper_rc" -eq 0 ]; then
+        write_status 'Game assets are ready.' > "$ASSETS_STATUS"
+      else
+        write_status 'Download failed; see run/scraper.log.' > "$ASSETS_STATUS"
+      fi
+      ;;
+  esac
+  sleep 0.25
+done
+EOF
+chmod +x "$RES/bin/server.sh"
+
+cp "$ROOT/launcher-mac.swift" "$WORK/Liberated.swift"
+xcrun swiftc -parse-as-library -O "$WORK/Liberated.swift" -o "$APP/Contents/MacOS/Liberated"
+rm -f "$RES/bin/menubar.js"
+
 ICONSET="$WORK/AppIcon.iconset"
 mkdir -p "$ICONSET"
 for s in 16 32 128 256 512; do
@@ -357,7 +609,7 @@ cat > "$APP/Contents/Info.plist" <<'EOF'
     <key>CFBundleVersion</key><string>1.0</string>
     <key>CFBundleShortVersionString</key><string>1.0</string>
     <key>LSMinimumSystemVersion</key><string>11.0</string>
-    <key>LSUIElement</key><true/>
+    <key>LSUIElement</key><false/>
 </dict>
 </plist>
 EOF
