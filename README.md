@@ -31,12 +31,18 @@ copy/move the <code>./contents</code> folder over into <code>./nginx/html</code>
 
 Run <code>start.bat</code>
 
+If you're running this on macOS or Linux, YHWY help you... this AIO package is made for Windows FOR A REASON!
+
+But as long as you have a web server with both ssl and php enabled and have it configured to have .do alongside .php for the php interpretor, you should be good!... just be sure to either use the certs in ./web/conf/ssl/ in your installation or put the cert for your installation at ./web/html/ca.crt
+
+The files that get served are in ./web/html/
+
 Note the IP address that is listed in the DNS Server window
 
 # Connect To The Server
 Use the included DNS changer app to change your phones DNS to the IP address that you found earlier
 
-If this is your first time connecting to the server, then go to <code>liberated.local</code> in your web browser and follow the directions for android devices. If it warns you about privacy or something like that click "advanced" then continue.
+If this is your first time connecting to the server, then go to <code>liberated.dx2</code> in your web browser and follow the directions for android devices. If it warns you about privacy or something like that click "advanced" then continue.
 
 # What works
 . Tutorial
@@ -89,7 +95,7 @@ A: No... you need a computer for running the server... I will make an android ve
 
 Q: Will iOS devices be supported?
 
-A: Unfortunately no.
+A: ~~Unfortunately no.~~ Actually I just got a Mac and an iPhone to test with so now it's a maybe!
 
 # Relevent links:
 

@@ -1,9 +1,10 @@
 import socket
 import sys
+import select
 from dnslib import DNSRecord, RR, QTYPE, A, AAAA
 
 # Configuration
-DOMAIN_NAMES = ["d2-megaten-l.sega.com", "d2r-dl.d2megaten.com", "d2r-sim.d2megaten.com","d2r-chat.d2megaten.com"]
+DOMAIN_NAMES = ["d2-megaten-l.sega.com", "d2r-dl.d2megaten.com", "d2r-sim.d2megaten.com","d2r-chat.d2megaten.com", "liberated.dx2"]
 HOST_IPv4 = "0.0.0.0"  # Bind to all IPv4 interfaces
 HOST_IPv6 = "::"       # Bind to all IPv6 interfaces
 PORT = 53              # Default DNS port
@@ -61,7 +62,4 @@ def start_dns_server():
     sock_ipv4.close()
     sock_ipv6.close()
 
-if __name__ == "__main__":
-    if sys.platform == "win32":
-        import select  # On Windows, `select` must be explicitly imported
     start_dns_server()

@@ -5,3 +5,5 @@ node_modules
 package-lock.json
 web/logs
 scratch*.*
+.DS_Store
+venv
