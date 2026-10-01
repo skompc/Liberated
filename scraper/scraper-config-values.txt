@@ -1,0 +1,5 @@
+check_code: obtained from a real https://d2r-sim.d2megaten.com/socialsv/common/GetUrl.do request
+lang_code: "en", "jp", idk for Chinese
+lang_num: 1=English, 0=Japanese, 3=Chinese... idk if there is a 2
+platform: "Android" or "iOS"
+platform_num: 1 for iOS, 2 for Android

@@ -35,11 +35,16 @@ def create_response(data, ipv4, ipv6):
 
 def start_dns_server():
     ipv4, ipv6 = get_server_ip()
+    # Optional IPv4 override (macOS hostname lookup often returns 127.0.0.1)
+    if len(sys.argv) > 1 and sys.argv[1]:
+        ipv4 = sys.argv[1]
     print(f"DNS server running on IPv4: {ipv4}, IPv6: {ipv6}")
 
     # Create sockets for IPv4 and IPv6
     sock_ipv4 = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock_ipv6 = socket.socket(socket.AF_INET6, socket.SOCK_DGRAM)
+    # macOS/Linux default to dual-stack, which would collide with the IPv4 bind
+    sock_ipv6.setsockopt(socket.IPPROTO_IPV6, socket.IPV6_V6ONLY, 1)
     sock_ipv4.bind((HOST_IPv4, PORT))
     sock_ipv6.bind((HOST_IPv6, PORT))
 
@@ -62,4 +67,6 @@ def start_dns_server():
     sock_ipv4.close()
     sock_ipv6.close()
 
+
+if __name__ == "__main__":
     start_dns_server()

@@ -9,35 +9,29 @@ It should be noted that this is a rewrite of my second attempt into php
 The uploaded code will NOT have game assets from Sega's servers. There is an asset scraper however.
 
 # First Steps
-Make sure you have nodejs installed (https://nodejs.org/en/download/).
+Install the DNS Changer apk that is in the root directory on your phone.
 
-Run <code>git clone https://github.com/skompc/Liberated.git</code> to copy this repo to your pc.
+# Get The Server
+Download a build for your OS from the [Actions](https://github.com/skompc/Liberated/actions) tab (open the latest "Build Liberated" run and grab the artifact), or build it yourself:
 
-Run <code>npm install</code> to install dependencies for the scraper.
+| OS | Build command | Output |
+| --- | --- | --- |
+| Windows | <code>powershell -ExecutionPolicy Bypass -File .\build-windows.ps1</code> | <code>dist\Liberated-windows\Liberated.exe</code> |
+| macOS | <code>./build-mac.sh</code> (needs Xcode Command Line Tools) | <code>dist/Liberated.app</code> |
+| Linux | <code>./build-linux.sh</code> (needs build-essential + curl) | <code>dist/Liberated-linux/Liberated</code> |
 
-Install the DNS Changer apk that is in the root directory.
-
-# Scrape The Assets
-
-Run <code>node ./scraper.js</code> to fetch assets.
-
-copy everything from <code>./contents/Android/(asset_bundle_version)</code> to a new folder called <code>./contents/Android/custom</code>
-
-edit the first line of <code>./contents/Android/custom/en/ab_list.txt</code> from whatever it is to <code>custom</code>
-
-copy/move the <code>./contents</code> folder over into <code>./nginx/html</code>
+Everything (nginx, PHP, Python, configs and the site) lives inside that app/folder. Delete it and it's gone.
 
 # Run The Server
+Launch Liberated. The first time, it will offer to download the game assets (this takes a while). You can re-run the download later with the "Update Assets" button.
 
-Run <code>start.bat</code>
+Asset download settings (check code, language, platform) come from <code>scraper/scraper-config.json</code> at build time (see <code>scraper/scraper-config-values.txt</code> for possible values). To change them after building, edit the copy inside the build at <code>resources/scraper/scraper-config.json</code> (on macOS: <code>Liberated.app/Contents/Resources/scraper/</code>).
 
-If you're running this on macOS or Linux, YHWY help you... this AIO package is made for Windows FOR A REASON!
+Note the IP address that Liberated shows you.
 
-But as long as you have a web server with both ssl and php enabled and have it configured to have .do alongside .php for the php interpretor, you should be good!... just be sure to either use the certs in ./web/conf/ssl/ in your installation or put the cert for your installation at ./web/html/ca.crt
+On Linux, Liberated will ask for your password because ports 53/80/443 need root there.
 
 The files that get served are in ./web/html/
-
-Note the IP address that is listed in the DNS Server window
 
 # Connect To The Server
 Use the included DNS changer app to change your phones DNS to the IP address that you found earlier
@@ -83,7 +77,7 @@ If this is your first time connecting to the server, then go to <code>liberated.
 
 Q: The app isn't fetching the assets I downloaded
 
-A: Make sure to do all the steps in [Scrape The Assets](#scrape-the-assets)
+A: Click "Update Assets" in Liberated (see [Run The Server](#run-the-server)) and let the download finish
 
 ----------------------------------------------
 

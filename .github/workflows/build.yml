@@ -1,0 +1,53 @@
+name: Build Liberated
+
+on:
+  workflow_dispatch:
+
+jobs:
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: ./build-mac.sh
+
+      # ditto keeps the bundle's symlinks and executable bits intact
+      - name: Package
+        run: ditto -c -k --keepParent dist/Liberated.app dist/Liberated-macos.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Liberated-macos
+          path: dist/Liberated-macos.zip
+
+  linux:
+    # Older Ubuntu = older glibc baseline, so the build runs on more distros
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: ./build-linux.sh
+
+      - name: Package
+        run: tar -czf dist/Liberated-linux.tar.gz -C dist Liberated-linux
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Liberated-linux
+          path: dist/Liberated-linux.tar.gz
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        shell: powershell
+        run: powershell -ExecutionPolicy Bypass -File .\build-windows.ps1
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Liberated-windows
+          path: dist/Liberated-windows

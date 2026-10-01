@@ -7,3 +7,4 @@ web/logs
 scratch*.*
 .DS_Store
 venv
+dist
